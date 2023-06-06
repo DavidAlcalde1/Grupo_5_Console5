@@ -33,5 +33,11 @@
 #### Tomamos referencia a esta web por los modelos alojados allí, los cuales son similares a los que tendremos en nuestro proyecto.
 ### https://atticusclothing.com/ 
 #### Diseño Estética Minimalista.
+### https://www.kill.com.ar/
+#### Estéticamente atractivo, estilo delicado, excelente animación y presentación preliminar de la marca. Intuitiva y fácil de navegar.
+### https://www.rapsodia.com.ar/
+#### Estéticamente atractivo, con un menú acorde al tipo de usuario y a la visión y misión de la marca. 
+### https://www.yagmour.com.ar/
+#### Footer estructurado con claridad, publicidad un poco invasiva, utiliza tipografías y colores que ayudan a la legibilidad. La información está bien redactada y sin faltas de ortografía. Muestra sus redes sociales.
 
 
