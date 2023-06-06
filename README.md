@@ -6,7 +6,7 @@
 ##INTEGRANTES DEL EQUIPO:
 ### DAVID ERNESTO SEGURA JIMENEZ
 ### JAIME MADERIC BELTRÁN CARRASCO
-### MAILEN IGLESIAS
+### MAILEN JOHANNA IGLESIAS
 ### JOSÉ DAVID ALCALDE CABRERA
 
 ## DESCRIPCION DE INTEGRANTES:
@@ -16,8 +16,8 @@
 ### JAIME MADERIC BELTRÁN CARRASCO
 #### Técnico en Telecomunicaciones, Inspector de terreno en CGE
 #### ---------------------------------------------------------------------------------------------------------------------------------------
-### MAILEN IGLESIAS
-#### Abogada
+### MAILEN JOHANNA IGLESIAS
+#### Abogada con especialización en derecho informático. 
 #### ---------------------------------------------------------------------------------------------------------------------------------------
 ### JOSÉ DAVID ALCALDE CABRERA
 #### Bachiller en Ingeniería de Sistemas y Computación, Técnico Titulado en Electrónica, con experiencia en Helpdesk y Cableado Estructurado
