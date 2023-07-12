@@ -304,7 +304,7 @@ body {
 
 }
 
-@media (max-width: 530px) {
+@media (max-width: 460px) {
   .main-header-top-bar {
     flex-direction: column;
     align-items: center;
@@ -312,13 +312,14 @@ body {
   }
   .logo {
     margin-bottom: 10px;
+    margin-left: 40px;
   }
   .search-bar {
     margin-top: 10px;
     margin-left: 10px;
     margin-right: 10px;
   }
-  .search-bar input[type="search"] {
+  .search-bar input[type="text"] {
     width: 100%;
   }
   .search-button {
@@ -334,6 +335,9 @@ body {
     justify-content: center;
   }
   .section-products {
+    margin-top: 160px;
+  }
+  .sport-home {
     margin-top: 10px;
   }
   .sport-home,
@@ -354,9 +358,12 @@ body {
   .new-collection img {
     width: 100%;
     height: auto;
+    align-items: center;
   }
   
   .description {
+    margin-top: 15px;
+    margin-bottom: 15px;
     margin-left: 10px;
     margin-right: 10px;
   }
@@ -387,6 +394,7 @@ body {
     margin-left: 10px;
   }
 }
+
 
 .principal {
   width: 40vw;
