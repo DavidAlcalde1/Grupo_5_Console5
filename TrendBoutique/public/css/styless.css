@@ -1,3 +1,9 @@
+*{
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+
+}
 body {
   font-family: 'Roboto', sans-serif;
   font-weight: 600;
@@ -388,7 +394,7 @@ body {
   height: 30vh;
   display: flex;
   margin-left: auto; 
-  margin-right: auto;
+  margin-right:40%;
   font-size: 0.5rem;
   align-items: center;
   justify-content: space-evenly;
@@ -396,25 +402,36 @@ body {
 
 .ingreso {
   margin: 30px;
-  border: thin solid black;
+    border: thin solid black;
   padding: 20px;
-  
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(27, 74, 82, 0.8); /* Cambio: Aplicar opacidad al fondo */
 }
 
 .ingreso .iniciar-sesion {
   width: 100%;
-  margin: .5em;
+  margin: 0;
+  margin-top: 0.8em;
 }
+
 
 /* .ancho:hover{
   background-color: #1b4a52;
   opacity: 0.2;
 } */
 
-.ingreso .ancho {
+.ingreso .ancho-mail,
+.ingreso .ancho-pass {
   width: 100%;
-  margin: .5em;
-  background-color: #1b4a52;
+  margin: 0;
+  background-color: transparent; /* Cambio: Fondo transparente */
+  margin-top: .8em;
+  
+}
+
+.ingreso .ancho-mail::placeholder, .ingreso .ancho-pass::placeholder{
+  color:#FFFFFF;
 }
 
 .ingreso h4 button {
@@ -426,3 +443,28 @@ body {
   left: auto;
   right: auto;
 }
+
+.olvidaste{
+  color:#FFFFFF;
+  font-size: 10px;
+  font: weight 10000px;;
+}
+
+
+.login{
+  color:#FFFFFF;
+  font-weight: bolder;
+  font-size: 12px;
+}
+
+.login h2{
+  color:#FFFFFF;
+  font-weight: bold;
+  font-size: 20px;
+}
+
+
+
+
+
+
