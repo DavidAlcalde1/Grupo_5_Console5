@@ -232,6 +232,7 @@ body {
 .create-form {
   display: flex;
   display: wrap;
+  margin-left: 4rem;
 }
 
 .rectangle-button {
