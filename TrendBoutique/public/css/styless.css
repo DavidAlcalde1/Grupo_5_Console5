@@ -404,7 +404,7 @@ body {
 
 .ingreso {
   margin: 30px;
-    border: thin solid black;
+  border: thin solid black;
   padding: 20px;
   align-items: center;
   justify-content: center;
@@ -478,6 +478,31 @@ body {
   margin-top: 10rem;
 }
 
+footer {
+  background-color: rgba(27, 74, 82, 0.8);
+  padding: 2px;
+  color: #fff;
+  text-align: center;
+  margin-top: 3rem;
+  margin-bottom: 0rem;
+  display:flex;
+  align-items: center;
+  justify-content: center;
+  height: 2rem; 
+  
+}
+
+footer p {
+  display: inline;
+  margin-right: 10px;
+  font-size:small;
+  padding-bottom: 4rem;
+  
+}
+
+.space {
+  margin: 0 10px;
+}
 
 
 
