@@ -22,6 +22,15 @@ body {
   --color-verde: #222723;
 }
 
+.btnWa {
+  font-size: 72px; /* Tamaño del ícono */
+  color: #25D366; /* Color verde clásico de WhatsApp */
+  text-decoration: none; 
+  position: fixed;
+  right: 50px;
+  bottom:50px;
+}
+
 .main-header-top-bar {
   display: flex;
   align-items: center;
