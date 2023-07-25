@@ -185,6 +185,8 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+  background-color: #b8d6e5;
+  padding-bottom: 50px;
 }
 
 .new-collection {
@@ -261,7 +263,6 @@ body {
 .last {
   display: flex;
   flex-wrap: wrap;
-  margin-top: 60px;
   margin-left: 45px;
 }
 
@@ -355,6 +356,11 @@ body {
   justify-content: center;
 }
 
+footer {
+  background-color: #f4f3f4;
+  padding-bottom: 5px;
+}
+
 @media (max-width: 768px) {
   .main-header-top-bar {
     flex-direction: column;
@@ -388,13 +394,13 @@ body {
     padding-left: 0;
   }
 
-.left-navbar {
+ .left-navbar {
   list-style: none;
   display: flex;
   justify-content: center;
   align-items: center;
   padding: 50px;
-}
+ }
 
   .section-products {
     margin-top: 16px;
@@ -446,14 +452,14 @@ body {
     margin-right: 0;
   }
   .control-formulario {
-    margin-top: 10px;
+    margin-top: 30px;
     margin-left: 10px;
     margin-right: 10px;
   }
   .about, .help {
     margin-left: 10px;
   }
-  .terminos {
+  .terminos  {
     margin-top: 20px;
     margin-left: 10px;
   }
@@ -554,7 +560,7 @@ body {
     margin-right: 0;
   }
   .control-formulario {
-    margin-top: 10px;
+    margin-top: 30px;
     margin-left: 10px;
     margin-right: 10px;
   }
