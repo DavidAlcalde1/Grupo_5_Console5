@@ -7,7 +7,7 @@
 body {
   font-family: 'Roboto', sans-serif;
   font-weight: 600;
-  background-image: url("../images/fondo-trend-login.jpg");
+  background-image: url("../images/imagen-login.jpg");
   background-size: cover;
   background-position: center center;
   background-repeat: no-repeat;
@@ -262,6 +262,7 @@ body {
   margin: 0 10px;
   max-width: 33%;
   margin-top: 35px;
+  color: black;
 }
 
 .control-formulario {
@@ -418,7 +419,7 @@ body {
   padding: 20px;
   align-items: center;
   justify-content: center;
-  background-color: rgba(27, 74, 82, 0.8); /* Cambio: Aplicar opacidad al fondo */
+  background-color: rgba(122, 92, 60, 0.8); /* Cambio: Aplicar opacidad al fondo */
 }
 
 .ingreso .iniciar-sesion {
@@ -480,11 +481,11 @@ body {
 }
 
 .about-trend p .last-section h3{
-  color:#FFFFFF;
+  color:white;
 }
 
 .last{
-  color:white;
+  color: white;
   margin-top: 10rem;
 }
 
