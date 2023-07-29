@@ -149,7 +149,7 @@ body {
   bottom: 15%;
   left: 50%;
   transform: translateX(-50%);
-  background-color: rgba(102, 102, 102, 0);
+  background-color: red;
   height: 50px;
   width: 200px;
   transition: background-color 0.3s ease;
@@ -262,7 +262,7 @@ body {
   margin: 0 10px;
   max-width: 33%;
   margin-top: 35px;
-  color: black;
+  color: white;
 }
 
 .control-formulario {
@@ -415,11 +415,11 @@ body {
 
 .ingreso {
   margin: 30px;
-  border: thin solid black;
+  border: thin solid gray;
   padding: 20px;
   align-items: center;
   justify-content: center;
-  background-color: rgba(122, 92, 60, 0.8); /* Cambio: Aplicar opacidad al fondo */
+  background-color: rgba(251, 235, 228, 0.1); /* Cambio: Aplicar opacidad al fondo */
 }
 
 .ingreso .iniciar-sesion {
@@ -490,7 +490,7 @@ body {
 }
 
 footer {
-  background-color: rgba(27, 74, 82, 0.8);
+  background-color: rgba(251, 235, 228, 0.1);
   padding: 2px;
   color: #fff;
   text-align: center;
