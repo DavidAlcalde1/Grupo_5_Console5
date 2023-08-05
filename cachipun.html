@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Juego de Piedra, Papel y Tijera</title>
+</head>
+<body>
+  <h1>Juego de Piedra, Papel y Tijera</h1>
+  <p>Selecciona tu opción:</p>
+  <button onclick="jugar('piedra')">Piedra</button>
+  <button onclick="jugar('papel')">Papel</button>
+  <button onclick="jugar('tijera')">Tijera</button>
+
+  <div id="resultado"></div>
+
+  <script>
+    function jugar(opcionUsuario) {
+      const opciones = ['piedra', 'papel', 'tijera'];
+      const opcionComputadora = opciones[Math.floor(Math.random() * opciones.length)];
+
+      const resultado = obtenerResultado(opcionUsuario, opcionComputadora);
+
+      const resultadoDiv = document.getElementById('resultado');
+      resultadoDiv.innerHTML = `<p>Tu elegiste: ${opcionUsuario}</p><p>La computadora eligió: ${opcionComputadora}</p><p>Resultado: ${resultado}</p>`;
+    }
+
+    function obtenerResultado(opcionUsuario, opcionComputadora) {
+      if (opcionUsuario === opcionComputadora) {
+        return "Empate";
+      } else if (
+        (opcionUsuario === 'piedra' && opcionComputadora === 'tijera') ||
+        (opcionUsuario === 'papel' && opcionComputadora === 'piedra') ||
+        (opcionUsuario === 'tijera' && opcionComputadora === 'papel')
+      ) {
+        return "¡Ganaste!";
+      } else {
+        return "¡Perdiste!";
+      }
+    }
+  </script>
+</body>
+</html>

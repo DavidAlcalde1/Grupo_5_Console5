@@ -1,68 +1,103 @@
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-  }
-  body{
-    height: 100vh;
-    width: 100vw;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body{
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
 
-  }
+}
+main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  align-items: center;
+  height: 60wh;
+  width: 60vw;
+}
+
+form {
+  height: 100%;
+  width: 55%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: 2px solid #000000;
+  border-radius: 10px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  background-image: linear-gradient(to bottom,  rgba(221, 212, 80, 0.548), rgba(255, 0, 0, 0.3));
+  font-family: 'Roboto', sans-serif;
+ 
+}
+.title{
+  margin-top: 10px;
+  margin-bottom: 20px;
+}
+#nombre{
+  width: 80%;
+  height:6%;
+}
+#apellido{
+  width: 80%;
+  height:6%;
+}
+#numeroOcorreo{
+  width: 80%;
+  height:7%;
+}
+#contrasena{
+  width: 80%;
+  height:7%;
+}
+#fechaNacimiento{
+  width: 40%;
+  height:7%;
+}
+.caja {
+  display: flex;
+  flex-direction: row;
+}
+.contenedor{
+  margin-right:10px;
+}
+button {
+  width: 120px; 
+  height: 40px;
+  border-radius: 7px;
+  font-size: 20px; 
+  background-color: #f0f0f0; 
+  color: #333; 
+  margin: 5px; 
+}
+@media only screen and (max-width: 468px) {
   main {
-    font-family: Arial, sans-serif;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    align-items: center;
-    background-color: antiquewhite;
-    height: 50vh;
-    width: 50vw;
+    min-height: 100%;
+    width: 100%;
+  }
+
+  form {
+    max-width: 100%;
+    height: 50%;
+  }
+}
+@media only screen and (min-width: 768px) {
+     main {
+    min-height: 50%;
+    width: 40%;
   }
   
   form {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    border: 2px solid #000000;
-    border-radius: 10px;
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
-    padding: 20px;
-    background-color:rosybrown;
-   
-  }
-  .caja {
-    display: flex;
-    flex-direction: row;
-
-  }
-  @media only screen and (max-width: 468px) {
-    main {
-      min-height: 100%;
-      width: 100%;
-    }
-
-    form {
-      max-width: 100%;
-      height: 50%;
-    }
-  }
-  @media only screen and (min-width: 768px) {
-       main {
-      min-height: 50%;
-      width: 40%;
-    }
-    
-    form {
-      max-width: 100%;
-      max-height: 100%;     
-    }
-
+    max-width: 100%;
+    max-height: 100%;     
   }
 
- 
-  
+}
+
+

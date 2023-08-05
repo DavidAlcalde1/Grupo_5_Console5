@@ -1,0 +1,129 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  display: flex; 
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 600;
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+}
+.logo {
+  margin-right: 10px;
+  margin-top: 10px;
+  margin-left: 120px;
+}
+.main-header-top-bar {
+  display: flex;
+  align-items: center;
+  /* margin: 0; */
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background-color: white;
+  padding: 10px; 
+  z-index: 9999;
+}
+.navigation-bar {
+  display: flex;
+  justify-content: center;
+  padding-top: 80px;
+}
+main{
+  display: flex;
+  justify-items:center ;
+  justify-content: center;
+  max-width: 90%;
+  
+}
+.descripcionProd{
+  display: flex;
+  flex-direction: column;
+  max-width: 20%;
+  margin-left: 5%;
+  margin-top: 2%;
+  text-align: justify;
+}
+button {
+  width: 100px; 
+  height: 40px;
+  font-size: 16px; 
+  background-color: #f0f0f0; 
+  color: #333; 
+  margin: 5px; 
+}
+.nombreProd{
+  margin-bottom: 5vh; }
+  .coddigo{
+    font-family: "Georgia", serif;
+  }
+
+.fotosProd {
+  display: flex;
+  flex-direction:column;
+}
+
+.fotoGrande img {
+  display: flex;
+  justify-items: center;
+  max-width: 90vw;
+  max-height: 55vh;
+  margin-bottom: 10px;
+  border: 2px solid ;
+}
+
+.fotosPequenhas img {
+  max-width: 27vw;
+  max-height: 27vh;
+  border: 2px solid;
+  
+}  
+
+.last {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 60px;
+  margin-left: 45px;
+}
+
+.last-section {
+  flex: 1;
+  margin: 0 10px;
+  max-width: 33%;
+  margin-top: 35px;
+}
+.wide-input {
+  flex: 1;
+  margin-right: 10px;
+}
+
+.about {
+  margin-left: 10px;
+}
+
+.help {
+  margin-left: 10px;
+}
+
+.about-trend {
+  font-size: 14px;
+}
+
+.help-trend {
+  font-size: 14px;
+}
+
+.terminos {
+  margin-top: 60px;
+  margin-left: 20px;
+  margin-bottom: 15px;
+  display: flex;
+  align-items: center;
+  font-size: 12px;
+}
