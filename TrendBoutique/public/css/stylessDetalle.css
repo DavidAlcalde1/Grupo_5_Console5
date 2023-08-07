@@ -37,18 +37,15 @@ body {
 }
 main{
   display: flex;
-  justify-items:center ;
-  justify-content: center;
   max-width: 90%;
   
 }
 .descripcionProd{
   display: flex;
-  flex-direction: column;
-  max-width: 20%;
+  flex-direction:column;
+  max-width: 30%;
   margin-left: 5%;
   margin-top: 2%;
-  text-align: justify;
 }
 button {
   width: 100px; 
@@ -59,32 +56,53 @@ button {
   margin: 5px; 
 }
 .nombreProd{
-  margin-bottom: 5vh; }
-  .coddigo{
-    font-family: "Georgia", serif;
-  }
-
+  margin-bottom: 3%;
+ }
+.codigo{
+    font-family: 'Open Sans', sans-serif;
+    margin-bottom: 5%;
+}
+.precio{
+  font-family: 'Kanit', sans-serif;
+  margin-bottom: 5%; 
+}
+.cuotas{
+  margin-bottom: 5%; 
+}
+.colores{
+  font-family: 'Open Sans', sans-serif;
+  margin-bottom: 2%;
+}
+.talla{
+  font-family: 'Open Sans', sans-serif;  
+}
+.cajaDescripcion{
+  text-align: justify;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 80%;
+}
+.tituloDescripcion{
+  font-family: 'Roboto', sans-serif; 
+}
 .fotosProd {
   display: flex;
-  flex-direction:column;
+  margin-top: 5%;
 }
-
 .fotoGrande img {
   display: flex;
   justify-items: center;
   max-width: 90vw;
   max-height: 55vh;
-  margin-bottom: 10px;
+  margin-right: 10px;
   border: 2px solid ;
 }
-
 .fotosPequenhas img {
+  display: flex;
   max-width: 27vw;
   max-height: 27vh;
   border: 2px solid;
-  
+  margin-bottom:10px;
 }  
-
 .last {
   display: flex;
   flex-wrap: wrap;
