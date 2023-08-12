@@ -37,6 +37,7 @@ body {
 }
 main{
   display: flex;
+  justify-content: center;
   max-width: 90%;
   
 }
@@ -47,13 +48,28 @@ main{
   margin-left: 5%;
   margin-top: 2%;
 }
-button {
-  width: 100px; 
+.botones{
+  display: flex;
+}
+.boton-carrito {
+  width: 200px;
+  font-size: 15px;
+  background-color: #1e1f50;
+  color: #f7f4f4;
+  margin: 5px;
   height: 40px;
-  font-size: 16px; 
-  background-color: #f0f0f0; 
-  color: #333; 
-  margin: 5px; 
+  border: #aca8a8;
+  border-radius: 7px;
+}
+.boton-comprar {
+  width: 150px;
+  font-size: 15px;
+  background-color: #1e1f50;
+  color: #f7f4f4;
+  margin: 5px;
+  height: 40px;
+  border: #aca8a8;
+  border-radius: 7px;
 }
 .nombreProd{
   margin-bottom: 3%;
