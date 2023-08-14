@@ -1,4 +1,14 @@
-[{"id":1,"name":"Flower - Commercial Spider","description":"in hac habitasse platea dictumst maecenas ut massa quis augue","price":12.85,"quantity":1,"category":"rhoncus aliquet pulvinar sed nisl nunc rhoncus dui vel sem sed sagittis nam congue risus semper porta volutpat","image":"http://dummyimage.com/105x100.png/cc0000/ffffff","size":"M","color":"Blue"},
+[
+{"id":1,
+"name":"Blazer FashionGold",
+"description":"Blazer para Yeimis sexys como tú",
+"price":12.85,
+"quantity":1,
+"category":"Formal",
+"image":"../images/blazer-formal.jpg",
+"size":"M",
+"color":"Blue"},
+
 {"id":2,"name":"Cookies - Assorted","description":"sem mauris laoreet ut rhoncus aliquet pulvinar sed nisl nunc rhoncus dui vel","price":53.56,"quantity":2,"category":"velit eu est congue elementum in hac habitasse platea dictumst morbi vestibulum velit id pretium iaculis diam","image":"http://dummyimage.com/250x100.png/cc0000/ffffff","size":"L","color":"Green"},
 {"id":3,"name":"Bar Bran Honey Nut","description":"vulputate nonummy maecenas tincidunt lacus at velit vivamus vel nulla eget eros elementum pellentesque quisque porta volutpat erat quisque erat","price":18.11,"quantity":3,"category":"justo nec condimentum neque sapien","image":"http://dummyimage.com/147x100.png/cc0000/ffffff","size":"M","color":"Blue"},
 {"id":4,"name":"Mustard - Individual Pkg","description":"nunc purus phasellus in felis donec semper sapien a libero nam dui proin leo odio porttitor id consequat","price":26.89,"quantity":4,"category":"nec molestie sed justo pellentesque viverra pede ac diam cras pellentesque volutpat dui maecenas tristique","image":"http://dummyimage.com/116x100.png/ff4444/ffffff","size":"M","color":"Blue"},
