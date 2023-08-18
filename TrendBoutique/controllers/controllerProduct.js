@@ -1,8 +1,6 @@
-const productsData = require('../public/data/products.json');
-
 const controllerProducts = {
     listar : (req, res) => {
-        res.render('products/list', { products: productsData });
+        res.send('Lista de productos Dvaico')
     },
     detalle: (req, res) => {
         res.render('products/detail')
