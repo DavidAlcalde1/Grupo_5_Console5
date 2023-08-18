@@ -1,13 +1,22 @@
+const productsData = require('../public/data/products.json');
+
 const controllerProducts = {
     listar : (req, res) => {
-        res.send('Lista de productos Dvaico')
+        res.render('products/list', { products: productsData });
     },
     detalle: (req, res) => {
-        res.send('Detalle del producto')
+        res.render('products/detail')
     },
     crear: (req, res) => {
-        res.send('Producto creado')
+        res.render('products/create')
     },
+    edit: (req,res) => {
+        res.render('products/:id/edit')
+    },
+    delete: (req,res) => {
+        res.render('products/delete')
+    },
+
 }
 
     module.exports = controllerProducts; 
