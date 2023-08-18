@@ -1,6 +1,6 @@
 const controllerProducts = {
     listar : (req, res) => {
-        res.send('Lista de productos')
+        res.send('Lista de productos Dvaico')
     },
     detalle: (req, res) => {
         res.send('Detalle del producto')

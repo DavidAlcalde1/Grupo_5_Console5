@@ -5,14 +5,16 @@ const router = express.Router();
 const productsData = require('../public/data/products.json'); // Asegúrate de tener acceso a los datos de productos
 const controllerProducts = require('../controllers/controllerProduct');
 
-router,get('/', controllerProducts.listar);
-router,get('/', controllerProducts.detalle);
-router,get('/', controllerProducts.crear);
+// router,get('/', controllerProducts.listar);
+// router,get('/', controllerProducts.detalle);
+// router,get('/', controllerProducts.crear);
 
 
-router.get('/list', (req, res) => {
-    res.render('products/list', { products: productsData });
-});
+// router.get('/list', (req, res) => {
+//     res.render('products/list', { products: productsData });
+// });
+
+router.get('/list', controllerProducts.listar);
 
 router.get('/products/create', (req, res) => {
     res.render('products/create');
