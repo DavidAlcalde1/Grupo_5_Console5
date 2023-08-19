@@ -1,0 +1,14 @@
+.listProducts {
+    width: 20vw;
+    display: flex;
+    /* flex-direction: row;
+    flex-wrap: wrap; */
+}
+
+.imageList{
+    display: flex;
+}
+
+h2 {
+    display: block;
+}
