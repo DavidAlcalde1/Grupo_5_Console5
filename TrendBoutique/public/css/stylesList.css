@@ -1,19 +1,13 @@
 .listProducts {
-    width: 20vw;
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
-    /* flex-direction: row;
-    flex-wrap: wrap; */
+    margin-left: auto;
+    margin-right: auto;
+    width: 90%;
 }
-
-
-/* .imageList{
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
+ul {
+  display: flex;
+  flex-wrap: wrap;
 }
 
 h2 {
     display: block;
-} */
+}
