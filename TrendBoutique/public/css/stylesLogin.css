@@ -9,7 +9,7 @@ body {
   font-weight: 600;
   background-image: url("../images/fondo-login.jpg");
   background-size: cover;
-  background-position: center center;
+  background-position: 100% 100%;
   background-repeat: no-repeat;
   justify-content: center;
 }
@@ -177,6 +177,7 @@ body {
   align-items: center;
   justify-content: center;
   margin-top: 5rem;
+  margin-bottom: 3rem;
 }
 
 .ingreso {

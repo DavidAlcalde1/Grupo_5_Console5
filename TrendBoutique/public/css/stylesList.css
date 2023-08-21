@@ -1,14 +1,19 @@
 .listProducts {
     width: 20vw;
     display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
     /* flex-direction: row;
     flex-wrap: wrap; */
 }
 
-.imageList{
+
+/* .imageList{
     display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
 }
 
 h2 {
     display: block;
-}
+} */
