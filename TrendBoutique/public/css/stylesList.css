@@ -13,3 +13,7 @@ ul {
 h2 {
     display: block;
 }
+
+.imageList{
+    margin: 10px;
+}

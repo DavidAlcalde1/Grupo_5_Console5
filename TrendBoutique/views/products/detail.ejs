@@ -1,11 +1,28 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Detalle</title>
-</head>
-<body>
+  </head>
+  <body>
     <h1>Detalle</h1>
-</body>
+    <div class="listProducts">
+      <ul>
+        <% products.forEach(product => { %>
+        <li>
+            
+                <h2><%= product.id %> <%= product.name %></h2>
+                <img
+                class="imageList"
+                src="images/<%= product.image %>"
+                alt="Mi Imagen"
+                width="400px"
+                height="400px"/>
+                
+        </li>
+        <% }); %>
+      </ul>
+    </div>
+  </body>
 </html>

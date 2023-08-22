@@ -3,7 +3,11 @@ const products = require('../public/data/products.json');
 
 const controllerProducts = {
     listar : (req, res) => {
-        res.render('products/list', { products: products })
+        console.log(req.query.category);
+        const productsByCategory = products.filter( (product) => {
+            return product.category === req.query.category;
+        });
+        res.render('products/list', { products: productsByCategory })
     },
     detalle: (req, res) => {
         res.render('products/detail')
