@@ -96,25 +96,6 @@ body {
   padding-top: 80px;
 }
 
-.left-navbar {
-  list-style: none;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 50px;
-  margin-top: 20px;
-  margin-bottom: -21px;
-  /* margin-top: -80px; */
-}
-
-.left-navbar li {
-  margin: 0 10px;
-}
-
-.left-navbar li a {
-  text-decoration: none;
-  color: black;
-}
 
 .car {
   padding-left: 12px;
@@ -183,10 +164,13 @@ body {
 
 .section-collection {
   display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
   justify-content: center;
   align-items: center;
   background-color: #fbebe4;
-  padding-bottom: 50px;
+  padding-bottom: 40px;
+  padding-top: 20px;
 }
 
 .new-collection {
@@ -260,19 +244,6 @@ body {
   margin-left: 8px;
 }
 
-.last {
-  display: flex;
-  flex-wrap: wrap;
-  margin-left: 45px;
-}
-
-.last-section {
-  flex: 1;
-  margin: 0 10px;
-  max-width: 33%;
-  margin-top: 35px;
-}
-
 .control-formulario {
   flex: 1;
 }
@@ -303,7 +274,7 @@ body {
   font-size: 14px;
 }
 
-.terminos {
+/* .terminos {
   margin-top: 60px;
   margin-left: 10px;
   display: flex;
@@ -311,11 +282,19 @@ body {
   font-size: 12px;
 }
 
+.terminos {
+  margin-top: 20px;
+  margin-left: 10px;
+}
+.terminos  {
+  margin-top: 20px;
+  margin-left: 10px;
+}
+
 .space {
   margin-right: 5px;
   margin-left: 5px;
-}
-
+} */
 .principal {
   width: 40vw;
   height: 30vh;
@@ -355,10 +334,10 @@ body {
   justify-content: center;
 }
 
-footer {
+/* footer {
   background-color: #f4f3f4;
   padding-bottom: 5px;
-}
+} */
 
 @media (max-width: 768px) {
   .main-header-top-bar {
@@ -393,13 +372,6 @@ footer {
     padding-left: 0;
   }
 
- .left-navbar {
-  list-style: none;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 50px;
- }
 
   .section-products {
     margin-top: 16px;
@@ -458,10 +430,6 @@ footer {
   .about, .help {
     margin-left: 10px;
   }
-  .terminos  {
-    margin-top: 20px;
-    margin-left: 10px;
-  }
 }
 
 @media (min-width: 1200px) {
@@ -500,14 +468,6 @@ footer {
   .search-products {
     padding-left: 0;
   }
-
-.left-navbar {
-  list-style: none;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 50px;
-}
 
   .section-products {
     margin-top: 16px;
@@ -564,10 +524,6 @@ footer {
     margin-right: 10px;
   }
   .about, .help {
-    margin-left: 10px;
-  }
-  .terminos {
-    margin-top: 20px;
     margin-left: 10px;
   }
 }

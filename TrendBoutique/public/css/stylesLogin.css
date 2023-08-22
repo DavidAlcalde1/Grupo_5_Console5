@@ -1,0 +1,255 @@
+*{
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+  
+}
+body {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 600;
+  background-image: url("../images/fondo-login.jpg");
+  background-size: cover;
+  background-position: 100% 100%;
+  background-repeat: no-repeat;
+  justify-content: center;
+}
+
+.btnWa {
+  font-size: 72px; /* Tamaño del ícono */
+  color: #25D366; /* Color verde clásico de WhatsApp */
+  text-decoration: none; 
+  position: fixed;
+  right: 50px;
+  bottom:50px;
+}
+
+.caption h1 {
+  color: white;
+  font-size: 32px;
+  font-weight: 600;
+}
+
+.section-collection {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.new-collection {
+  display: flex;
+  align-items: center;
+}
+
+
+.new-collection img {
+  width: 100%;
+  height: auto;
+  margin-left: -235px;
+}
+
+.description {
+  margin-left: 10px;
+  margin-right: 10px;
+  text-align: center;
+}
+
+.description h1 {
+  font-size: 35px;
+  font-weight: bolder;
+  margin-bottom: 2px;
+}
+
+.description h2 {
+  font-size: 25px;
+  font-weight: bold;
+}
+
+.text-description {
+  font-size: 12px;
+  margin-bottom: -30px;
+}
+
+.conoce-mas {
+  font-size: 18px;
+  text-decoration: underline;
+  margin-top: 50px;
+}
+
+.img-new-collection {
+  margin-top: 20px;
+  margin-left: -159px;
+  margin-right: 115px;
+}
+
+@media (min-width: 768px) {
+
+}
+
+@media (min-width: 1200px) {
+
+}
+
+@media (max-width: 530px) {
+  .main-header-top-bar {
+    flex-direction: column;
+    align-items: center;
+    padding-left: -30px;
+  }
+  /* .logo {
+    margin-bottom: 10px;
+  } */
+  /* .search-bar {
+    margin-top: 10px;
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+  .search-bar input[type="search"] {
+    width: 100%;
+  } */
+  /* .search-button {
+    position: static;
+    width: 30px;
+    margin-left: 5px;
+  } */
+  /* .left-navbar {
+    margin-top: 10px;
+    justify-content: center;
+  } */
+  /* .section-products {
+    margin-top: 10px;
+  }
+  .sport-home,
+  .formal-home {
+    margin-right: 5px;
+    margin-left: 5px;
+    margin-bottom: 5px;
+  }
+  .product-home {
+    margin-bottom: 10px;
+  }
+
+  .new-collection{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .new-collection img {
+    width: 100%;
+    height: auto;
+  }
+  
+  .description {
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+  .description h1 {
+    font-size: 25px;
+  }
+  .description h2 {
+    font-size: 18px;
+  }
+  .conoce-mas {
+    margin-top: 40px;
+  }
+  .img-new-collection {
+    margin-top: 20px;
+    margin-left: 0;
+    margin-right: 0;
+  } */
+  /* .control-formulario {
+    margin-top: 10px;
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+  .about, .help {
+    margin-left: 10px;
+  } */
+}
+
+.principal {
+  width: 100%;
+  height: 30vh;
+  display: flex;
+  flex-direction: row;
+  margin-left: auto; 
+  /* margin-right:40%; */
+  font-size: 0.5rem;
+  align-items: center;
+  justify-content: center;
+  margin-top: 5rem;
+  margin-bottom: 3rem;
+}
+
+.ingreso {
+  margin: 30px;
+  border: thin solid gray;
+  padding: 20px;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(251, 235, 228, 0.1); 
+}
+
+.ingreso .iniciar-sesion {
+  width: 100%;
+  margin: 0;
+  margin-top: 0.8em;
+}
+
+
+
+.ingreso .ancho-mail,
+.ingreso .ancho-pass {
+  width: 100%;
+  margin: 0;
+  background-color: transparent; /* Cambio: Fondo transparente */
+  margin-top: .8em;
+  
+}
+
+.ingreso .ancho-mail::placeholder, .ingreso .ancho-pass::placeholder{
+  color:gray;
+}
+
+.ingreso h4 button {
+  display: flex;
+  justify-content: center;
+}
+
+.olvidaste{
+  color:black;
+  font-size: 10px;
+  font: weight 10000px;;
+}
+
+.login{
+  color:black;
+  font-weight: bolder;
+  font-size: 12px;
+}
+
+.login h2{
+  color:black;
+  font-weight: bold;
+  font-size: 20px;
+}
+
+.about h3{
+  color:white;
+}
+
+.about-trend p .last-section h3{
+  color:white;
+}
+
+.last{
+  color: white;
+  /* margin-top: 10rem; */
+}
+
+
+
+
+
+
+
+
