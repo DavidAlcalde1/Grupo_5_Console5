@@ -12,7 +12,7 @@
         <% products.forEach(product => { %>
         <li>
             
-                <h2><%= product.id %> <%= product.name %></h2>
+                <h2><%= product.id %> <%= product.name %> <%= product.description %> <%= product.price %> <%= product.quantity %> <%= product.category %> <%= product.size %> <%= product.color %></h2>
                 <img
                 class="imageList"
                 src="images/<%= product.image %>"

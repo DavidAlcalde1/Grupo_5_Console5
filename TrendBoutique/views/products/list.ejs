@@ -13,15 +13,13 @@
         <ul>
           <% products.forEach(product => { %>
           <li>
-            <% if (true){%>
             <h2><%= product.id %> <%= product.name %></h2>
             <img class="imageList"
               src="images/<%= product.image %>"
               alt="Mi Imagen"
               width="400px"
               height="400px"/>
-              <% }; %>
-
+              />
           </li>
           <% }); %>
         </ul>

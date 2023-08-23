@@ -339,6 +339,10 @@ body {
   padding-bottom: 5px;
 } */
 
+a {
+  text-decoration: none;
+}
+
 @media (max-width: 768px) {
   .main-header-top-bar {
     flex-direction: column;
