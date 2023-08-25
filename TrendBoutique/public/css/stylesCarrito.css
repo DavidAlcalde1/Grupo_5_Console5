@@ -253,6 +253,10 @@ body {
   margin-top: 35px;
 }
 
+main {
+  margin-bottom: 70px;
+}
+
 footer {
   margin-top: 180px;
   background-color: #f4f3f4;
