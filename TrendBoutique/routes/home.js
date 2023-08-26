@@ -9,12 +9,7 @@ router.get('/', (req, res)=> {
 });
 
 
-function irCategoria (cat){
-    const boton = document.getElementsById(id);
-    alert(cat);
-} 
 
 
-
-module.exports = router , irCategoria;
+module.exports = router;
 
