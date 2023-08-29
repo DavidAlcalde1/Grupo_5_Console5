@@ -2,12 +2,12 @@
 <html>
 <head>
     <title>Crear Producto</title>
-    <link rel="stylesheet" href="stylesCreate.css">
+    <link rel="stylesheet" href="/css/stylesCreate.css">
 </head>
 <body>
     <h1>Crear Producto</h1>
 
-    <form id="productForm">
+    <form id="productForm" action="/products/list" method="POST" enctype="multipart/form-data" >
         <main class="main">
             <div class="column1">
                 <label for="nombre">Nombre:</label>
@@ -49,8 +49,8 @@
             </div>
         </main>
         <div>
-            <button type="button" id="crear">Crear Producto</button>
-            <button type="button" id="eliminar">Eliminar Producto</button>
+            <button type="submit" id="crear">Crear Producto</button>
+            <button type="delete" id="eliminar">Eliminar Producto</button>
         </div>
     </form>
 

@@ -1,11 +1,140 @@
-[{"id":1,"name":"Blazer Formal","description":"Blazer para uso formal, puede ser usado en reuniones","price":50,"quantity":1,"category":"Formal","image":"blazer-formal.jpg","size":"M","color":"Blanco y negro"},
-{"id":2,"name":"Cookies - Assorted","description":"sem mauris laoreet ut rhoncus aliquet pulvinar sed nisl nunc rhoncus dui vel","price":53.56,"quantity":2,"category":"Formal","image":"jacket-cassual.jpg","size":"L","color":"Green"},
-{"id":3,"name":"Bar Bran Honey Nut","description":"vulputate nonummy maecenas tincidunt lacus at velit vivamus vel nulla eget eros elementum pellentesque quisque porta volutpat erat quisque erat","price":18.11,"quantity":3,"category":"Formal","image":"jeans-cassual.jpg","size":"M","color":"Blue"},
-{"id":4,"name":"Mustard - Individual Pkg","description":"nunc purus phasellus in felis donec semper sapien a libero nam dui proin leo odio porttitor id consequat","price":26.89,"quantity":4,"category":"Sport","image":"sport1.jpg","size":"M","color":"Blue"},
-{"id":5,"name":"Beef - Salted","description":"consequat varius integer ac leo pellentesque ultrices mattis odio donec vitae nisi nam ultrices libero","price":55.87,"quantity":5,"category":"Sport","image":"sport2.jpg","size":"XS","color":"Indigo"},
-{"id":6,"name":"Lumpfish Black","description":"nec sem duis aliquam convallis nunc proin at turpis a pede posuere nonummy","price":90.65,"quantity":6,"category":"Sport","image":"sport3.jpg","size":"M","color":"Violet"},
-{"id":7,"name":"Bread - Bagels, Plain","description":"etiam pretium iaculis justo in hac habitasse platea dictumst etiam faucibus cursus","price":3.64,"quantity":7,"category":"Casual","image":"pantalon-formal.jpg","size":"M","color":"Indigo"},
-{"id":8,"name":"Walkers Special Old Whiskey","description":"aenean auctor gravida sem praesent id massa id nisl venenatis","price":28.35,"quantity":8,"category":"Casual","image":"pink-dress.jpg","size":"XS","color":"Puce"},
-{"id":9,"name":"Sea Bass - Fillets","description":"congue elementum in hac habitasse platea dictumst morbi vestibulum velit id pretium iaculis diam erat fermentum justo","price":24.79,"quantity":9,"category":"Casual","image":"saco-cassual.jpg","size":"XL","color":"Teal"},
-{"id":10,"name":"Beef - Top Butt","description":"accumsan odio curabitur convallis duis consequat dui nec nisi volutpat eleifend donec ut dolor morbi vel lectus in quam","price":10.97,"quantity":10,"category":"","image":"saco-sport.jpg","size":"3XL","color":"Red"}
+[
+    {
+        "id": 1,
+        "name": "Blazer Formal",
+        "description": "Blazer para uso formal, puede ser usado en reuniones",
+        "price": 50,
+        "quantity": 1,
+        "category": "Formal",
+        "image": "blazer-formal.jpg",
+        "size": "M",
+        "color": "Blanco y negro"
+    },
+    {
+        "id": 2,
+        "name": "Cookies - Assorted",
+        "description": "sem mauris laoreet ut rhoncus aliquet pulvinar sed nisl nunc rhoncus dui vel",
+        "price": 53.56,
+        "quantity": 2,
+        "category": "Formal",
+        "image": "jacket-cassual.jpg",
+        "size": "L",
+        "color": "Green"
+    },
+    {
+        "id": 3,
+        "name": "Bar Bran Honey Nut",
+        "description": "vulputate nonummy maecenas tincidunt lacus at velit vivamus vel nulla eget eros elementum pellentesque quisque porta volutpat erat quisque erat",
+        "price": 18.11,
+        "quantity": 3,
+        "category": "Formal",
+        "image": "jeans-cassual.jpg",
+        "size": "M",
+        "color": "Blue"
+    },
+    {
+        "id": 4,
+        "name": "Mustard - Individual Pkg",
+        "description": "nunc purus phasellus in felis donec semper sapien a libero nam dui proin leo odio porttitor id consequat",
+        "price": 26.89,
+        "quantity": 4,
+        "category": "Sport",
+        "image": "sport1.jpg",
+        "size": "M",
+        "color": "Blue"
+    },
+    {
+        "id": 5,
+        "name": "Beef - Salted",
+        "description": "consequat varius integer ac leo pellentesque ultrices mattis odio donec vitae nisi nam ultrices libero",
+        "price": 55.87,
+        "quantity": 5,
+        "category": "Sport",
+        "image": "sport2.jpg",
+        "size": "XS",
+        "color": "Indigo"
+    },
+    {
+        "id": 6,
+        "name": "Lumpfish Black",
+        "description": "nec sem duis aliquam convallis nunc proin at turpis a pede posuere nonummy",
+        "price": 90.65,
+        "quantity": 6,
+        "category": "Sport",
+        "image": "sport3.jpg",
+        "size": "M",
+        "color": "Violet"
+    },
+    {
+        "id": 7,
+        "name": "Bread - Bagels, Plain",
+        "description": "etiam pretium iaculis justo in hac habitasse platea dictumst etiam faucibus cursus",
+        "price": 3.64,
+        "quantity": 7,
+        "category": "Casual",
+        "image": "pantalon-formal.jpg",
+        "size": "M",
+        "color": "Indigo"
+    },
+    {
+        "id": 8,
+        "name": "Walkers Special Old Whiskey",
+        "description": "aenean auctor gravida sem praesent id massa id nisl venenatis",
+        "price": 28.35,
+        "quantity": 8,
+        "category": "Casual",
+        "image": "pink-dress.jpg",
+        "size": "XS",
+        "color": "Puce"
+    },
+    {
+        "id": 9,
+        "name": "Sea Bass - Fillets",
+        "description": "congue elementum in hac habitasse platea dictumst morbi vestibulum velit id pretium iaculis diam erat fermentum justo",
+        "price": 24.79,
+        "quantity": 9,
+        "category": "Casual",
+        "image": "saco-cassual.jpg",
+        "size": "XL",
+        "color": "Teal"
+    },
+    {
+        "id": 10,
+        "name": "Beef - Top Butt",
+        "description": "accumsan odio curabitur convallis duis consequat dui nec nisi volutpat eleifend donec ut dolor morbi vel lectus in quam",
+        "price": 10.97,
+        "quantity": 10,
+        "category": "",
+        "image": "saco-sport.jpg",
+        "size": "3XL",
+        "color": "Red"
+    },
+    {
+        "id": null,
+        "image": "x"
+    },
+    {
+        "id": null,
+        "image": "x"
+    },
+    {
+        "id": null,
+        "image": "x"
+    },
+    {
+        "id": null,
+        "image": "x"
+    },
+    {
+        "id": null,
+        "image": "x"
+    },
+    {
+        "id": null,
+        "image": "x"
+    },
+    {
+        "id": 11,
+        "image": "x"
+    }
 ]
