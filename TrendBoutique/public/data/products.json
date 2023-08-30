@@ -110,31 +110,11 @@
         "color": "Red"
     },
     {
-        "id": null,
-        "image": "x"
-    },
-    {
-        "id": null,
-        "image": "x"
-    },
-    {
-        "id": null,
-        "image": "x"
-    },
-    {
-        "id": null,
-        "image": "x"
-    },
-    {
-        "id": null,
-        "image": "x"
-    },
-    {
-        "id": null,
-        "image": "x"
-    },
-    {
         "id": 11,
-        "image": "x"
+        "image": "saco-sport.jpg"
+    },
+    {
+        "id": 12,
+        "image": "saco-sport.jpg"
     }
 ]

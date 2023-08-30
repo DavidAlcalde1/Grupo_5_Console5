@@ -16,7 +16,7 @@ router.get('/products/create', (req,res) => {
     res.render('../views/products/create.ejs');
 });
 
-router.post('/products/list', controllerProducts.saveNew);
+router.post('/products/create', controllerProducts.saveNew);
 
 router.get('/products/detail', controllerProducts.detalle);
 
