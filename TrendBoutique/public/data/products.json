@@ -111,10 +111,46 @@
     },
     {
         "id": 11,
-        "image": "saco-sport.jpg"
+        "name": "polera",
+        "description": "polera para dama",
+        "price": "78",
+        "quantity": "8",
+        "size": "M",
+        "color": "negro",
+        "category": "sport",
+        "image": "product-1693367477258.jpeg"
     },
     {
         "id": 12,
-        "image": "saco-sport.jpg"
+        "name": "blazer",
+        "description": "Blazer para dama",
+        "price": "100",
+        "quantity": "5",
+        "size": "S",
+        "color": "rosado",
+        "category": "casual",
+        "image": "product-1693367858543.jpeg"
+    },
+    {
+        "id": 13,
+        "name": "leggins",
+        "description": "Leggins para dama",
+        "price": "30",
+        "quantity": "7",
+        "size": "M",
+        "color": "NEGRO",
+        "category": "casual",
+        "image": "product-1693368187722.jpeg"
+    },
+    {
+        "id": 14,
+        "name": "jeans",
+        "description": "jeans para dama",
+        "price": "30",
+        "quantity": "7",
+        "size": "M",
+        "color": "NEGRO",
+        "category": "casual",
+        "image": "product-1693368348500.jpeg"
     }
 ]
