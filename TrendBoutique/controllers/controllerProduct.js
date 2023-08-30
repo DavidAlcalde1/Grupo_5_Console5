@@ -24,7 +24,7 @@ const controllerProducts = {
     
     saveNew: (req, res) => {
       let productos = fs.readFileSync(path.resolve(__dirname,'../public/data/products.json'));// de JSON a objeto
-      
+     
       productos = JSON.parse(productos); //se convierte en objeo literal
       let arr = [];
       productos.forEach((x)=>{ // recorrer los productos y pushear sus ids
@@ -32,6 +32,7 @@ const controllerProducts = {
         console.log('id = '+ x.id);
       });
       let maxId = Math.max(...arr);
+      debugger
       maxId = maxId + 1;
       console.log(maxId);
       let producto = {
@@ -44,12 +45,12 @@ const controllerProducts = {
           size : req.body.talla,
           color : req.body.color,
           category : req.body.categoria,
-          image : 'x'
+          image : req.file.filename
         };
-        console.log(producto);
+      
       productos.push(producto);
-      productos = JSON.stringify(productos, null, 4); //convertir de Objeto literal a texto
-      fs.writeFileSync(path.resolve(__dirname,'../public/data/products.json'), productos);
+      let newList = JSON.stringify(productos, null, 4); //convertir de Objeto literal a texto
+      fs.writeFileSync(path.resolve(__dirname,'../public/data/products.json'), newList);
       
       res.redirect('/list');
     },

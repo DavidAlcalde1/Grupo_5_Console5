@@ -9,14 +9,14 @@ const rutaLogin = require('./routes/login');
 const rutaRegistro = require('./routes/registro');
 const rutaProducts = require('./routes/products');
 
-    
 const app = express();
+    
+app.use(express.static('public'));
 app.use(express.urlencoded({ extended: false}));
 app.use(express.json());
 
 // const router = express.Router();
 
-app.use(express.static('public'));
 
 app.set('view engine', 'ejs');
 app.use('/', rutaHome);

@@ -110,31 +110,102 @@
         "color": "Red"
     },
     {
-        "id": null,
-        "image": "x"
-    },
-    {
-        "id": null,
-        "image": "x"
-    },
-    {
-        "id": null,
-        "image": "x"
-    },
-    {
-        "id": null,
-        "image": "x"
-    },
-    {
-        "id": null,
-        "image": "x"
-    },
-    {
-        "id": null,
-        "image": "x"
-    },
-    {
         "id": 11,
-        "image": "x"
+        "name": "polera",
+        "description": "polera para dama",
+        "price": "78",
+        "quantity": "8",
+        "size": "M",
+        "color": "negro",
+        "category": "sport",
+        "image": "product-1693367477258.jpeg"
+    },
+    {
+        "id": 12,
+        "name": "blazer",
+        "description": "Blazer para dama",
+        "price": "100",
+        "quantity": "5",
+        "size": "S",
+        "color": "rosado",
+        "category": "casual",
+        "image": "product-1693367858543.jpeg"
+    },
+    {
+        "id": 13,
+        "name": "leggins",
+        "description": "Leggins para dama",
+        "price": "30",
+        "quantity": "7",
+        "size": "M",
+        "color": "NEGRO",
+        "category": "casual",
+        "image": "product-1693368187722.jpeg"
+    },
+    {
+        "id": 14,
+        "name": "jeans",
+        "description": "jeans para dama",
+        "price": "30",
+        "quantity": "7",
+        "size": "M",
+        "color": "NEGRO",
+        "category": "casual",
+        "image": "product-1693368348500.jpeg"
+    },
+    {
+        "id": 15,
+        "name": "blazer",
+        "description": "Blazer para dama",
+        "price": "84",
+        "quantity": "6",
+        "size": "M",
+        "color": "gris",
+        "category": "formal",
+        "image": "product-1693368939523.jpeg"
+    },
+    {
+        "id": 16,
+        "name": "blazer",
+        "description": "Blazer para dama",
+        "price": "84",
+        "quantity": "6",
+        "size": "M",
+        "color": "gris",
+        "category": "formal",
+        "image": "product-1693369001711.jpeg"
+    },
+    {
+        "id": 17,
+        "name": "blazer",
+        "description": "Blazer para dama",
+        "price": "84",
+        "quantity": "6",
+        "size": "M",
+        "color": "gris",
+        "category": "formal",
+        "image": "product-1693369043485.jpeg"
+    },
+    {
+        "id": 18,
+        "name": "blazer",
+        "description": "Blazer para dama",
+        "price": "84",
+        "quantity": "6",
+        "size": "M",
+        "color": "gris",
+        "category": "formal",
+        "image": "product-1693369061712.jpeg"
+    },
+    {
+        "id": 19,
+        "name": "polera",
+        "description": "Blazer para dama",
+        "price": "84",
+        "quantity": "6",
+        "size": "M",
+        "color": "gris",
+        "category": "formal",
+        "image": "product-1693369115861.jpeg"
     }
 ]

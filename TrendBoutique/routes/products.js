@@ -1,9 +1,21 @@
 const express = require('express');
 const path = require('path');
 const router = express.Router();
+const multer = require('multer');
 
 const productsData = require('../public/data/products.json'); // Asegúrate de tener acceso a los datos de productos
 const controllerProducts = require('../controllers/controllerProduct');
+
+const storage = multer.diskStorage({
+    destination: function (req, file, cb) {
+        cb(null, path.resolve(__dirname, '../public/images'))
+    },
+    filename: function (req, file, cb) {
+        cb(null, 'product-' + Date.now() + path.extname(file.originalname))
+    }
+});
+
+const upload = multer({storage: storage})
 
 // router,get('/', controllerProducts.listar);
 // router,get('/', controllerProducts.detalle);
@@ -16,7 +28,7 @@ router.get('/products/create', (req,res) => {
     res.render('../views/products/create.ejs');
 });
 
-router.post('/products/list', controllerProducts.saveNew);
+router.post('/products/create', upload.single('imagen'), controllerProducts.saveNew);
 
 router.get('/products/detail', controllerProducts.detalle);
 
