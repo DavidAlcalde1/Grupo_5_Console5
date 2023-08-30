@@ -16,9 +16,11 @@
   rel="stylesheet"
   href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"/>
   
-<%- include('./partials/header.ejs') %>
+
 </head>
+ 
 <body>
+  <%- include('./partials/header.ejs') %>
   <main>
   <form id="registroForm">
     <h1 class="title">Registrate</h1>
@@ -48,7 +50,7 @@
   </form>
   <script src="script.js"></script>
   </main>
-  
+  <%- include('./partials/footer.ejs') %> 
 </body>
-<%- include('./partials/footer.ejs') %>
+
 </html>
