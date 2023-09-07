@@ -35,7 +35,7 @@ router.get('/detail', controllerProducts.detalle);
 
 router.get('/:id/edit', controllerProducts.edit);
 
-router.put('/:id/edit', upload.single('imagen'), controllerProducts.update)
+router.post('/:id/edit', upload.single('imagen'), controllerProducts.update)
 
 router.get('/delete', controllerProducts.delete);
 

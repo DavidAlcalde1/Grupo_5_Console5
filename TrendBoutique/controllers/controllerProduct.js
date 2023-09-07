@@ -68,6 +68,7 @@ const controllerProducts = {
       // let producto = products.find((item) => {
       //   return item.id === id;
       // });
+      let producto;
       let productUpdate = productos.map(producto => {
         if(producto.id === id){
           return({
@@ -80,11 +81,11 @@ const controllerProducts = {
         }
         return producto;
       })
-
-      let newList = JSON.stringify(productos, null, 4); //convertir de Objeto literal a texto
+      console.log(producto);
+      let newList = JSON.stringify(productUpdate, null, 4); //convertir de Objeto literal a texto
       fs.writeFileSync(path.resolve(__dirname,'../public/data/products.json'), newList);
 
-      res.redirect()
+      res.send('EDITADO')
     },
 
     delete: (req,res) => {
