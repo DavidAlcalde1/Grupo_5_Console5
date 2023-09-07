@@ -32,7 +32,7 @@ const controllerProducts = {
         console.log('id = '+ x.id);
       });
       let maxId = Math.max(...arr);
-      debugger
+     
       maxId = maxId + 1;
       console.log(maxId);
       let producto = {
@@ -55,8 +55,38 @@ const controllerProducts = {
       res.redirect('/list');
     },
     edit: (req,res) => {
-        res.render('products/:id/edit')
+      const miId = parseInt(req.params.id);
+      let producto = products.find((item) => {
+        return item.id === miId;
+      });
+      res.render("products/edit", { producto });
     },
+
+    update: (req,res)=>{
+      let productos = fs.readFileSync(path.resolve(__dirname,'../public/data/products.json'));
+      const id = parseInt(req.params.id);
+      // let producto = products.find((item) => {
+      //   return item.id === id;
+      // });
+      let productUpdate = productos.map(producto => {
+        if(producto.id === id){
+          return({
+            id:id,
+            name:req.body.name,
+            description : req.body.descripcion,
+            price: req.body.price,
+            // image: req.file.filename })
+          });
+        }
+        return producto;
+      })
+
+      let newList = JSON.stringify(productos, null, 4); //convertir de Objeto literal a texto
+      fs.writeFileSync(path.resolve(__dirname,'../public/data/products.json'), newList);
+
+      res.redirect()
+    },
+
     delete: (req,res) => {
         res.render('products/delete')
     },

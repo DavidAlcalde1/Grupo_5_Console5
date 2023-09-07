@@ -30,9 +30,12 @@ router.get('/create', (req,res) => {
 
 router.post('/create', upload.single('imagen'), controllerProducts.saveNew);
 
+
 router.get('/detail', controllerProducts.detalle);
 
 router.get('/:id/edit', controllerProducts.edit);
+
+router.put('/:id/edit', upload.single('imagen'), controllerProducts.update)
 
 router.get('/delete', controllerProducts.delete);
 
