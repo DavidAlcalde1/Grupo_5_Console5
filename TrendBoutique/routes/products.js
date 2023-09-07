@@ -24,17 +24,17 @@ const upload = multer({storage: storage})
 
 router.get('/list', controllerProducts.listar);
 
-router.get('/products/create', (req,res) => {
+router.get('/create', (req,res) => {
     res.render('../views/products/create.ejs');
 });
 
-router.post('/products/create', upload.single('imagen'), controllerProducts.saveNew);
+router.post('/create', upload.single('imagen'), controllerProducts.saveNew);
 
-router.get('/products/detail', controllerProducts.detalle);
+router.get('/detail', controllerProducts.detalle);
 
-router.get('/products/:id/edit', controllerProducts.edit);
+router.get('/:id/edit', controllerProducts.edit);
 
-router.get('/products/delete', controllerProducts.delete);
+router.get('/delete', controllerProducts.delete);
 
 // router.post('/products', (req, res) => {
 //     const newProduct = req.body; // Los datos del nuevo producto enviados desde el formulario

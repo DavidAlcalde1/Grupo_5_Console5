@@ -24,7 +24,7 @@ app.use('/', rutaCarrito);
 app.use('/', rutaDetalle);
 app.use('/', rutaLogin);
 app.use('/', rutaRegistro);
-app.use('/', rutaProducts);
+app.use('/products', rutaProducts);
 
 
 // app.use(router);

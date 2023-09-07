@@ -1,12 +1,11 @@
 const express = require('express');
 const path = require('path');
 const router = express.Router();
+const controllerHome = require('../controllers/controllerHome');
 
 
 
-router.get('/', (req, res)=> {
-    res.render('home')
-});
+router.get('/', controllerHome.home);
 
 
 
