@@ -1,9 +1,17 @@
 <!doctype html>
 <html lang="es">
-  <%- include('../partials/head.ejs') %>    
+  <link rel="stylesheet" type="text/css" href="/css/stylesshome.css">
+  <link rel="stylesheet" type="text/css" href="/css/stylesHeader.css">
+  <link rel="stylesheet" type="text/css" href="/css/stylesFooter.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+  <script
+  src="https://kit.fontawesome.com/2c7738e51c.js"
+  crossorigin="anonymous"
+></script>
+  <%- include('../partials/header.ejs') %>    
 <body>
     <main class="container-fluid">
-      <%- include('../partials/navBar.ejs') %>
+      
       <!--Administrador de productos-->
       <br>
       <section class="row">
@@ -25,13 +33,13 @@
               </tr>
             </thead>
             <tbody>
-              <% motos.forEach(moto => { %>
+              <% products.forEach(product => { %>
               <tr>
-                <td><%= moto.id%> </td>
-                <td><%= moto.nombre%> </td>
-                <td><a href="/administrar/detail/<%= moto.id%> "> <ion-icon name="eye-outline"></ion-icon></a></td>
-                <td><a href="/administrar/edit/<%= moto.id%> "> <ion-icon name="pencil-outline"></ion-icon></a></td>
-                <td><a href="/administrar/delete/<%= moto.id%>"><ion-icon name="trash-outline"></ion-icon></a></td>
+                <td><%= product.id%> </td>
+                <td><%= product.name%> </td>
+                <td><a href="../admin/detail/<%= product.id%> "> <ion-icon name="eye-outline"></ion-icon></a></td>
+                <td><a href="../admin/edit/<%= product.id%> "> <ion-icon name="pencil-outline"></ion-icon></a></td>
+                <td><a href="../admin/delete/<%= product.id%>"><ion-icon name="trash-outline"></ion-icon></a></td>
               </tr>
               <% }); %>
             </tbody>
@@ -41,4 +49,5 @@
       <script src="https://unpkg.com/ionicons@5.2.3/dist/ionicons.js"></script>
     </main>
   </body>
+ 
 </html>

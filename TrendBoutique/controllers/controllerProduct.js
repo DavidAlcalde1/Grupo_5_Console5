@@ -56,10 +56,10 @@ const controllerProducts = {
     },
     edit: (req,res) => {
       const miId = parseInt(req.params.id);
-      let producto = products.find((item) => {
+      let product = products.find((item) => {
         return item.id === miId;
       });
-      res.render("products/edit", { producto });
+      res.render("products/edit.ejs", { product });
     },
 
     update: (req,res)=>{
@@ -90,6 +90,15 @@ const controllerProducts = {
 
     delete: (req,res) => {
         res.render('products/delete')
+    },
+
+    admin: (req, res) => {
+      if (typeof req.query.category === 'string') {
+        let filtro = products.filter((item) => {
+          return item.category === req.query.category
+        })
+        res.render('products/admin', {products: filtro})
+      } else res.render('products/admin', {products})    
     },
 
 }

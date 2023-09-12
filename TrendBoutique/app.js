@@ -8,6 +8,7 @@ const rutaDetalle = require('./routes/detalle');
 const rutaLogin = require('./routes/login');
 const rutaRegistro = require('./routes/registro');
 const rutaProducts = require('./routes/products');
+const adminRoutes = require('./routes/admin');
 
 const app = express();
     
@@ -15,6 +16,7 @@ app.use(express.static('public'));
 app.use(express.urlencoded({ extended: false}));
 app.use(express.json());
 app.use(methodOverride('_method'));
+app.use(adminRoutes);
 // const router = express.Router();
 
 
@@ -33,8 +35,8 @@ app.use('/products', rutaProducts);
 
 module.exports = {
     index: (req,res)=>{
-        let motos = JSON.parse(fs.readFileSync(path.resolve(__dirname,'../database/motos.json')));
-        res.render(path.resolve(__dirname,'../views/admin/administrar'),{motos});
+        let products = JSON.parse(fs.readFileSync(path.resolve(__dirname,'/data/products.json')));
+        res.render(path.resolve(__dirname,'../views/admin/administrar'),{products});
     },
     create: (req,res)=>{
         res.render(path.resolve(__dirname,'../views/admin/create'));

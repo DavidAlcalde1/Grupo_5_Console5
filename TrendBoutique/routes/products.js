@@ -25,7 +25,7 @@ const upload = multer({storage: storage})
 router.get('/list', controllerProducts.listar);
 
 router.get('/create', (req,res) => {
-    res.render('../views/products/create.ejs');
+    res.render('products/create.ejs');
 });
 
 router.post('/create', upload.single('imagen'), controllerProducts.saveNew);
@@ -35,9 +35,13 @@ router.get('/detail', controllerProducts.detalle);
 
 router.get('/:id/edit', controllerProducts.edit);
 
-router.post('/:id/edit', upload.single('imagen'), controllerProducts.update)
+router.put('/edit/:id', upload.single('imagen'), controllerProducts.update)
 
 router.get('/delete', controllerProducts.delete);
+
+router.get('/admin', controllerProducts.admin);
+
+
 
 // router.post('/products', (req, res) => {
 //     const newProduct = req.body; // Los datos del nuevo producto enviados desde el formulario
