@@ -21,9 +21,10 @@ app.use(methodOverride('_method'));
 
 //Creando variable para llamar a la ruta products
 const productsRoute = require('./routes/products')
+const homeRoute = require('./routes/home');
 
 //Le damos utilidad a la constante productsRoutes desde Express (app)
 app.use(productsRoute);
-console.log(productsRoute);
+app.use(homeRoute);
 app.listen(3000, ()=> console.log('Servidor Corriendo'));
 
