@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<link rel="stylesheet" type="text/css" href="/css/stylesCarrito.css">
+<link rel="stylesheet" type="text/css" href="/css/stylesHeader.css">
+<link rel="stylesheet" type="text/css" href="/css/stylesFooter.css">
+<link rel="stylesheet" type="text/css" href="/css/stylesshome.css">
+<link
+  rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+/>
+<%- include('./partials/header.ejs') %>
+
+<body>
+  <div class="contenedorWa">
+    <a class="btnWa" tarjet="_blank" onclick="gtag_report_conversion_wa();" href="https://api.whatsapp.com/send?phone=51946559236&text=Estoy%20interesado%20en%20sus%20productos.">
+        <i class="fab fa-whatsapp my-float"></i>
+    </a> 
+  </div>
+  <!-- <header class="main-header">
+    <div class="main-header-top-bar">
+      <div>
+        <img class="logo" src="/images/logo-trend-boutique.svg" alt="Logo Trend Boutique"
+          style="width: 150px; height: 100px;">
+      </div>
+      <div class="search-bar">
+        <button class="search-button" type="submit"><i class="fa-solid fa-magnifying-glass"></i></button>
+        <input class="search-products" type="text" placeholder="Encontrar Productos">
+      </div>
+    </div>
+    
+    
+    <nav class="navigation-bar">
+      <ul class="left-navbar">
+        <li class="home"><a href="/">Home</a></li>
+        <li class="register"><a href="/register">Regístrate</a></li>
+        <li class="login"><a href="/login">Login</a></li>
+        <li class="login"><a href="/detalle">Detalle</a></li>
+        <li class="car"><a href="/"><i class="fas fa-cart-shopping"></i></a></li>
+      </ul>
+    </nav>
+
+ 
+</header> -->
+
+  <main>
+
+    <section class="product-shop">
+
+      <div class="product-selected">
+        <img class="dress-car" src="/images/pink-dress.jpg" style="width: 200px; height: 300px;">
+        <div class="product-details">
+        <h1 class="title-productSelected">Vestido Body Rosado Trend Boutique</h1>
+        <p class="product-description">Vestido Body de seda Rosado.<br> 
+            Para eventos formales y/o especiales,<br>
+            collección especial de Trend Boutique.
+         </p>
+      </div>
+
+
+      <div class="shipping">
+        <h1 class="shipping-title">Opciones de envío</h1>
+        <div class="shipping-options"><i class="fa-solid fa-truck-fast"></i><p class="shipping-method">Cuenta con método de envíos</p><br></div>
+      </div>
+
+      <div class="price">
+        <h1 class="price-title">Precio</h1>
+        <p class="total-price">$200 USD</p>
+      </div>
+
+      <div class="quantity">
+        <h1 class="quantity-title">Cantidad</h1>
+        <div class="number-box">
+          <span class="number">0</span>
+        </div>
+        
+      </div>
+
+    </section>
+  </main>
+  <!-- Formulario -->
+  <%- include('./partials/footer.ejs') %>
+</body>
+
+</html>

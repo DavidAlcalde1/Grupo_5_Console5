@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/css/stylesList.css" />
+    <script
+      src="https://kit.fontawesome.com/2c7738e51c.js"
+      crossorigin="anonymous"
+    ></script>
+    <title>Lista de Productos</title>
+  </head>
+  <link rel="stylesheet" type="text/css" href="/css/stylesshome.css">
+  <link rel="stylesheet" type="text/css" href="/css/stylesHeader.css">
+  <link rel="stylesheet" type="text/css" href="/css/stylesFooter.css">
+  <%- include('../partials/header.ejs') %>
+  <body>
+    <h1>Lista de Productos</h1>
+    <div class="listProducts">
+      
+        <ul>
+          <% products.forEach(product => { %>
+          <li>
+
+            <!-- <% if (true){ %> -->
+
+
+            <h2><%= product.id %> <%= product.name %></h2>
+            <a href="/products/<%=product.id%>/edit">
+            <img class="imageList"
+              src="/images/<%= product.image %>"
+              alt="Mi Imagen"
+              width="400px"
+              height="400px"/>
+            </a>
+              <!-- <% }; %> -->
+            <a href="./detail/<%=product.id%>">Ver detalle</a>
+
+          </li>
+          <% }); %>
+        </ul>
+     
+    </div>
+  </body>
+  <%- include('../partials/footer.ejs') %>
+</html>

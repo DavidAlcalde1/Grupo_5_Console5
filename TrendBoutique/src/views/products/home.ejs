@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+  <meta charset="UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta
+  name="viewport"
+  content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"
+/>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link
+  href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap"
+  rel="stylesheet"
+/>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<script
+  src="https://kit.fontawesome.com/2c7738e51c.js"
+  crossorigin="anonymous"
+></script>
+<!-- Enlace al CDN de Font Awesome -->
+<link
+  rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+/>
+
+<link rel="stylesheet" type="text/css" href="/css/stylesshome.css">
+<link rel="stylesheet" type="text/css" href="/css/stylesHeader.css">
+<link rel="stylesheet" type="text/css" href="/css/stylesFooter.css">
+<%- include('./partials/header.ejs') %>
+
+<body>
+  <div class="contenedorWa">
+    <a class="btnWa" tarjet="_blank" onclick="gtag_report_conversion_wa();" href="https://api.whatsapp.com/send?phone=51946559236&text=Estoy%20interesado%20en%20sus%20productos.">
+        <i class="fab fa-whatsapp my-float"></i>
+    </a> 
+  </div>
+  
+
+ 
+  <main>
+
+    <section class="section-products">
+
+      <div class="product-home">
+        <img class="sport-home" src="/images/sport-home.jpg" style="width: 410px; height: 600px;">
+        <div class="caption">
+          
+          <a class="categoria" id="sport" href="products/list?category=Sport" ><h1>SPORT</h1></a>
+        </div>
+      </div>
+      
+      
+      <div class="product-home">
+        <img class="cassual-home" src="/images/cassual-home.jpg" style="width: 410px; height: 600px;">
+        <div class="caption">
+          
+          <a class="categoria" id="sport" href="products/list?category=Casual" ><h1>CASSUAL</h1></a>
+        </div>
+      </div>
+      
+      <div class="product-home">
+        <img class="formal-home" src="/images/formal-home.jpg" style="width: 410px; height: 600px;">
+        <div class="caption">
+          
+          <a class="categoria" id="sport" href="products/list?category=Formal" ><h1>FORMAL</h1></a>
+        </div>
+      </div>
+
+    </section>
+
+    <section class="section-collection">
+      <div class="new-collection">
+        <img class="img-new-collection" src="/images/new-collection-home.jpg"
+          style="width: 600px; height: 410px;">
+        <div class="description">
+          <h1>TREND BOUTIQUE</h1>
+          <h2>New Collection</h2>
+          <div class="text-description">
+            <p>Inspirado en las nuevas tendencias </p>
+            <p>de la moda, reinventándonos siempre.</p>
+          </div>
+          <div class="conoce-mas">
+            <a href="products/list" style="color: black;">CATÁLOGO COMPLETO</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+  
+    <%- include('./partials/footer.ejs') %>
+    <script src="../routes/home.js"></script>
+</body>
+
+</html>
