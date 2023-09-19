@@ -1,6 +1,6 @@
 <!doctype html>
 <html lang="es">
-  <%- include('../partials/header') %>
+ 
   <body>
     <main class="container-fluid">
        
@@ -14,33 +14,41 @@
           </article>
         </section>
 
+        <!-- <h2>"../../../public/images/<%=productEdit.image%>"</h2> -->
+
         <section class="bg-home pt-4">
             <div class="container">
                 <div class="row" >
                     <div class="col-8 mx-auto bg-light ">
                         <div class="create-form">
-                            <form action="/products/edit/<%= product.id%>?_method=PUT
+                            <form action="/admin/edit/<%= productEdit.id%>?_method=PUT
                             " method="POST" enctype="multipart/form-data" >
-                                <div class="form-group">
-                                    <input type="text" class="form-control" name="nombre" placeholder="Nombre" required="required" value="<%= product.name%>">
-                                </div>	
-                                <div class="form-group">
-                                    <input type="text" class="form-control" name="descripcion" placeholder="Descripción" required="required" value="<%= product.description%>">
-                                </div>
-                                <div class="form-group">
-                                    <input type="number" class="form-control" name="precio" placeholder="Indique el precio" required="required" value="<%= product.price%>">
-                                </div>
-                                <div class="form-group">
-                                    <select  name="descuento" class="custom-select" id="validationCustom04" required>
-                                      <option disabled value="#">Seleccione un descuento"</option>
-                                      <option value="0" <%= product.descuento == 0 ? "selected" : null %>
+                            
+                            <div class="form-group">
+                                <input type="text" class="form-control" name="nombre" placeholder="Nombre" required="required" value="<%= productEdit.name%>">
+                            </div>	
+                            <div class="form-group">
+                                <input type="text" class="form-control" name="descripcion" placeholder="Descripción" required="required" value="<%= productEdit.description%>">
+                            </div>
+                            <div class="form-group">
+                                <input type="number" class="form-control" name="precio" placeholder="Indique el precio" required="required" value="<%= productEdit.price%>">
+                            </div>
+                            <div class="form-group">
+                                <select  name="descuento" class="custom-select" id="validationCustom04" required>
+                                    <option disabled value="#">Seleccione un descuento"</option>
+                                    <option value="0" <%= productEdit.descuento == 0 ? "selected" : null %>
                                         >Sin descuento</option>
-                                      <option value="15" <%= product.descuento == 15 ? "selected" : null %>>15%</option>
-                                      <option value="30" <%= product.descuento == 30 ? "selected" : null %>>30%</option>
+                                        <option value="15" <%= productEdit.descuento == 15 ? "selected" : null %>>15%</option>
+                                        <option value="30" <%= productEdit.descuento == 30 ? "selected" : null %>>30%</option>
                                     </select>
                                 </div>
                                 <!--Aquí solicito la imagen-->
+                                
+                                <div class="form-group">
+                                    <img src="/images/<%=productEdit.image%>" alt="<%=productEdit.name%>" width="500px"/>
+                                </div>	
 
+                                <button type="submit" class ="btn-img">Selccionar archivo</button>
                                 
                                 <div class="form-group mt-2">
                                     <button type="submit" class="btn btn btn-info">Actualizar</button>
