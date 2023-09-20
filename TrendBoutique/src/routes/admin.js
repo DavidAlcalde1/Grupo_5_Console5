@@ -22,7 +22,9 @@ const controllerDetail = require(path.resolve(__dirname, '..', 'controllers', 'c
 
 router.get('/admin', controllerAdmin.show);
 router.get('/admin/detail/:id', controllerDetail.show);
-router.get('/admin/edit/:id', controllerAdmin.edit)
+router.get('/admin/edit/:id', controllerAdmin.edit);
+router.put('/admin/edit/:id', controllerAdmin.update)
+
 
 
 
