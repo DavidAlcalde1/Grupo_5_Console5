@@ -30,7 +30,7 @@ const controllerAdmin = {
     //     console.log(updateProducts);
     // }
     update: (req, res) => {
-        console.log(req.body)
+        console.log('bodyupdate', req.body)
         const productId = req.params.id;
         const updatedProduct = req.body;
     
