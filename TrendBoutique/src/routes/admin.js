@@ -3,19 +3,30 @@ const router = express.Router();
 const path = require('path');
 const multer = require('multer')
 
-let storage = multer.diskStorage({
+// let storage = multer.diskStorage({
+//     destination: function (req, file, cb) {
+//         cb(null, path.resolve(__dirname, '../../public/images'));
+//     },
+//     filename: function (req, file, cb) {
+//         cb(null, 'product-' + Date.now() + path.extname(file.originalname))
+//     }
+// });
+
+// const upload = multer({ storage })
+
+//Como podemos indicar para subir el archivo name y donde guardarlo
+var storage = multer.diskStorage({
     destination: function (req, file, cb) {
-        cb(null, path.resolve(__dirname, '../../public/images'));
+        cb(null, path.resolve(__dirname, 'images'));
     },
     filename: function (req, file, cb) {
         cb(null, 'product-' + Date.now() + path.extname(file.originalname))
     }
-});
+})
 
 const upload = multer({ storage })
 
-
-const controllerAdmin = require('../controllers/controllerAdmin');
+const controllerAdmin = require(path.resolve(__dirname, '..', 'controllers', 'controllerAdmin')); //'../controllers/controllerAdmin'
 const controllerDetail = require(path.resolve(__dirname, '..', 'controllers', 'controllerProducts'));
 
 
