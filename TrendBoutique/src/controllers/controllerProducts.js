@@ -19,7 +19,6 @@ module.exports = {
             }
             
         });
-        console.log(products);
         res.render(path.resolve(__dirname, '..', 'views', 'products', 'list'), { products });
 
     },
