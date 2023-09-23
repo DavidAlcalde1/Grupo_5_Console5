@@ -3,12 +3,15 @@ const fs = require('fs');
 
 
 
+let products = JSON.parse(fs.readFileSync(path.resolve(__dirname, '..', 'data', 'products.json')));
 const controllerHome = {
     show:  (req,res) =>{
+        console.log(req.category);
+        let filtro = products.filter((reg) => {
+            reg.category == req.params.category
+        })
 
-        let products = JSON.parse(fs.readFileSync(path.resolve(__dirname, '..', 'data', 'products.json')));
-
-        res.render(path.resolve(__dirname, '..', 'views', 'products', 'home'),{products});
+        res.render(path.resolve(__dirname, '..', 'views', 'products', 'home'),{filtro});
     }
 };
 

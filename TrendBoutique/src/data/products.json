@@ -88,27 +88,29 @@
     "color": "Puce"
   },
   {
-    "id": 9,
     "name": "Sea Bass - Fillets",
     "description": "congue elementum in hac habitasse platea dictumst morbi vestibulum velit id pretium iaculis diam erat fermentum justo",
-    "price": 24.79,
-    "quantity": 9,
-    "category": "Casual",
-    "image": "saco-cassual.jpg",
-    "size": "XL",
-    "color": "Teal"
+    "price": "24.79",
+    "size": "L",
+    "color": "Black",
+    "existencia": "4",
+    "category": "Formal",
+    "descuento": "0",
+    "oldImage": "product-1695443768103.jpg",
+    "id": "9",
+    "image": "product-1695444420087.jpg"
   },
   {
     "name": "Beef - Top Butt",
     "description": "accumsan odio curabitur convallis duis consequat dui nec nisi volutpat eleifend donec ut dolor morbi vel lectus in quam",
     "price": "10.97",
-    "tallas": "L.M,S",
-    "colores": "gris , rojo, gris",
-    "existencia": "10",
+    "size": "L.M,S",
+    "color": "blanco",
+    "quantity": "10",
     "category": "Formal",
     "descuento": "15",
-    "oldImage": "cabeza clava.jpg",
-    "image": "cabeza clava.jpg",
-    "id": "10"
+    "oldImage": "product-1695443744913.jpg",
+    "id": "10",
+    "image": "product-1695444534511.jpg"
   }
 ]

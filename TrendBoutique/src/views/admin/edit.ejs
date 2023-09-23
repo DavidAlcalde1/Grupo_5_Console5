@@ -21,7 +21,7 @@
               <div class="col-8 mx-auto bg-light ">
                 <div class="create-form">
                   <form action="/admin/edit/<%= productEdit.id%>"
-                     method="POST">
+                     method="POST" enctype="multipart/form-data">
                     <div class="form-group">
                       <input type="text" class="form-control" name="name" placeholder="Nombre" required="required"
                         value="<%= productEdit.name%>">
@@ -35,16 +35,16 @@
                         required="required" value="<%= productEdit.price%>">
                     </div>
                     <div class="form-group">
-                      <input type="text" class="form-control" name="tallas" placeholder="Tallas" required="required"
-                        value="<%= productEdit.tallas%>">
+                      <input type="text" class="form-control" name="size" placeholder="Tallas" required="required"
+                        value="<%= productEdit.size%>">
                     </div>
                     <div class="form-group">
-                      <input type="text" class="form-control" name="colores" placeholder="Colores" required="required"
-                        value="<%= productEdit.colores%>">
+                      <input type="text" class="form-control" name="color" placeholder="Colores" required="required"
+                        value="<%= productEdit.color%>">
                     </div>
                     <div class="form-group">
-                      <input type="number" class="form-control" name="existencia" placeholder="Indique la existencia"
-                        required="required" value="<%= productEdit.existencia%>">
+                      <input type="number" class="form-control" name="quantity" placeholder="Indique la existencia"
+                        required="required" value="<%= productEdit.quantity%>">
                     </div>
                     <div class="form-group">
                       <select name="category" class="custom-select" id="validationCategory" required>

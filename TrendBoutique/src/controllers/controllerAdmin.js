@@ -24,6 +24,7 @@ const controllerAdmin = {
        console.log(req.file);
     //    console.log(req.file.filename);
        console.log(req.body.oldimage);
+       console.log(req.body);
        req.body.image = req.file ? req.file.filename : req.body.oldImage; 
 
         let updateProducts = products.map(product => {

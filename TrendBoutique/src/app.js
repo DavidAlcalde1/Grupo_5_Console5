@@ -25,6 +25,7 @@ const productsRoute = require('./routes/products');
 const homeRoute = require('./routes/home');
 const loginRoute = require('./routes/login');
 const adminRoute = require('./routes/admin');
+const multer = require('multer');
 
 
 //Le damos utilidad a la constante productsRoutes desde Express (app)
