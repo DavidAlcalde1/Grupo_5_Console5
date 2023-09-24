@@ -1,5 +1,7 @@
 const path = require('path');
 const fs = require('fs');
+const { stringify } = require('querystring');
+const { generateKey } = require('crypto');
 
 let products = JSON.parse(fs.readFileSync(path.resolve(__dirname, '..', 'data', 'products.json')));
 const controllerAdmin = {
@@ -8,7 +10,6 @@ const controllerAdmin = {
     },
     
     edit : (req, res)=> {
-        // console.log(req.body);
         
         let userId = req.params.id;
         let productEdit = products.find(product => product.id == userId);
@@ -17,14 +18,7 @@ const controllerAdmin = {
 
     update : (req, res)=> {
         
-        // console.log(req.body)
-
         req.body.id = req.params.id;
-       console.log(req.body.image);
-       console.log(req.file);
-    //    console.log(req.file.filename);
-       console.log(req.body.oldimage);
-       console.log(req.body);
        req.body.image = req.file ? req.file.filename : req.body.oldImage; 
 
         let updateProducts = products.map(product => {
@@ -39,7 +33,17 @@ const controllerAdmin = {
         fs.writeFileSync(path.resolve(__dirname, '..', 'data', 'products.json'), registroActualizado);
 
         res.redirect('/admin');
-    }
+    },
+
+        delete : (req, res) => {
+            const deleteProducts = req.params.id;
+            const finalList = products.filter(product => product.id != deleteProducts);
+            let deleted = JSON.stringify(finalList, null, 2);
+            fs.writeFileSync(path.resolve(__dirname, '..', 'data', 'products.json'), deleted);
+            
+            res.redirect('/admin');
+        },
+
     // update: (req, res) => {
     //     console.log('bodyupdate', req.body)
     //     const productId = req.params.id;

@@ -75,42 +75,5 @@
     "image": "pantalon-formal.jpg",
     "size": "M",
     "color": "Indigo"
-  },
-  {
-    "id": 8,
-    "name": "Walkers Special Old Whiskey",
-    "description": "aenean auctor gravida sem praesent id massa id nisl venenatis",
-    "price": 28.35,
-    "quantity": 8,
-    "category": "Casual",
-    "image": "pink-dress.jpg",
-    "size": "XS",
-    "color": "Puce"
-  },
-  {
-    "name": "Sea Bass - Fillets",
-    "description": "congue elementum in hac habitasse platea dictumst morbi vestibulum velit id pretium iaculis diam erat fermentum justo",
-    "price": "24.79",
-    "size": "L",
-    "color": "Black",
-    "existencia": "4",
-    "category": "Formal",
-    "descuento": "0",
-    "oldImage": "product-1695443768103.jpg",
-    "id": "9",
-    "image": "product-1695444420087.jpg"
-  },
-  {
-    "name": "Beef - Top Butt",
-    "description": "accumsan odio curabitur convallis duis consequat dui nec nisi volutpat eleifend donec ut dolor morbi vel lectus in quam",
-    "price": "10.97",
-    "size": "L.M,S",
-    "color": "blanco",
-    "quantity": "9",
-    "category": "Formal",
-    "descuento": "0",
-    "oldImage": "product-1695444534511.jpg",
-    "id": "10",
-    "image": "product-1695444534511.jpg"
   }
 ]

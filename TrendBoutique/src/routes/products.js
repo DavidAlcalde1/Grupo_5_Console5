@@ -5,7 +5,6 @@ const path = require('path');
 
 
 const controllerProducts = require('../controllers/controllerProducts');
-console.log(controllerProducts);
 
 router.get('/products', controllerProducts.index);
 

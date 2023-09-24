@@ -6,7 +6,6 @@ const fs = require('fs');
 let products = JSON.parse(fs.readFileSync(path.resolve(__dirname, '..', 'data', 'products.json')));
 const controllerHome = {
     show:  (req,res) =>{
-        console.log(req.category);
         let filtro = products.filter((reg) => {
             reg.category == req.params.category
         })

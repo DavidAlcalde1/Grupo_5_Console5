@@ -35,8 +35,7 @@ router.get('/admin', controllerAdmin.show);
 router.get('/admin/detail/:id', controllerDetail.show);
 router.get('/admin/edit/:id', controllerAdmin.edit);
 router.post('/admin/edit/:id', upload.single('image'), controllerAdmin.update)
-
-
+router.get('/admin/delete/:id', controllerAdmin.delete);
 
 
 module.exports = router;
