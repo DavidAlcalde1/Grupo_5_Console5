@@ -31,11 +31,14 @@ const controllerDetail = require(path.resolve(__dirname, '..', 'controllers', 'c
 
 
 
+
 router.get('/admin', controllerAdmin.show);
 router.get('/admin/detail/:id', controllerDetail.show);
 router.get('/admin/edit/:id', controllerAdmin.edit);
 router.post('/admin/edit/:id', upload.single('image'), controllerAdmin.update)
 router.get('/admin/delete/:id', controllerAdmin.delete);
+router.get('/admin/create', controllerAdmin.create);
+router.post('/admin/create', upload.single('image'), controllerAdmin.save);
 
 
 module.exports = router;

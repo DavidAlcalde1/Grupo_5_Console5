@@ -64,16 +64,5 @@
     "image": "sport3.jpg",
     "size": "M",
     "color": "Violet"
-  },
-  {
-    "id": 7,
-    "name": "Bread - Bagels, Plain",
-    "description": "etiam pretium iaculis justo in hac habitasse platea dictumst etiam faucibus cursus",
-    "price": 3.64,
-    "quantity": 7,
-    "category": "Casual",
-    "image": "pantalon-formal.jpg",
-    "size": "M",
-    "color": "Indigo"
   }
 ]

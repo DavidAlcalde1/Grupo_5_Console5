@@ -34,33 +34,51 @@ const controllerAdmin = {
 
         res.redirect('/admin');
     },
-
-        delete : (req, res) => {
-            const deleteProducts = req.params.id;
-            const finalList = products.filter(product => product.id != deleteProducts);
-            let deleted = JSON.stringify(finalList, null, 2);
-            fs.writeFileSync(path.resolve(__dirname, '..', 'data', 'products.json'), deleted);
+    
+    delete : (req, res) => {
+        const deleteProducts = req.params.id;
+        const finalList = products.filter(product => product.id != deleteProducts);
+        let deleted = JSON.stringify(finalList, null, 2);
+        fs.writeFileSync(path.resolve(__dirname, '..', 'data', 'products.json'), deleted);
+        
+        // res.render(path.resolve(__dirname, '..', 'views', 'admin', 'admin'),{products});
+        
+            res.status(200).redirect('/admin')
             
-            res.redirect('/admin');
-        },
+            
+        
+    },
+    
+    create: (req,res) => {
+        res.render(path.resolve(__dirname, '..', 'views', 'admin', 'create'));
+    },
+    
+    save: (req,res) => {
+        let lastId = products.pop();
+        products.push(lastId);
+        
+        let newProduct = {
+            id: parseInt(lastId.id) + 1,
+            name: req.body.nombre,
+            description: req.body.descripcion,
+            price: req.body.precio,
+            quantity: req.body.cantidad,
+            category: req.body.categoria,
+            size: req.body.talla,
+            color: req.body.color,
+            image: req.file.filename
+        }
+        products.push(newProduct);
 
-    // update: (req, res) => {
-    //     console.log('bodyupdate', req.body)
-    //     const productId = req.params.id;
-    //     const updatedProduct = req.body;
+        let registroActualizado = JSON.stringify(products, null, 2);
+        // fs.writeFileSync(path.resolve(__dirname, '..', 'data', 'products.json'), updateProducts);
+        fs.writeFileSync(path.resolve(__dirname, '..', 'data', 'products.json'), registroActualizado);
     
-        // Encuentra el índice del producto que deseas actualizar
-        // const productIndex = products.findIndex(product => product.id == productId);
+        res.redirect('/admin');
+
+        }
+
     
-    //     if (productIndex !== -1) {
-    //         // Actualiza el producto en el arreglo con los nuevos valores
-    //         products[productIndex] = updatedProduct;
-    //         res.status(200).json({ message: 'Producto actualizado correctamente' });
-    //     } else {
-    //         res.status(404).json({ error: 'Producto no encontrado' });
-    //     }
-      
-    // }
     
 }
 
