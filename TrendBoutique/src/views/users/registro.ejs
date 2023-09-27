@@ -22,26 +22,29 @@
 <%- include('../partials/header.ejs') %>
 <body>
   <main>
-  <form id="registroForm">
+  <form id="registroForm" action = '/register' method="post">
     <h1 class="title">Registrate</h1>
-    <input type="text" placeholder="Nombre" id="nombre"><br>
-    <input type="text" placeholder="Apellido" id="apellido"><br>
-    <input type="numero o email" placeholder="Numero de celular o correo electrónico" id="numeroOcorreo"><br>
-    <input type="password" placeholder="Contraseña" id="contrasena"><br>
+    <input type="text" placeholder="Nombre" name= "first_name" id="nombre" required><br>
+    <input type="text" placeholder="Apellido" name= "last_name" id="apellido" required><br>
+    <input type="email" placeholder="correo electrónico" name = "email" id="correo" required><br>
+    <input type="tel" placeholder="Teléfono" name="telefono" id="telefono" required><br>
+    <input type="password" placeholder="Contraseña" name="password" id="contrasena" required><br>
+    <input type="text" placeholder="Ocupación" name="role" id="role"><br>
+    <input type="text" placeholder="Ciudad" name="country" id="ciudad" required><br>
     <label for="fechaNacimiento">Fecha de nacimiento:</label>
-    <input type="date" id="fechaNacimiento" required><br>
+    <input type="date" name="fechaNacimiento" id="fechaNacimiento" required><br>
     <h3>sexo</h3>
       <div class="caja">
         <div class="contenedor">
-          <input type="radio" id="hombre" name="sexo" value="hombre" required>
+          <input type="radio" id="hombre" name="gender" value="hombre" required>
           <label for="hombre">hombre</label>
         </div>
           <div class="contenedor">
-          <input type="radio" id="mujer" name="sexo" value="mujer" required>
+          <input type="radio" id="mujer" name="gender" value="mujer" required>
           <label for="mujer">mujer</label>
         </div>
           <div class="contenedor">
-          <input type="radio" id="personalizado" name="sexo" value="personalizado" required>
+          <input type="radio" id="personalizado" name="gender" value="personalizado" required>
           <label for="personalizado">personalizado</label>
         </div>
       </div><br>

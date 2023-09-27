@@ -14,9 +14,11 @@ var storage = multer.diskStorage({
 
 const upload = multer({storage : storage});
 
-const controllerLogin = require(path.resolve(__dirname, '..', 'controllers', 'controllerLogin'))
+const controllerLogin = require(path.resolve(__dirname, '..', 'controllers', 'controllerLogin'));
 
-router.get('/login', controllerLogin.show)
-router.get('/login/edit/:id', controllerLogin.edit);
+router.get('/login', controllerLogin.login);
+router.post('/login', controllerLogin.getIn);
+router.get('/register', controllerLogin.register);
+router.post('/register', controllerLogin.create);
 
 module.exports = router

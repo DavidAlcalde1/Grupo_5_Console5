@@ -108,5 +108,16 @@
         "password": "wD7\\dbK~~37x%Vhp",
         "role": "Construction Worker",
         "country": "South Korea"
-    }
+    },
+        {
+        "id": 11,
+        "first_name": "David",
+        "last_name": "Segura",
+        "email": "david182_segura@hotmail.com",
+        "gender": "Male",
+        "telefono": 3118194120,
+        "password": "trendboutique",
+        "role": "Designer",
+        "country": "Colombia"
+        }
 ]
