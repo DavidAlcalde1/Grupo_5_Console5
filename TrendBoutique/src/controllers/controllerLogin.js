@@ -21,6 +21,8 @@ const controllerLogin = {
     },
 
     create: (req, res) => {
+        console.log('body',req.body);
+        console.log('file', req.file);
         let lastRegister = users.pop();
         users.push(lastRegister);
 

@@ -4,7 +4,7 @@
 
   <title>Registro</title>
 
-  <link rel="stylesheet" type="text/css" href="/css/stylesshome.css">
+  <link rel="stylesheet" type="text/css" href="/css/stylesRegistro.css">
   <link rel="stylesheet" type="text/css" href="/css/stylesHeader.css">
   <link rel="stylesheet" type="text/css" href="/css/stylesFooter.css">
 
@@ -22,7 +22,7 @@
 <%- include('../partials/header.ejs') %>
 <body>
   <main>
-  <form id="registroForm" action = '/register' method="post">
+  <form id="registroForm" action = '/register' method="post" enctype="multipart/form-data">
     <h1 class="title">Registrate</h1>
     <input type="text" placeholder="Nombre" name= "first_name" id="nombre" required><br>
     <input type="text" placeholder="Apellido" name= "last_name" id="apellido" required><br>
@@ -48,7 +48,7 @@
           <label for="personalizado">personalizado</label>
         </div>
       </div><br>
-      <label for="imagen">Imagen:</label>
+      <label for="image">Imagen:</label>
       <input type="file" id="image" name="image" accept="image/*">
     <button type="submit">Registrarse</button>
   </form>
