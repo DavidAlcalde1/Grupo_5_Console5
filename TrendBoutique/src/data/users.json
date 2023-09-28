@@ -130,5 +130,27 @@
     "role": "Publicista",
     "country": "Bogotá",
     "image": "user-1695861429161.jpg"
+  },
+  {
+    "id": 13,
+    "first_name": "David",
+    "last_name": "Segura",
+    "email": "perritos@outlook.com",
+    "telefono": "123456",
+    "password": "$2a$10$fN64ZzEBNTgUTkrXrGoocela7QwcYCiXPXlYOcv9Ki4.FIA7J5ApG",
+    "role": "Publicista",
+    "country": "Bogotá",
+    "image": "user-1695864686651.jpg"
+  },
+  {
+    "id": 14,
+    "first_name": "Guillermo",
+    "last_name": "Infiltrado",
+    "email": "infiltrado@gmail.com",
+    "telefono": "3123456789",
+    "password": "$2a$10$X5lGVrjt1JxOxVfYNV2cB./s.JgqkE7oFif4dcV7s7XLfx2CwAY42",
+    "role": "Profesor",
+    "country": "Medellin",
+    "image": "user-1695867480857.png"
   }
 ]
