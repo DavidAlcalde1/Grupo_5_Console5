@@ -8,7 +8,7 @@
   <link rel="stylesheet" type="text/css" href="/css/stylesHeader.css">
   <link rel="stylesheet" type="text/css" href="/css/stylesFooter.css">
 
-  <link rel="stylesheet" type="text/css" href="../public/css/stylesRegistro.css">
+  <!-- <link rel="stylesheet" type="text/css" href="../public/css/stylesRegistro.css"> -->
 
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -19,9 +19,11 @@
 
 </head>
  
-<%- include('../partials/header.ejs') %>
 <body>
   <main>
+  <div>
+    <%- include('../partials/header.ejs') %>
+  </div>
   <form id="registroForm" action = '/register' method="post" enctype="multipart/form-data">
     <h1 class="title">Registrate</h1>
     <input type="text" placeholder="Nombre" name= "first_name" id="nombre" required><br>
@@ -53,8 +55,10 @@
     <button type="submit">Registrarse</button>
   </form>
   <script src="script.js"></script>
-  </main>
-  <%- include('../partials/footer.ejs') %> 
+  <div>
+    <%- include('../partials/footer.ejs') %> 
+  </div>
+</main>
 </body>
 
 </html>
