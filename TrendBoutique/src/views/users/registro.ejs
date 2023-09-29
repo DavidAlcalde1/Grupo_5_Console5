@@ -22,6 +22,13 @@
 <%- include('../partials/header.ejs') %>
 <body>
   <main>
+    <% if(typeof(errors) != 'undefined'){%>
+      <ul class="alert alert-danger">
+         <% errors.forEach(error => { %>
+            <li><%= error.msg%></li>
+         <%});%>
+       </ul>
+   <%}%>
   <form id="registroForm" action = '/register' method="post" enctype="multipart/form-data">
     <h1 class="title">Registrate</h1>
     <input type="text" placeholder="Nombre" name= "first_name" id="nombre" required><br>

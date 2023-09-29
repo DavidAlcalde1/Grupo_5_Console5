@@ -152,5 +152,27 @@
     "role": "Profesor",
     "country": "Medellin",
     "image": "user-1695867480857.png"
+  },
+  {
+    "id": 15,
+    "first_name": "David",
+    "last_name": "Segura",
+    "email": "asd@hotmail.com",
+    "telefono": "123456",
+    "password": "$2a$10$mCX77erAIy4TAWNjQmN1Pu/8HPLeMwAy.JjWH8lRBQ6kNb2c8zoAG",
+    "role": "Publicista",
+    "country": "Bogotá",
+    "image": "user-1695947227569.png"
+  },
+  {
+    "id": 16,
+    "first_name": "David",
+    "last_name": "Segura",
+    "email": "asd@hotmail.com",
+    "telefono": "123456",
+    "password": "$2a$10$5feSqIYKRjg4YB8FY5bqxu75iCyCYyyY9m.u/zYg/o5Dt30r8Z4Xu",
+    "role": "Publicista",
+    "country": "Bogotá",
+    "image": "user-1695950705199.png"
   }
 ]
