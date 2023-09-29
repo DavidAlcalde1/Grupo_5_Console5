@@ -152,5 +152,27 @@
     "role": "Profesor",
     "country": "Medellin",
     "image": "user-1695867480857.png"
+  },
+  {
+    "id": 15,
+    "first_name": "Guille",
+    "last_name": "Betan",
+    "email": "guib@hotmail.com",
+    "telefono": "2457863",
+    "password": "$2a$10$h.4eWaj1MuAQmroO97FUoOo5qSTrUdyZpFdZFbyojFY2Yq.u6LGB.",
+    "role": "Laquetede",
+    "country": "Medellin",
+    "image": "user-1695946262977.jpg"
+  },
+  {
+    "id": 16,
+    "first_name": "David",
+    "last_name": "Segura",
+    "email": "davidsegura@gmail.com",
+    "telefono": "123456",
+    "password": "$2a$10$gVt2SC1dJDfCzGtxV3PageFRpblQef/OGmpZwXjv5Edl6mrx4/Tq6",
+    "role": "Laquetede",
+    "country": "Medellin",
+    "image": "user-1695947006100.gif"
   }
 ]

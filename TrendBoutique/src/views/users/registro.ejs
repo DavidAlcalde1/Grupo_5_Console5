@@ -35,6 +35,15 @@
     <input type="text" placeholder="Ciudad" name="country" id="ciudad" required><br>
     <label for="fechaNacimiento">Fecha de nacimiento:</label>
     <input type="date" name="fechaNacimiento" id="fechaNacimiento" required><br>
+    <% if(typeof(errors) != "undefined"){%>
+    <ul>
+      <% errors.forEach(error => {%>
+      
+        <li><%error.msg%></li>
+        <%})%>
+    </ul>
+    <%}%>
+
     <h3>sexo</h3>
       <div class="caja">
         <div class="contenedor">
@@ -56,9 +65,9 @@
   </form>
   <script src="script.js"></script>
   <div>
-    <%- include('../partials/footer.ejs') %> 
   </div>
 </main>
 </body>
+<%- include('../partials/footer.ejs') %> 
 
 </html>

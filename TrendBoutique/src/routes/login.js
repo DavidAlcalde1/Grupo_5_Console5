@@ -42,6 +42,6 @@ let validation = [
 router.get('/login', controllerLogin.login);
 router.post('/login', validation, controllerLogin.getIn);
 router.get('/register', controllerLogin.register);
-router.post('/register', upload.single('image'), controllerLogin.create);
+router.post('/register', upload.single('image'), validation, controllerLogin.create);
 
 module.exports = router
