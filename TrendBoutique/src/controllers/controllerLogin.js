@@ -13,12 +13,12 @@ const controllerLogin = {
         res.render(path.resolve(__dirname, '..', 'views', 'users', 'login'));
     },
     getIn: (req, res) => {
+        const errors = validationResult(req);
+        if (errors.isEmpty()) {
         const loggedUser = users.find(user=>user.email == req.body.email);
         delete loggedUser.password
         req.session.user = loggedUser
-        const errors = validationResult(req);
-        if (errors.isEmpty()) {
-            let logUser = users.find(user => user.email == req.body.email)
+            // let logUser = users.find(user => user.email == req.body.email)
             return res.redirect('/');
         } else {
             return res.render(path.resolve(__dirname, '..', 'views', 'users', 'login'),{errors:errors.mapped() , old:req.body});

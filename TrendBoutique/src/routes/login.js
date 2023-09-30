@@ -22,17 +22,6 @@ let users = JSON.parse(fs.readFileSync(path.resolve(__dirname, '..', 'data', 'us
 
 const bcrypt = require('bcryptjs');
 let validation = [
-    body('password').custom((value, { req }) => {
-        for (let i = 0; i < users.length; i++) {
-            if (users[i].email == req.body.email) {
-                if (bcrypt.compareSync(value, users[i].password)) {
-                    return true
-                } else {
-                    return false
-                }
-            }
-        }
-    }).withMessage('Clave invalida'),
     body('email').isEmail().withMessage('Debe ingresar un email válido'),
     body('email').custom(value => {
         for (let i = 0; i < users.length; i++) {
@@ -41,7 +30,20 @@ let validation = [
             }
         }
         return false
-    }).withMessage('El usuario no se encuentra registrado')
+    }).withMessage('El usuario no se encuentra registrado'),
+    body('password').custom((value, { req }) => {
+        for (let i = 0; i < users.length; i++) {
+            if (users[i].email == req.body.email) {
+                if (bcrypt.compareSync(value, users[i].password)) {
+                    console.log("todo ok", users[i].password)
+                    return true
+                } else {
+                    console.log("falló", users[i].password)
+                    return false
+                }
+            }
+        }
+    }).withMessage('Clave invalida')
 ]
 
 let validationRegister = [
