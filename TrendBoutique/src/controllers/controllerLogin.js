@@ -2,6 +2,8 @@ const path = require('path');
 const fs = require('fs');
 const bcrypt = require('bcryptjs');
 const { validationResult } = require('express-validator');
+const multer = require('multer');
+const { log } = require('console');
 
 
 let users = JSON.parse(fs.readFileSync(path.resolve(__dirname, '..', 'data', 'users.json')));
@@ -11,6 +13,9 @@ const controllerLogin = {
         res.render(path.resolve(__dirname, '..', 'views', 'users', 'login'));
     },
     getIn: (req, res) => {
+        const loggedUser = users.find(user=>user.email == req.body.email);
+        delete loggedUser.password
+        req.session.user = loggedUser
         const errors = validationResult(req);
         if (errors.isEmpty()) {
             let logUser = users.find(user => user.email == req.body.email)
@@ -23,14 +28,12 @@ const controllerLogin = {
     register: (req, res) => {
         res.render(path.resolve(__dirname, '..', 'views', 'users', 'registro'));
     },
-
+    
     create: (req, res) => {
-        let logRegister = users.find(user => user.email == req.body.email)
-        if (typeof logRegister != 'undefined') {
-            alert ('existe')
+        let errors = validationResult(req)
+        if(!errors.isEmpty()) {
+            return res.render(path.resolve(__dirname, '..', 'views', 'users', 'registro'),{errors: errors.errors, old:req.body});
         }
-        console.log(logRegister);
-        return
         let lastRegister = users.pop();
         users.push(lastRegister);
 
@@ -52,7 +55,14 @@ const controllerLogin = {
         fs.writeFileSync(path.resolve(__dirname, '..', 'data', 'users.json'), registroActualizado);
 
         res.redirect('/login');
+    },
+    
+    logout: (req, res) => {
+        req.session.destroy ()
+        res.cookie('email', null, {maxAge:-1})
+        res.redirect('/')
     }
+
 };
 
 

@@ -5,9 +5,10 @@ const multer = require('multer');
 const fs = require('fs');
 const {body} = require('express-validator');
 
+
 var storage = multer.diskStorage({
     destination: function (req, file, cb) {
-        cb(null, path.resolve(__dirname, '../../public/images'));
+        cb(null, path.resolve(__dirname, '../../public/images/users'));
     },
     filename: function (req, file, cb) {
         cb(null, 'user-' + Date.now() + path.extname(file.originalname));
@@ -31,16 +32,42 @@ let validation = [
                 }
             }
         }
-    }).withMessage('clave invalida')
+    }).withMessage('Clave invalida'),
+    body('email').isEmail().withMessage('Debe ingresar un email válido'),
+    body('email').custom(value => {
+        for (let i = 0; i < users.length; i++) {
+            if (users[i].email == value) {
+                return true
+            }
+        }
+        return false
+    }).withMessage('El usuario no se encuentra registrado')
 ]
 
 let validationRegister = [
-
+    body('first_name').isLength({min:2}).withMessage('El nombre no puede tener menos de 2 caracteres'),
+    body('last_name').isLength({min:2}).withMessage('El apellido no puede tener menos de 2 caracteres'),
+    body('email').isEmail().withMessage('Debe registrar un email válido'),
+    body('email').custom(value => {
+        let logRegister = users.find(user => user.email == value)
+        if (typeof logRegister == 'undefined') {
+            return true
+        }
+        return false
+    }).withMessage('El email ingresado ya se encuentra registrado'),
+    body.apply('image').custom((value, {req}) => {
+        if (req.file != 'undefined') {
+            return true
+        } else {
+            return false
+        }
+    } ).withMessage('Debes elegir tu avatar y debe tener formato: .jpg .jpeg .png')
 ]
 
 router.get('/login', controllerLogin.login);
 router.post('/login',validation, controllerLogin.getIn);
 router.get('/register', controllerLogin.register);
-router.post('/register', upload.single('image'), controllerLogin.create);
+router.post('/register', upload.single('image'), validationRegister, controllerLogin.create);
+router.get('/logout', controllerLogin.logout);
 
 module.exports = router

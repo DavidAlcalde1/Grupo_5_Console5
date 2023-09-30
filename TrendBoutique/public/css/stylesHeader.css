@@ -77,3 +77,20 @@
   padding-left: 12px;
 }
 
+ul {
+  list-style-type: none;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.user {
+  display: flex;
+  flex-direction: row;
+  width: 64%;
+
+}
+
+.avatar {
+  width: 40%;
+}
