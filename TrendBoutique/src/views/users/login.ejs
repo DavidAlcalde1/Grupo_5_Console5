@@ -43,6 +43,11 @@
             name="password"
             placeholder="Contraseña"
           />
+          <% if(typeof(errors) != 'undefined' && errors.password){%>
+            <span class="text-danger">
+              <%= errors.password.msg %>
+            </span>
+         <%}%>
           <button class="iniciar-sesion" type="submit">Iniciar Sesión</button>
           <br />
           <br />

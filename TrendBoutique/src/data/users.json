@@ -155,24 +155,24 @@
   },
   {
     "id": 15,
-    "first_name": "Guille",
-    "last_name": "Betan",
-    "email": "guib@hotmail.com",
-    "telefono": "2457863",
-    "password": "$2a$10$h.4eWaj1MuAQmroO97FUoOo5qSTrUdyZpFdZFbyojFY2Yq.u6LGB.",
-    "role": "Laquetede",
-    "country": "Medellin",
-    "image": "user-1695946262977.jpg"
+    "first_name": "David",
+    "last_name": "Segura",
+    "email": "asd@hotmail.com",
+    "telefono": "123456",
+    "password": "$2a$10$mCX77erAIy4TAWNjQmN1Pu/8HPLeMwAy.JjWH8lRBQ6kNb2c8zoAG",
+    "role": "Publicista",
+    "country": "Bogotá",
+    "image": "user-1695947227569.png"
   },
   {
     "id": 16,
     "first_name": "David",
     "last_name": "Segura",
-    "email": "davidsegura@gmail.com",
+    "email": "asd@hotmail.com",
     "telefono": "123456",
-    "password": "$2a$10$gVt2SC1dJDfCzGtxV3PageFRpblQef/OGmpZwXjv5Edl6mrx4/Tq6",
-    "role": "Laquetede",
-    "country": "Medellin",
-    "image": "user-1695947006100.gif"
+    "password": "$2a$10$5feSqIYKRjg4YB8FY5bqxu75iCyCYyyY9m.u/zYg/o5Dt30r8Z4Xu",
+    "role": "Publicista",
+    "country": "Bogotá",
+    "image": "user-1695950705199.png"
   }
 ]
