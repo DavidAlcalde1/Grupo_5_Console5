@@ -197,5 +197,16 @@
     "country": "Medellin",
     "image": "user-1696040355513.png",
     "perfil": 1
+  },
+  {
+    "id": 19,
+    "first_name": "David",
+    "last_name": "Alcalde",
+    "email": "pruebaDavidA@gmail.com",
+    "telefono": "1234567",
+    "password": "$2a$10$cABkjlfRQId5opc1giwYPeNc0pXuos6OEpAjxpKS2scdo1Yguw/cq",
+    "role": "Laquetede",
+    "country": "Medellin",
+    "image": "user-1696109533836.jpg"
   }
 ]

@@ -67,7 +67,6 @@ let validationRegister = [
 router.get('/login', controllerLogin.login);
 router.post('/login',validation, controllerLogin.getIn);
 router.get('/register', controllerLogin.register);
-router.post('/register', upload.single('image'), validation, controllerLogin.create);
 router.post('/register', upload.single('image'), validationRegister, controllerLogin.create);
 router.get('/logout', controllerLogin.logout);
 
