@@ -1,10 +1,12 @@
 const express = require('express');
 const path = require('path');
 const methodOverride = require("method-override");
-
+const access = require('./routes/access');
+const session = require('express-session');
+const cookieParser = require('cookie-parser');
 
 const app = express();
-    
+
 //Para indicarle express la carpeta donde se encuentran los archivos estáticos
 app.use(express.static(path.resolve(__dirname, '..', 'public')));
 
@@ -29,9 +31,14 @@ const multer = require('multer');
 
 
 //Le damos utilidad a la constante productsRoutes desde Express (app)
+app.use(cookieParser())
+app.use(session({
+    secret:'topSecret', resave:true, saveUninitialized: true
+}))
+app.use(access);
 app.use(productsRoute);
 app.use(homeRoute);
 app.use(loginRoute);
 app.use(adminRoute);
-app.listen(3000, ()=> console.log('Servidor Corriendo'));
+app.listen(3000, ()=> console.log('Servidor Corriendo en puerto 3000'));
 

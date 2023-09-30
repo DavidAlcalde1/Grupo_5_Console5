@@ -159,7 +159,6 @@
     "last_name": "Segura",
     "email": "asd@hotmail.com",
     "telefono": "123456",
-    "password": "$2a$10$mCX77erAIy4TAWNjQmN1Pu/8HPLeMwAy.JjWH8lRBQ6kNb2c8zoAG",
     "role": "Publicista",
     "country": "Bogotá",
     "image": "user-1695947227569.png"
@@ -174,5 +173,29 @@
     "role": "Publicista",
     "country": "Bogotá",
     "image": "user-1695950705199.png"
+  },
+  {
+    "id": 17,
+    "first_name": "Guillermo",
+    "last_name": "Betancur",
+    "email": "guibetancur@gmail.com",
+    "telefono": "3207694199",
+    "password": "$2a$10$yV/9HAEQmpV2ZXg3qsyKL.wep2NwON5o6nEs2NVMx5ERmjw9AQUaC",
+    "role": "Desarrollador LAN",
+    "country": "Medellín",
+    "image": "user-1696013117731.jpg",
+    "perfil": 1
+  },
+  {
+    "id": 18,
+    "first_name": "Ernesto",
+    "last_name": "Segura",
+    "email": "davidseguraprueba@gmail.com",
+    "telefono": "123456",
+    "password": "$2a$10$0u2s15zNTGwcBWtr0uoEKOoBZUhC5YX0KxtWj3aYPZAQyfVY1drc.",
+    "role": "Profesor",
+    "country": "Medellin",
+    "image": "user-1696040355513.png",
+    "perfil": 1
   }
 ]
