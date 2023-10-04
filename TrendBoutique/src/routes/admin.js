@@ -15,12 +15,13 @@ var storage = multer.diskStorage({
 const upload = multer({ storage: storage })
 
 const controllerAdmin = require(path.resolve(__dirname, '..', 'controllers', 'controllerAdmin')); //'../controllers/controllerAdmin'
+const controllerAdmindb = require(path.resolve(__dirname, '..', 'controllers', 'controllerAdmindb'));
 const controllerDetail = require(path.resolve(__dirname, '..', 'controllers', 'controllerProducts'));
 
 
 
 
-router.get('/admin', controllerAdmin.show);
+router.get('/admin', controllerAdmindb.show);
 router.get('/admin/detail/:id', controllerDetail.show);
 router.get('/admin/edit/:id', controllerAdmin.edit);
 router.post('/admin/edit/:id', upload.single('image'), controllerAdmin.update)
