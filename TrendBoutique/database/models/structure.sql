@@ -1,6 +1,6 @@
 CREATE SCHEMA IF NOT EXISTS `trendboutique` DEFAULT CHARACTER SET utf8 
 CREATE TABLE IF NOT EXISTS `trendboutique`.`products` (
-  `idproducts` INT NOT NULL AUTO_INCREMENT,
+  `id` INT NOT NULL AUTO_INCREMENT,
   `name` VARCHAR(45) NOT NULL,
   `description` VARCHAR(100) NOT NULL,
   `price` DECIMAL(6) NOT NULL,
@@ -9,8 +9,8 @@ CREATE TABLE IF NOT EXISTS `trendboutique`.`products` (
   `size` VARCHAR(3) NOT NULL,
   `color` VARCHAR(45) NOT NULL,
   `category` VARCHAR(45) NOT NULL,
-  PRIMARY KEY (`idproducts`),
-  UNIQUE INDEX `idproducts_UNIQUE` (`idproducts` ASC) VISIBLE)
+  PRIMARY KEY (`id`),
+  UNIQUE INDEX `id_UNIQUE` (`id` ASC) VISIBLE)
 ENGINE = InnoDB
 
 CREATE TABLE IF NOT EXISTS `trendboutique`.`users` (

@@ -24,7 +24,7 @@ const controllerDetail = require(path.resolve(__dirname, '..', 'controllers', 'c
 router.get('/admin', controllerAdmindb.show);
 router.get('/admin/detail/:id', controllerDetail.show);
 router.get('/admin/edit/:id', controllerAdmin.edit);
-router.post('/admin/edit/:id', upload.single('image'), controllerAdmin.update)
+router.post('/admin/edit/:id', upload.single('image'), controllerAdmindb.update)
 router.get('/admin/delete/:id', controllerAdmin.delete);
 router.get('/admin/create', controllerAdmin.create);
 router.post('/admin/create', upload.single('image'), controllerAdmin.save);

@@ -1,14 +1,16 @@
 [
   {
-    "id": 1,
-    "name": "Blazer Formal",
+    "name": "Blazer ",
     "description": "Blazer para uso formal, puede ser usado en reuniones",
-    "price": 50,
-    "quantity": 1,
-    "category": "Formal",
-    "image": "blazer-formal.jpg",
+    "price": "50",
     "size": "M",
-    "color": "Blanco y negro"
+    "color": "Blanco y negro",
+    "quantity": "1",
+    "category": "Formal",
+    "descuento": "0",
+    "oldImage": "blazer-formal.jpg",
+    "id": "1",
+    "image": "blazer-formal.jpg"
   },
   {
     "id": 2,
