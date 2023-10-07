@@ -41,14 +41,14 @@
             <tbody>
               <% products.forEach(product => { %>
               <tr>
-                <td><img src="<%= product.image%>" style="width: 50px; height: 50px;"></td>
+                <td><img src="/images/<%= product.image%>" style="width: 50px; height: 50px;"></td>
                 <td style="vertical-align: middle;"><%= product.name%></td>
                 <td style="vertical-align: middle;"><%= product.size%> </td>
                 <td style="vertical-align: middle;"><%= product.color%> </td>
                 <td style="vertical-align: middle;"><%= product.price%> </td>
                 <td style="vertical-align: middle;"><%= product.descuento%> </td>
                 <td style="vertical-align: middle;"><%= product.quantity%> </td>
-                <td style="vertical-align: middle;"><a href="../admin/detail/<%= product.id%> "> <ion-icon name="eye-outline"></ion-icon></a></td>
+                <td style="vertical-align: middle;"><a href="../products/detail/<%= product.id%> "> <ion-icon name="eye-outline"></ion-icon></a></td>
                 <td style="vertical-align: middle;"><a href="../admin/edit/<%= product.id%> "> <ion-icon name="pencil-outline"></ion-icon></a></td>
                 <td style="vertical-align: middle;"><a href="../admin/delete/<%= product.id%>"><ion-icon name="trash-outline"></ion-icon></a></td>
               </tr>

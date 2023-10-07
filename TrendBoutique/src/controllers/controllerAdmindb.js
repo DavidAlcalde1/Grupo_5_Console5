@@ -15,8 +15,8 @@ const controllerAdmin = {
 
     view: (req, res) => {     
         const productId = req.params.id;
-        db.Products.findOne({ where: { id: productId } }).then(function (product) {
-            res.render(path.resolve(__dirname, '..', 'views', 'products', 'detail'), { product });
+        db.Products.findOne({ where: { id: productId } }).then(function (miProducto) {
+            res.render(path.resolve(__dirname, '..', 'views', 'products', 'detail'), { miProducto });
         })
     },
     
@@ -27,7 +27,8 @@ const controllerAdmin = {
         })
     },
 
-    update: (req, res) => {              
+    update: (req, res) => {         
+        console.log(req.body);     
         const productId = req.params.id;
         const updatedData = req.body; // Los nuevos datos del producto a editar            
         db.Products.update(updatedData, { where: { id: productId} }).then(()=>{res.redirect('/admin')}).catch(error=>{console.log(error)})
@@ -44,6 +45,7 @@ const controllerAdmin = {
 
     save: (req, res) => {        
         const createData = req.body; 
+        console.log(createData);
         db.Products.create(createData).then(()=>{res.redirect('/admin')}).catch(error=>{console.log(error)})
     }
 }

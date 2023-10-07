@@ -85,8 +85,6 @@ const controllerAdmin = {
 
     }
 
-
-
 }
 
 module.exports = controllerAdmin;
