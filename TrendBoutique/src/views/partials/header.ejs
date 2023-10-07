@@ -4,12 +4,15 @@
       <img class="logo" src="/images/logo-trend-boutique.svg" alt="Logo Trend Boutique"
         style="width: 150px; height: 100px" />
     </div>
-    <div class="search-bar">
-      <button class="search-button" type="submit">
-        <i class="fa-solid fa-magnifying-glass"></i>
-      </button>
-      <input class="search-products" type="text" placeholder="Encontrar Productos" />
-    </div>
+    <form action="/search" method="get">
+
+      <div class="search-bar">
+        <button class="search-button" type="submit">
+          <i class="fa-solid fa-magnifying-glass"></i>
+        </button>
+        <input name="search" class="search-products" type="text" placeholder="Encontrar Productos" />
+      </div>
+    </form>
     <div class="user">
       <ul>
         <% if(locals.user) { %>

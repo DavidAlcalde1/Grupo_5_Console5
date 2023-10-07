@@ -1,18 +1,5 @@
 [
   {
-    "name": "Blazer ",
-    "description": "Blazer para uso formal, puede ser usado en reuniones",
-    "price": "50",
-    "size": "M",
-    "color": "Blanco y negro",
-    "quantity": "1",
-    "category": "Formal",
-    "descuento": "0",
-    "oldImage": "blazer-formal.jpg",
-    "id": "1",
-    "image": "blazer-formal.jpg"
-  },
-  {
     "id": 2,
     "name": "Cookies - Assorted",
     "description": "sem mauris laoreet ut rhoncus aliquet pulvinar sed nisl nunc rhoncus dui vel",
@@ -55,17 +42,6 @@
     "image": "sport2.jpg",
     "size": "XS",
     "color": "Indigo"
-  },
-  {
-    "id": 6,
-    "name": "Lumpfish Black",
-    "description": "nec sem duis aliquam convallis nunc proin at turpis a pede posuere nonummy",
-    "price": 90.65,
-    "quantity": 6,
-    "category": "Sport",
-    "image": "sport3.jpg",
-    "size": "M",
-    "color": "Violet"
   },
   {
     "id": 7,

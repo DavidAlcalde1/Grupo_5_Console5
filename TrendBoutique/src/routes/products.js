@@ -12,4 +12,6 @@ router.get('/detail/:id', controllerProducts.show);
 
 router.get('/productsCategory/:category', controllerProducts.productsCategory);
 
+router.get('/search', controllerProducts.search);
+
 module.exports = router;
