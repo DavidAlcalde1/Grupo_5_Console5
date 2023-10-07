@@ -14,7 +14,7 @@ module.exports = {
     productsCategory: function (req,res){
         let products = []
         productsOriginal.forEach(product => {
-            if(product.category == req.params.category){
+            if(product.idcategory == req.params.idcategory){
                 products.push(product)
             }
             

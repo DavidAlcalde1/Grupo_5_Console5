@@ -1,14 +1,16 @@
 [
   {
-    "id": 1,
-    "name": "Blazer Formal",
+    "name": "Blazer ",
     "description": "Blazer para uso formal, puede ser usado en reuniones",
-    "price": 50,
-    "quantity": 1,
-    "category": "Formal",
-    "image": "blazer-formal.jpg",
+    "price": "50",
     "size": "M",
-    "color": "Blanco y negro"
+    "color": "Blanco y negro",
+    "quantity": "1",
+    "category": "Formal",
+    "descuento": "0",
+    "oldImage": "blazer-formal.jpg",
+    "id": "1",
+    "image": "blazer-formal.jpg"
   },
   {
     "id": 2,
@@ -64,5 +66,45 @@
     "image": "sport3.jpg",
     "size": "M",
     "color": "Violet"
+  },
+  {
+    "id": 7,
+    "name": "Vestido",
+    "description": "-",
+    "price": "12",
+    "quantity": "1",
+    "category": "formal",
+    "size": "M",
+    "color": "ROHO",
+    "image": "product-1696481842768.jpeg"
+  },
+  {
+    "id": 8,
+    "category": "1",
+    "color": "ROHO",
+    "image": "product-1696481934203.jpeg"
+  },
+  {
+    "id": 9,
+    "category": "1",
+    "color": "ROHO",
+    "image": "product-1696481952068.png"
+  },
+  {
+    "id": 10,
+    "category": "1",
+    "color": "ROHO",
+    "image": "product-1696482057183.jpeg"
+  },
+  {
+    "id": 11,
+    "category": "1",
+    "color": "ROHO",
+    "image": "product-1696483249235.jpeg"
+  },
+  {
+    "id": 12,
+    "color": "2",
+    "image": "product-1696483362554.jpeg"
   }
 ]

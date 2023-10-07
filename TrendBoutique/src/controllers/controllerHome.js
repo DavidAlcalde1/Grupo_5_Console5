@@ -7,7 +7,7 @@ let products = JSON.parse(fs.readFileSync(path.resolve(__dirname, '..', 'data', 
 const controllerHome = {
     show:  (req,res) =>{
         let filtro = products.filter((reg) => {
-            reg.category == req.params.category
+            reg.idcategory == req.params.idcategory
         })
 
         res.render(path.resolve(__dirname, '..', 'views', 'products', 'home'),{filtro});

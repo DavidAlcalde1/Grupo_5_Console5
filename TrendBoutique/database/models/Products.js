@@ -18,6 +18,9 @@ module.exports = (sequelize, dataTypes) => {
         quantity: {
             type: dataTypes.INTEGER
         },
+        descuento: {
+            type: dataTypes.INTEGER
+        },
         image: {
             type: dataTypes.STRING
         },
@@ -27,7 +30,7 @@ module.exports = (sequelize, dataTypes) => {
         color: {
             type: dataTypes.STRING
         },
-        category: {
+        idcategory: {
             type: dataTypes.STRING
         }
     };

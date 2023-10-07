@@ -26,8 +26,13 @@
         <table class=" table ">
             <thead class="text-white bg-primary">
               <tr>  
-                <th scope="col">Id</th>
+                <th scope="col"></th>
                 <th scope="col">Nombre</th>
+                <th scope="col">Talla</th>
+                <th scope="col">Color</th>
+                <th scope="col">Precio</th>
+                <th scope="col">Descuento</th>
+                <th scope="col">Stock</th>
                 <th scope="col">Ver</th>
                 <th scope="col">Editar</th>
                 <th scope="col" id="trashButton">Borrar</th>
@@ -36,11 +41,16 @@
             <tbody>
               <% products.forEach(product => { %>
               <tr>
-                <td><%= product.id%> </td>
-                <td><%= product.name%> </td>
-                <td><a href="../admin/detail/<%= product.id%> "> <ion-icon name="eye-outline"></ion-icon></a></td>
-                <td><a href="../admin/edit/<%= product.id%> "> <ion-icon name="pencil-outline"></ion-icon></a></td>
-                <td><a href="../admin/delete/<%= product.id%>"><ion-icon name="trash-outline"></ion-icon></a></td>
+                <td><img src="<%= product.image%>" style="width: 50px; height: 50px;"></td>
+                <td style="vertical-align: middle;"><%= product.name%></td>
+                <td style="vertical-align: middle;"><%= product.size%> </td>
+                <td style="vertical-align: middle;"><%= product.color%> </td>
+                <td style="vertical-align: middle;"><%= product.price%> </td>
+                <td style="vertical-align: middle;"><%= product.descuento%> </td>
+                <td style="vertical-align: middle;"><%= product.quantity%> </td>
+                <td style="vertical-align: middle;"><a href="../admin/detail/<%= product.id%> "> <ion-icon name="eye-outline"></ion-icon></a></td>
+                <td style="vertical-align: middle;"><a href="../admin/edit/<%= product.id%> "> <ion-icon name="pencil-outline"></ion-icon></a></td>
+                <td style="vertical-align: middle;"><a href="../admin/delete/<%= product.id%>"><ion-icon name="trash-outline"></ion-icon></a></td>
               </tr>
               <% }); %>
             </tbody>

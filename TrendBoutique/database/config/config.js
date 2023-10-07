@@ -1,22 +1,22 @@
 module.exports = {
   "development": {
     "username": "root",
-    "password": 'monito123!',
-    "database": "database_development",
+    "password": null,
+    "database": "structure",
     "host": "127.0.0.1",
     "dialect": "mysql"
   },
   "test": {
     "username": "root",
     "password": null,
-    "database": "database_test",
+    "database": "structure",
     "host": "127.0.0.1",
     "dialect": "mysql"
   },
   "production": {
     "username": "root",
     "password": null,
-    "database": "database_production",
+    "database": "structure",
     "host": "127.0.0.1",
     "dialect": "mysql"
   }
