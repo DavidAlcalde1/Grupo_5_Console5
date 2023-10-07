@@ -30,7 +30,8 @@ const controllerAdmin = {
     update: (req, res) => {         
         console.log(req.body);     
         const productId = req.params.id;
-        const updatedData = req.body; // Los nuevos datos del producto a editar            
+        const updatedData = req.body; // Los nuevos datos del producto a editar
+        req.body.image = req.file.filename;    
         db.Products.update(updatedData, { where: { id: productId} }).then(()=>{res.redirect('/admin')}).catch(error=>{console.log(error)})
     },
 
@@ -43,9 +44,9 @@ const controllerAdmin = {
         res.render(path.resolve(__dirname, '..', 'views', 'admin', 'create'));
     },
 
-    save: (req, res) => {        
-        const createData = req.body; 
-        console.log(createData);
+    save: (req, res) => {
+        req.body.image = req.file.filename;
+        const createData = req.body;
         db.Products.create(createData).then(()=>{res.redirect('/admin')}).catch(error=>{console.log(error)})
     }
 }
