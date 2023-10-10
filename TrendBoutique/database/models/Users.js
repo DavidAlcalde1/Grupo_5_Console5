@@ -1,7 +1,7 @@
 module.exports = (sequelize, dataTypes) => {
     let alias = "Users";
     let cols = {
-        id: {
+        idusers: {
             type: dataTypes.INTEGER,
             primaryKey: true,
             autoIncrement: true
@@ -26,6 +26,9 @@ module.exports = (sequelize, dataTypes) => {
             type: dataTypes.STRING
         },
         role: {
+            type: dataTypes.STRING
+        },
+        country:{
             type: dataTypes.STRING
         },
         image: {
