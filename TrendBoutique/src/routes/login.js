@@ -18,7 +18,7 @@ var storage = multer.diskStorage({
 const upload = multer({ storage: storage });
 
 const controllerLogin = require(path.resolve(__dirname, '..', 'controllers', 'controllerLogin'));
-let users = JSON.parse(fs.readFileSync(path.resolve(__dirname, '..', 'data', 'users.json')));
+// let users = JSON.parse(fs.readFileSync(path.resolve(__dirname, '..', 'data', 'users.json')));
 
 const bcrypt = require('bcryptjs');
 let validation = [
@@ -67,7 +67,7 @@ let validationRegister = [
 ]
 
 router.get('/login', controllerLogin.login);
-router.post('/login',validation, controllerLogin.getIn);
+router.post('/login', controllerLogin.getIn);
 router.get('/register', controllerLogin.register);
 router.post('/register', upload.single('image'), validationRegister, controllerLogin.create);
 router.get('/logout', controllerLogin.logout);

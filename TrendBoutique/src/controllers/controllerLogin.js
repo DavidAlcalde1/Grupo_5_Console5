@@ -33,12 +33,10 @@ const controllerLogin = {
     
             // Comparar la contraseña ingresada con la contraseña almacenada en la base de datos
             const passwordMatch = await bcrypt.compare(password, user.password);
-            console.log(password)
-            console.log(user.password)
             if (!passwordMatch) {
                 return res.status(401).json({ message: 'Contraseña incorrecta.' });
             }
-    
+            
             // Si la autenticación es exitosa, puedes iniciar una sesión o generar un token JWT según tu sistema de autenticación.
             // Aquí asumimos que se ha autenticado correctamente y redirigimos al usuario.
             res.redirect('/');
@@ -110,7 +108,6 @@ const controllerLogin = {
     create: (req, res) => {
         req.body.image = req.file.filename;
         req.body.password = bcrypt.hashSync(req.body.password,10);
-        console.log(req.body.password);
         
         const createData = req.body;
         db.Users.create(createData).then(()=>{res.redirect('/login')}).catch(error=>{console.log(error)})
