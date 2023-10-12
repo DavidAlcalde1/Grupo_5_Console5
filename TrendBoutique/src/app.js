@@ -31,10 +31,10 @@ const multer = require('multer');
 
 
 //Le damos utilidad a la constante productsRoutes desde Express (app)
-app.use(cookieParser())
+app.use(cookieParser());
 app.use(session({
-    secret:'topSecret', resave:true, saveUninitialized: true
-}))
+    secret:'topSecret', resave:false, saveUninitialized: true
+}));
 app.use(access);
 app.use(productsRoute);
 app.use(homeRoute);
