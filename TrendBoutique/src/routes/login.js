@@ -4,6 +4,9 @@ const path = require('path');
 const multer = require('multer');
 const fs = require('fs');
 const {body} = require('express-validator');
+const access = require('../../src/routes/access');
+
+const app = express();
 
 
 var storage = multer.diskStorage({
@@ -66,6 +69,7 @@ let validationRegister = [
     } ).withMessage('Debes elegir tu avatar y debe tener formato: .jpg .jpeg .png')
 ]
 
+app.use(access);
 router.get('/login', controllerLogin.login);
 router.post('/login', controllerLogin.getIn);
 router.get('/register', controllerLogin.register);
