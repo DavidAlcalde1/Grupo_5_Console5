@@ -5,7 +5,7 @@ const multer = require('multer');
 const fs = require('fs');
 const {body} = require('express-validator');
 const access = require('../../src/routes/access');
-const { validateCreate } = require('../validators/usersValidators') 
+//const { validateCreate } = require('../validators/usersValidators') 
 
 const app = express();
 
@@ -72,7 +72,7 @@ let validationRegister = [
 
 app.use(access);
 router.get('/login', controllerLogin.login);
-router.post('/login', validateCreate, controllerLogin.getIn);
+router.post('/login', validation, controllerLogin.getIn);
 router.get('/register', controllerLogin.register);
 router.post('/register', upload.single('image'), validationRegister, controllerLogin.create);
 router.get('/logout', controllerLogin.logout);

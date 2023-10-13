@@ -108,9 +108,9 @@ const controllerLogin = {
     create: (req, res) => {
         req.body.image = req.file.filename;
         req.body.password = bcrypt.hashSync(req.body.password,10);
-        
+        console.log(req.body.password);
         const createData = req.body;
-        db.Users.create(createData).then(()=>{res.redirect('/login')}).catch(error=>{console.log(error)})
+        db.Users.create(createData).then(()=>{res.redirect('/login')}).catch(error=>{console.log('cualquier texto', error)})
         // let errors = validationResult(req)
         // if(!errors.isEmpty()) {
         //     return res.render(path.resolve(__dirname, '..', 'views', 'users', 'registro'),{errors: errors.errors, old:req.body});
