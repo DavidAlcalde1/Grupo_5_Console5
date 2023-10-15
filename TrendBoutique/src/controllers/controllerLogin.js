@@ -18,7 +18,7 @@ const controllerLogin = {
     getIn: async (req, res) => {
         try {
             const { email, password } = req.body;
-    
+            console.log(email)
             // Validación de entrada
             if (!email || !password) {
                 return res.status(400).json({ message: 'Se requieren correo electrónico y contraseña.' });
@@ -36,6 +36,18 @@ const controllerLogin = {
             if (!passwordMatch) {
                 return res.status(401).json({ message: 'Contraseña incorrecta.' });
             }
+
+        //     const errors = validationResult(req);
+        // if (errors.isEmpty()) {
+        // const loggedUser = users.find(user=>user.email == req.body.email);
+            const loggedUser = user
+            delete loggedUser.password
+            req.session.user = loggedUser
+            // let  logUser = users.find(user => user.email == req.body.email)
+        //     return res.redirect('/');
+        // } else {
+        //     return res.render(path.resolve(__dirname, '..', 'views', 'users', 'login'),{errors:errors.mapped() , old:req.body});
+        // }
             
             // Si la autenticación es exitosa, puedes iniciar una sesión o generar un token JWT según tu sistema de autenticación.
             // Aquí asumimos que se ha autenticado correctamente y redirigimos al usuario.
@@ -89,16 +101,7 @@ const controllerLogin = {
     //     db.Users.findOne({ where: { email: useremail, password: userpassword } }).then(()=>{res.redirect('/')}).catch(error=>{console.log(error)})
 
     // },
-        // const errors = validationResult(req);
-        // if (errors.isEmpty()) {
-        // const loggedUser = users.find(user=>user.email == req.body.email);
-        // delete loggedUser.password
-        // req.session.user = loggedUser
-        //     // let logUser = users.find(user => user.email == req.body.email)
-        //     return res.redirect('/');
-        // } else {
-        //     return res.render(path.resolve(__dirname, '..', 'views', 'users', 'login'),{errors:errors.mapped() , old:req.body});
-        // }
+        
    
 
     register: (req, res) => {
@@ -106,7 +109,9 @@ const controllerLogin = {
     },
     
     create: (req, res) => {
-        req.body.image = req.file.filename;
+        // console.log("req.file", req.file)
+        // console.log(req)
+        // req.body.image = req.file.filename;
         req.body.password = bcrypt.hashSync(req.body.password,10);
         console.log(req.body.password);
         const createData = req.body;
@@ -135,7 +140,7 @@ const controllerLogin = {
         // let registroActualizado = JSON.stringify(users, null, 2);
         // fs.writeFileSync(path.resolve(__dirname, '..', 'data', 'users.json'), registroActualizado);
 
-        // res.redirect('/login');
+        //res.redirect('/login');
     },
     
     logout: (req, res) => {

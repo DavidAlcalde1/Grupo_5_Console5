@@ -70,6 +70,9 @@ let validationRegister = [
     } ).withMessage('Debes elegir tu avatar y debe tener formato: .jpg .jpeg .png')
 ]
 
+
+
+
 app.use(access);
 router.get('/login', controllerLogin.login);
 router.post('/login', validation, controllerLogin.getIn);
