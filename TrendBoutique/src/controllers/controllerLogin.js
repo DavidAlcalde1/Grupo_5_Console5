@@ -13,6 +13,8 @@ let db = require('../../database/models');
 const controllerLogin = {
     login: (req, res) => {
         res.render(path.resolve(__dirname, '..', 'views', 'users', 'login'));
+        
+
     },
 
     getIn: async (req, res) => {
