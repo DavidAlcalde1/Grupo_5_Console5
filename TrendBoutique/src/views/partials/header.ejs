@@ -37,7 +37,7 @@
         <% } else { %>
           <li> <a href="/logout">Cerrar Sesión</a> </li>
           <% }%>
-            <% if (locals.user.perfil==1) {%>
+            <% if (locals.user.role==1) {%>
               <li><a href="/admin">Administrar</a></li>
               <% }%>
                 <li class="car">

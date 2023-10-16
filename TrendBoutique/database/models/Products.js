@@ -19,7 +19,7 @@ module.exports = (sequelize, dataTypes) => {
             type: dataTypes.INTEGER
         },
         descuento: {
-            type: dataTypes.DECIMAL
+            type: dataTypes.INTEGER
         },
         image: {
             type: dataTypes.STRING
@@ -33,6 +33,7 @@ module.exports = (sequelize, dataTypes) => {
         idcategory: {
             type: dataTypes.INTEGER
         }
+       
     };
 
     let config = {
