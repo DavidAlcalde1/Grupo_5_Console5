@@ -118,12 +118,13 @@ const controllerLogin = {
     },
     
     create: (req, res) => {
-        // console.log("req.file", req.file)
+        console.log("req.body", req.body)
         // console.log(req)
-        req.body.image = req.file.filename;
-        req.body.password = bcrypt.hashSync(req.body.password,10);
-        console.log(req.body.password);
-        const createData = req.body;
+        const createData = {
+            email:req.body.email,
+            image:req.file.filename,
+            password:bcrypt.hashSync(req.body.password,10)
+        }
         db.Users.create(createData).then(()=>{res.redirect('/login')}).catch(error=>{console.log('cualquier texto', error)})
         // let errors = validationResult(req)
         // if(!errors.isEmpty()) {
