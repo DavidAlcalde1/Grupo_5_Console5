@@ -18,11 +18,11 @@ const controllerLogin = {
     },
     
     getIn: async (req, res) => {
-        let errors = validationResult(req);
-        if (!errors.isEmpty()){
-            console.log("ERRORS",errors)
-            res.render(path.resolve(__dirname, '..', 'views', 'users', 'login'), {errors:errors.mapped(), old:req.body});
-        }
+        // let errors = validationResult(req);
+        // if (!errors.isEmpty()){
+        //     console.log("ERRORS",errors)
+        //     res.render(path.resolve(__dirname, '..', 'views', 'users', 'login'), {errors:errors.mapped(), old:req.body});
+        // }
         try {
             const { email, password } = req.body;
             console.log("email", email)
@@ -118,13 +118,17 @@ const controllerLogin = {
     },
     
     create: (req, res) => {
-        console.log("req.body", req.body)
-        // console.log(req)
-        const createData = {
-            email:req.body.email,
-            image:req.file.filename,
-            password:bcrypt.hashSync(req.body.password,10)
-        }
+        
+        req.body.image=req.file.filename
+        req.body.password=bcrypt.hashSync(req.body.password,10)
+        const createData= req.body
+        
+        // const createData = {
+        //     email:req.body.email,
+        //     password:bcrypt.hashSync(req.body.password,10)
+        //     image:req.file.filename,
+        //}
+
         db.Users.create(createData).then(()=>{res.redirect('/login')}).catch(error=>{console.log('cualquier texto', error)})
         // let errors = validationResult(req)
         // if(!errors.isEmpty()) {

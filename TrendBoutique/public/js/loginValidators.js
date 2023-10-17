@@ -1,9 +1,6 @@
 window.addEventListener("load", function(){
-    console.log("La página se ha cargado completamente.");
     let formulario = document.querySelector("form.login");
-    console.log("formulario", formulario);
     formulario.addEventListener("submit", function(e){
-        alert("submit")
         let errores = [];
 
         let campoEmail = document.querySelector(".ancho-mail");
