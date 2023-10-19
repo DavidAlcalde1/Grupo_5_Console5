@@ -5,7 +5,7 @@ window.addEventListener("load", function(){
         let erroresReg = [];
 
         //Validaciones front de Nombre
-        let campoNombre = document.querySelector(".nombre");
+        let campoNombre = document.querySelector("#nombre");
         console.log("CAMPO NOMBRE", campoNombre)
         if(campoNombre.value === ""){
             erroresReg.push("El campo de Nombre debe estar llenado")
@@ -16,7 +16,7 @@ window.addEventListener("load", function(){
         }
 
         //Validaciones front de Apellido
-        let campoApellido = document.querySelector(".apellido");
+        let campoApellido = document.querySelector("#apellido");
         console.log("CAMPO APELLIDO", campoApellido)
         if(campoApellido.value === ""){
             erroresReg.push("El campo de Apellido debe estar llenado")
@@ -27,7 +27,7 @@ window.addEventListener("load", function(){
         }
                 
         //Validaciones front de Email
-        let campoEmail = document.querySelector(".email");
+        let campoEmail = document.querySelector("#email");
         console.log("CAMPO EMAIL", campoEmail)
         if(campoEmail.value === ""){
             erroresReg.push("El campo de email debe estar llenado");
