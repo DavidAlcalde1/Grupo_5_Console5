@@ -51,16 +51,17 @@ let validation = [
 ]
 
 let validationRegister = [
-    body('first_name').isLength({min:2}).withMessage('El nombre no puede tener menos de 2 caracteres'),
-    body('last_name').isLength({min:2}).withMessage('El apellido no puede tener menos de 2 caracteres'),
-    body('email').isEmail().withMessage('Debe registrar un email válido'),
-    body('email').custom(value => {
+    body('first_name').isLength({min:2}).withMessage('El nombre no puede tener menos de 2 caracteres').bail(),
+    body('last_name').isLength({min:2}).withMessage('El apellido no puede tener menos de 2 caracteres').bail(),
+    body('email')
+        .isEmail().withMessage('Debe registrar un email válido').bail()
+        .custom(value => {
         let logRegister = users.find(user => user.email == value)
         if (typeof logRegister == 'undefined') {
             return true
         }
         return false
-    }).withMessage('El email ingresado ya se encuentra registrado'),
+    }).withMessage('El email ingresado ya se encuentra registrado').bail(),
     body.apply('image').custom((value, {req}) => {
         if (req.file != 'undefined') {
             return true
@@ -69,7 +70,6 @@ let validationRegister = [
         }
     } ).withMessage('Debes elegir tu avatar y debe tener formato: .jpg .jpeg .png')
 ]
-
 
 
 

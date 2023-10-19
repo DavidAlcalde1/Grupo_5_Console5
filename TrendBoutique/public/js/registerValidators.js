@@ -27,7 +27,7 @@ window.addEventListener("load", function(){
         }
                 
         //Validaciones front de Email
-        let campoEmail = document.querySelector("#email");
+        let campoEmail = document.querySelector("#correo");
         console.log("CAMPO EMAIL", campoEmail)
         if(campoEmail.value === ""){
             erroresReg.push("El campo de email debe estar llenado");

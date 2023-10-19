@@ -28,7 +28,7 @@
       <ul class="alert alert-danger">
         <% errors.forEach(error=> { %>
           <li>
-            <%= error.msg%>
+            <%= error.msg%> 
           </li>
           <%});%>
       </ul>
@@ -40,7 +40,7 @@
           <h1 class="title">Registrate</h1>
           <input type="text" placeholder="Nombre" name="first_name" id="nombre" ><br>
           <input type="text" placeholder="Apellido" name="last_name" id="apellido" ><br>
-          <input type="email" placeholder="correo electrónico" name="email" id="correo" ><br>
+          <input type="text" placeholder="correo electrónico" name="email" id="correo" ><br>
           <input type="number" placeholder="Teléfono" name="telefono" id="telefono" ><br>
           <input type="password" placeholder="Contraseña" name="password" id="contrasena" ><br>
           <input type="text" placeholder="Ocupación" name="role" id="role"><br>
@@ -66,7 +66,7 @@
           <input type="file" id="image" name="image" accept="image/*">
           <button type="submit">Registrarse</button>
         </form>
-        <script src="/js/registerValidators.js"></script>
+        <!-- <script src="/js/registerValidators.js"></script> -->
         <div>
           <% //- include('../partials/footer.ejs') %>
         </div>
