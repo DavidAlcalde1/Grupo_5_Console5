@@ -3,12 +3,14 @@ window.addEventListener("load", function(){
     let formRegistro = document.querySelector("form.registro");
     formRegistro.addEventListener("submit", function(e){
         let erroresReg = [];
-
+        let msgNombre = document.querySelector('#msgNombre')
+        // let msgNombre = document.getElementById('msgNombre')
         //Validaciones front de Nombre
         let campoNombre = document.querySelector("#nombre");
         console.log("CAMPO NOMBRE", campoNombre)
         if(campoNombre.value === ""){
             erroresReg.push("El campo de Nombre debe estar llenado")
+            msgNombre.innerHTML = "El campo de Nombre debe estar llenado"
         }else if(campoNombre.value.length == 30 || /^\s+$/.test(campoNombre.value)){
             erroresReg.push("Solo se permiten 30 letras para el campo Nombre")
         }else if(/^([0-9])*$/.test(campoNombre.value)){
