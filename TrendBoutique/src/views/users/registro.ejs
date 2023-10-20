@@ -8,6 +8,7 @@
   <link rel="stylesheet" type="text/css" href="/css/stylesRegistro.css">
   <link rel="stylesheet" type="text/css" href="/css/stylesHeader.css">
   <link rel="stylesheet" type="text/css" href="/css/stylesFooter.css">
+  <link rel="stylesheet" type="text/css" href="/css/registerValidators.css">
 
   <!-- <link rel="stylesheet" type="text/css" href="../public/css/stylesRegistro.css"> -->
 
@@ -20,9 +21,9 @@
 
 <body>
   <!-- ul de validators -->
-  <div class="erroresReg">
-    <ul></ul>
-  </div>
+  <!-- <div class="erroresReg">
+    <ul id="erroresReg"></ul>
+  </div> -->
   <main>
     <% if(typeof(errors) !='undefined' ){%>
       <ul class="alert alert-danger">
@@ -39,20 +40,31 @@
           </div>
           <h1 class="title">Regístrate</h1>
           <input type="text" placeholder="Nombre" name="first_name" id="nombre" value="<% typeof old != 'undefined' ? old.first_name : '' %>">
-          <span id="msgNombre"></span>
+          <span id="msgNombre" class="msg"></span>
           <br  >
           <input type="text" placeholder="Apellido" name="last_name" id="apellido" >
-          <span id="msgApellido"></span>
+          <span id="msgApellido" class="msg"></span>
           <br>
           <input type="text" placeholder="correo electrónico" name="email" id="correo" >
-          <span id="msgEmail"></span>
+          <span id="msgEmail" class="msg"></span>
           <br>
-          <input type="number" placeholder="Teléfono" name="telefono" id="telefono" ><br>
-          <input type="password" placeholder="Contraseña" name="password" id="contrasena" ><br>
-          <input type="text" placeholder="Ocupación" name="role" id="role"><br>
-          <input type="text" placeholder="Ciudad" name="country" id="ciudad" ><br>
+          <input type="number" placeholder="Teléfono" name="telefono" id="telefono" >
+          <span id="msgTelefono" class="msg"></span>
+          <br>
+          <input type="password" placeholder="Contraseña" name="password" id="contrasena" >
+          <span id="msgPassword" class="msg"></span>
+          <br>
+          <input type="text" placeholder="Ocupación" name="role" id="role">
+          <span id="msgOcupacion" class="msg"></span>
+          <br>
+          <input type="text" placeholder="Ciudad" name="country" id="ciudad" >
+          <span id="msgCiudad" class="msg"></span>
+          <br>
           <label for="fechaNacimiento">Fecha de nacimiento:</label>
+          <br>
           <input type="date" name="fechaNacimiento" id="fechaNacimiento" ><br>
+          <span id="msgFechaNacimiento" class="msg"></span>
+          <br>
           <h3>sexo</h3>
           <div class="caja">
             <div class="contenedor">
@@ -67,7 +79,9 @@
               <input type="radio" id="personalizado" name="gender" value="personalizado" >
               <label for="personalizado">personalizado</label>
             </div>
-          </div><br>
+          </div>
+          <span id="msgRadio" class="msg"></span>
+          <br>
           <label for="image">Imagen:</label>
           <input type="file" id="image" name="image" accept="image/*">
           <button type="submit">Registrarse</button>
@@ -77,7 +91,7 @@
           <% //- include('../partials/footer.ejs') %>
         </div>
   </main>
-  <script src="/js/registerValidatorGB.js"></script>
+  <script src="/js/registerValidators.js"></script>
 </body>
 
 </html>
