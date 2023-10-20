@@ -7,23 +7,28 @@
 <body>
     <h1>Crear Producto</h1>
 
-    <form action="/admin/create" method="POST" enctype="multipart/form-data" >
+    <form class="create" id="createForm" action="/admin/create" method="POST" enctype="multipart/form-data" >
         <main class="main">
             <div class="column1">
                 <label for="name">Nombre:</label>
-                <input type="text" id="name" name="name" required><br><br>
+                <input type="text" id="name" name="name" required><br>
+                <span id="msgName" class="msg"></span><br>
 
                 <label for="description">Descripción:</label>
-                <input type="text" id="description" name="description" required><br><br>
+                <input type="text" id="description" name="description" required><br>
+                <span id="msgDescription" class="msg"></span><br>
 
                 <label for="price">Precio:</label>
-                <input type="number" id="price" name="price" required><br><br>
+                <input type="number" id="price" name="price" required><br>
+                <span id="msgPrice" class="msg"></span><br>
 
                 <label for="quantity">Cantidad:</label>
-                <input type="number" id="quantity" name="quantity" required>
+                <input type="number" id="quantity" name="quantity" required><br>
+                <span id="msgQuantity" class="msg"></span><br>
 
                 <label for="descuento">Descuento:</label>
-                <input type="number" id="descuento" name="descuento" required>                
+                <input type="number" id="descuento" name="descuento" required> <br>
+                <span id="msgDiscount" class="msg"></span><br>                
             </div>
 
             <div class="column2">                
@@ -53,6 +58,7 @@
             <button type="delete" id="eliminar">Eliminar Producto</button>
         </div>
     </form>  
+    <script src="/js/createValidators.js"></script>
 </body>
 </html>
 
