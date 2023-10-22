@@ -129,12 +129,14 @@ const controllerLogin = {
         //     image:req.file.filename,
         //}
 
-        let errors = validationResult(req)
-        if (!errors.isEmpty()) {
-            return res.render(path.resolve(__dirname, '..', 'views', 'users', 'registro'), { errors: errors.errors, old: req.body });
-        } else {
-            db.Users.create(createData).then(() => { res.redirect('/login') })
-        }
+        db.Users.create(createData).then(()=>{res.redirect('/login')}).catch(error=>{console.log('cualquier texto', error)})
+
+        // let errors = validationResult(req)
+        // if (!errors.isEmpty()) {
+        //     return res.render(path.resolve(__dirname, '..', 'views', 'users', 'registro'), { errors: errors.errors, old: req.body });
+        // } else {
+        //     db.Users.create(createData).then(() => { res.redirect('/login') })
+        // }
         // let lastRegister = users.pop();
         // users.push(lastRegister);
 
