@@ -2,6 +2,11 @@
 <html lang="es">
 
 <body>
+  <!-- ERRORES FRONT -->
+  <div class="errores">
+    <ul></ul>
+  </div>
+
   <main class="container-fluid">
     <!-- Cuerpo principal -->
     <section class="row">
@@ -17,33 +22,33 @@
         <div class="row">
           <div class="col-8 mx-auto bg-light ">
             <div class="create-form">
-              <form action="/admin/edit/<%= productEdit.id%>" method="POST" enctype="multipart/form-data">
+              <form class="edit" action="/admin/edit/<%= productEdit.id%>" method="POST" enctype="multipart/form-data">
                 <div class="form-group">
-                  <input type="text" class="form-control" name="name" placeholder="Nombre" required="required"
+                  <input id="name" type="text" class="form-control" name="name" placeholder="Nombre" 
                     value="<%= productEdit.name%>">
                 </div>
                 <div class="form-group">
-                  <input type="text" class="form-control" name="description" placeholder="Descripción"
-                    required="required" value="<%= productEdit.description%>">
+                  <input id="description" type="text" class="form-control" name="description" placeholder="Descripción"
+                     value="<%= productEdit.description%>">
                 </div>
                 <div class="form-group">
                   <input type="number" class="form-control" name="price" placeholder="Indique el precio"
-                    required="required" value="<%= productEdit.price%>">
+                     value="<%= productEdit.price%>">
                 </div>
                 <div class="form-group">
-                  <input type="text" class="form-control" name="size" placeholder="Tallas" required="required"
+                  <input type="text" class="form-control" name="size" placeholder="Tallas" 
                     value="<%= productEdit.size%>">
                 </div>
                 <div class="form-group">
-                  <input type="text" class="form-control" name="color" placeholder="Colores" required="required"
+                  <input type="text" class="form-control" name="color" placeholder="Colores" 
                     value="<%= productEdit.color%>">
                 </div>
                 <div class="form-group">
                   <input type="number" class="form-control" name="quantity" placeholder="Indique la existencia"
-                    required="required" value="<%= productEdit.quantity%>">
+                     value="<%= productEdit.quantity%>">
                 </div>
                 <div class="form-group">
-                  <select name="idcategory" class="custom-select" id="idcategory" required>
+                  <select name="idcategory" class="custom-select" id="idcategory">
                     <option disabled value="#">Seleccione la categoría"</option>
                     <option value="1" <%=productEdit.idcategory==1 ? "selected" : null %>
                       >FORMAL</option>
@@ -53,7 +58,7 @@
                   </select>
                 </div>
                 <div class="form-group">
-                  <select name="descuento" class="custom-select" id="validationCustom04" required>
+                  <select name="descuento" class="custom-select" id="validationCustom04">
                     <option disabled value="#">Seleccione un descuento"</option>
                     <option value="0" <%=productEdit.descuento==0 ? "selected" : null %>
                       >Sin descuento</option>
@@ -67,11 +72,11 @@
                     <img class="w-100" src="/images/<%= productEdit.image%>" width="500px"
                       alt="productEdit <%= productEdit.name%>">
                   </figure>
-                  <input type="hidden" name="image" value="<%= productEdit.image%>">
+                  <input id="image" type="hidden" name="image" value="<%= productEdit.image%>">
                   <!--De esta forma logro conservar y que viaje la image anterior de esta forma evito que el usuario seleccione una image nuevamente, ( si no lo desea) -->
                   <!--<input type="file" name="image">-->
                   <input type="file" class="custom-file-input" id="inputGroupFileimage"
-                    aria-describedby="inputGroupFileAddon01" name="image" required value="<%= productEdit.image%>">
+                    aria-describedby="inputGroupFileAddon01" name="image" value="<%= productEdit.image%>">
 
                   <label class="custom-file-label" for="inputGroupFile01">Seleccione una image...</label>
                 </div>
@@ -87,6 +92,8 @@
       </div>
     </section>
   </main>
+
+  <script src="/js/editValidators.js"></script>
 </body>
 
 </html>

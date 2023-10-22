@@ -1,108 +1,79 @@
 window.addEventListener('load', function () {
-  this.document.addEventListener('submit', function (e) {
-    e.preventDefault()
-    // Validaciones del Nombre
-    let campoNombre = document.querySelector("#nombre");
-    let msgNombre = document.querySelector('#msgNombre');
-    msgNombre.innerHTML = ""
-    if (campoNombre.value === "") {
-      msgNombre.innerHTML = "¡El campo de Nombre debe estar llenado!!!"
-    } else if (campoNombre.value.length >= 30 || /^\s+$/.test(campoNombre.value)) {
-      msgNombre.innerHTML = "¡Solo se permiten 30 letras para el campo Nombre!!!"
-    } else if (/^([0-9])*$/.test(campoNombre.value)) {
-      msgNombre.innerHTML = "¡Solo se permiten letras en el campo Nombre!!!"
-    }
+    let formRegister = document.querySelector('form.registro')
+    formRegister.addEventListener('submit', function (e) {
+        let errores = [];
+        
+        let campoNombre = document.querySelector('#nombre');
+        
+        if (campoNombre.value === "") {
+            errores.push("¡El campo de Nombre debe estar llenado!!!");
+        
+        } else if (/^([0-9])*$/.test(campoNombre.value)) {
+            errores.push("¡Solo se permiten letras en el campo Nombre!!!");
+        } else if (campoNombre.value.length >= 30 || campoNombre.value.length < 2 || /^\s+$/.test(campoNombre.value)) {
+            errores.push("¡Solo se permiten mínimo 02 caracteres para el campo Nombre!!!");
+        }
+        // Validaciones del Apellido
+        let campoApellido = document.querySelector('#apellido');
+        
+        if (campoApellido.value === "") {
+            errores.push( "¡El campo de Apellido debe estar llenado¡¡¡")
+        } else if (campoApellido.value.length >= 30 || campoApellido.value.length < 2 || /^\s+$/.test(campoApellido.value)) {
+            errores.push( "¡Solo se permiten 30 letras para el campo Apellido¡¡¡")
+        } else if (/^([0-9])*$/.test(campoApellido.value)) {
+            errores.push( "¡Solo se permiten letras en el campo Apellido¡¡¡")
+        }
 
-    // Validaciones del Apellido
-    let campoApellido = document.querySelector("#apellido");
-    let msgApellido = document.querySelector('#msgApellido');
-    msgApellido.innerHTML = ""
-    if (campoApellido.value === "") {
-      msgApellido.innerHTML = "¡El campo de Apellido debe estar llenado¡¡¡"
-    } else if (campoApellido.value.length >= 30 || /^\s+$/.test(campoApellido.value)) {
-      msgApellido.innerHTML = "¡Solo se permiten 30 letras para el campo Apellido¡¡¡"
-    } else if (/^([0-9])*$/.test(campoApellido.value)) {
-      msgApellido.innerHTML = "¡Solo se permiten letras en el campo Apellido¡¡¡"
-    }
-    
-    // Validaciones del email
-    let campoEmail = document.querySelector("#correo");
-    let msgEmail = document.querySelector('#msgEmail')
-    msgEmail.innerHTML = ""
-    if (campoEmail.value === "") {
-      msgEmail.innerHTML = "¡El campo de email debe estar llenado¡¡¡"
-    // } else if (!campoEmail.value.includes('@')) {
-    } else if (!/\S+@\S+\.\S+/.test(campoEmail.value)) {
-      msgEmail.innerHTML = "¡El email debe ser válido¡¡¡"
-    }
+        // Validaciones del Correo Electrónico
+        let campoEmail = document.querySelector('#correo');
+        if (campoEmail.value === "") {
+            errores.push("¡El campo de correo electrónico debe estar llenado!");
+        } else {
+            // Utiliza una expresión regular para verificar el formato del correo electrónico
+            if (!/^\w+([.-_+]?\w+)*@\w+([.-]?\w+)*(\.\w{2,10})+$/.test(campoEmail.value)) {
+                errores.push("¡El correo electrónico debe ser válido!");
+            }
+        }
+        
+        // Validaciones de Password
+        let campoPassword = document.querySelector('#contrasena');
+        
+        if (campoPassword.value === "") {
+            errores.push("¡El campo de Password es Obligatorio¡¡¡")
+        }else if (campoPassword.value.length <= 8){
+            errores.push("¡El campo de Password debe tener al menos 8 caracteres¡¡¡");
+        }
 
-    // Validaciones del teléfono
-    let campoTelefono = document.querySelector("#telefono");
-    let msgTelefono = document.querySelector('#msgTelefono');
-    msgTelefono.innerHtml = "";
-    if(campoTelefono.value === ""){
-      msgTelefono.innerHTML = "¡El campo de Teléfono debe estar llenado¡¡¡"
-    }
+        // Validaciones de la Imagen
+        let campoImagen = document.querySelector('#image');
+        if (campoImagen.files.length === 0) {
+            errores.push("¡Debes seleccionar una imagen!");
+        } else {
+            // Verificar la extensión del archivo
+            const allowedExtensions = ["jpg", "jpeg", "png", "gif"];
+            const fileName = campoImagen.files[0].name;
+            const fileExtension = fileName.split(".").pop().toLowerCase();
 
-    // Validaciones de Ocupación
-    let campoOcupacion = document.querySelector("#role");
-    let msgOcupacion = document.querySelector('#msgOcupacion');
-    msgOcupacion.innerHTML = "";
-    if (campoOcupacion.value === ""){
-      msgOcupacion.innerHTML = "¡El campo de Ocupación debe estar llenado¡¡¡"
-    }else if (/^([0-9])*$/.test(campoOcupacion.value)) {
-      msgOcupacion.innerHTML = "¡Solo se permiten letras en el campo Ocupación¡¡¡"
-    }
+            if (!allowedExtensions.includes(fileExtension)) {
+                errores.push("¡La imagen debe ser de formato JPG, JPEG, PNG o GIF!");
+            }
+        }
+                
 
-    // Validaciones de Password
-    let campoPassword = document.querySelector("#contrasena");
-    let msgPassword = document.querySelector('#msgPassword');
-    msgPassword.innerHTML = "";
-    if (campoPassword.value === ""){
-      msgPassword.innerHTML = "¡El campo de Password es Obligatorio¡¡¡"
-    }
+        if (errores.length > 0) {
+            e.preventDefault(); // Evita que el formulario se envíe si hay errores.
+        
+            let ulErrores = document.querySelector("div.errores ul");
+            ulErrores.innerHTML = ""; // Limpia cualquier contenido previo.
+        
+            for (let i = 0; i < errores.length; i++) {
+                let li = document.createElement("li");
+                let br = document.createElement("br");
+                li.textContent = errores[i];
+                ulErrores.appendChild(li);
+                ulErrores.appendChild(br);
+            }
+        }
 
-    // Validaciones de Ciudad
-    let campoCiudad = document.querySelector("#ciudad");
-    let msgCiudad = document.querySelector('#msgCiudad');
-    msgCiudad.innerHTML = "";
-    if (campoCiudad.value === ""){
-      msgCiudad.innerHTML = "¡El campo de Ciudad debe estar llenado¡¡¡"
-    }else if(/^([0-9])*$/.test(campoCiudad.value)){
-      msgCiudad.innerHTML = "¡Solo se permiten letras en el campo Ciudad¡¡¡"
-    }
-
-    // Validación de Fecha de Nacimiento
-    let campoFechaNacimiento = document.querySelector("#fechaNacimiento");
-    let msgFechaNacimiento = document.querySelector('#msgFechaNacimiento');
-    msgFechaNacimiento.innerHTML = "";
-
-    if (campoFechaNacimiento.value === "") {
-      msgFechaNacimiento.innerHTML = "¡El campo de Fecha de Nacimiento debe estar llenado!";
-    } else {
-      const fechaNacimiento = new Date(campoFechaNacimiento.value);
-      const fechaActual = new Date();
-      const edad = fechaActual.getFullYear() - fechaNacimiento.getFullYear();
-
-      if (fechaActual.getMonth() < fechaNacimiento.getMonth() || (fechaActual.getMonth() === fechaNacimiento.getMonth() && fechaActual.getDate() < fechaNacimiento.getDate())) {
-        edad--; // Restar 1 si no ha cumplido años todavía en este año.
-      }
-
-      if (edad < 18) {
-        msgFechaNacimiento.innerHTML = "Debes ser mayor de 18 años para registrarte.";
-      }
-    }
-
-    //Validaciones del sexo
-    let opcionesRadio = document.querySelectorAll(".caja input[type=radio]");
-    let msgRadio = document.querySelector('#msgRadio');
-    msgRadio.innerHTML = "";
-
-    let algunaOpcionSeleccionada = Array.from(opcionesRadio).some(opcion => opcion.checked);
-
-    if (!algunaOpcionSeleccionada) {
-      msgRadio.innerHTML = "Debes seleccionar una de las opciones de género";
-    }
-
-  })
+    })
 })
