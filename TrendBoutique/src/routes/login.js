@@ -55,7 +55,6 @@ let validationRegister = [
     body('email')
         .isEmail().withMessage('Debe registrar un email válido').bail()
         .custom(value => {
-           console.log('afafdgsg');
         let logRegister = users.find(user => user.email == value)
         if (typeof logRegister == 'undefined') {
             return true
