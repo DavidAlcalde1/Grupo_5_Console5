@@ -1,54 +1,54 @@
 window.addEventListener('load', function () {
-    this.document.addEventListener('submit', function (e) {
-        e.preventDefault()
-        // Validaciones del Nombre
-        let campoName = document.querySelector("#name");
-        let msgName = document.querySelector('#msgName');
-        msgName.innerHTML = ""
-        if (campoName.value === "") {
-            msgName.innerHTML = "¡El campo de Nombre debe estar llenado!!!"
-        } else if (campoName.value.length >= 30 || /^\s+$/.test(campoName.value)) {
-            msgName.innerHTML = "¡Solo se permiten 30 letras para el campo Nombre!!!"
-        } else if (/^([0-9])*$/.test(campoName.value)) {
-            msgName.innerHTML = "¡Solo se permiten letras en el campo Nombre!!!"
+    let formRegister = document.querySelector('form.create')
+    formRegister.addEventListener('submit', function (e) {
+        let errores = [];
+        
+        let campoNombre = document.querySelector('#name');
+        
+        if (campoNombre.value === "") {
+            errores.push("¡El campo de Nombre debe estar llenado!!!");
+        
+        } else if (campoNombre.value.length < 5 ) {
+            errores.push("¡Solo se permiten mínimo 05 caracteres para el campo Nombre!!!");
         }
+        // Validaciones de Descripción
+        let campoDescripcion = document.querySelector('#description');
+        
+        if (campoDescripcion.value === "") {
+            errores.push( "¡El campo de Apellido debe estar llenado¡¡¡")
+        } else if (campoDescripcion.value.length < 20 ) {
+            errores.push( "¡El campo Descripción deberá tener al menos 20 caracteres!!!");
+        }   
+        // Validaciones de la Imagen
+        let campoImagen = document.querySelector('#image');
+        if (campoImagen.files.length === 0) {
+            errores.push("¡Debes seleccionar una imagen!");
+        } else {
+            // Verificar la extensión del archivo
+            const allowedExtensions = ["jpg", "jpeg", "png", "gif"];
+            const fileName = campoImagen.files[0].name;
+            const fileExtension = fileName.split(".").pop().toLowerCase();
 
-        // Validaciones de la Descripción
-        let campoDescription = document.querySelector("#description");
-        let msgDescription = document.querySelector('#msgDescription');
-        msgDescription.innerHTML = ""
-        if (campoDescription.value === "") {
-            msgDescription.innerHTML = "¡El campo de Descripción debe estar llenado¡¡¡"
-        } else if (campoDescription.value.length >= 100 || /^\s+$/.test(campoDescription.value)) {
-            msgDescription.innerHTML = "¡Solo se permiten 100 letras para el campo Descripción¡¡¡"
-        } else if (/^([0-9])*$/.test(campoDescription.value)) {
-            msgDescription.innerHTML = "¡Solo se permiten letras en el campo Descripción¡¡¡"
+            if (!allowedExtensions.includes(fileExtension)) {
+                errores.push("¡La imagen debe ser de formato JPG, JPEG, PNG o GIF!");
+            }
         }
+                
 
-        // Validaciones del Precio
-        let campoPrice = document.querySelector("#price");
-        let msgPrice = document.querySelector('#msgPrice');
-        msgName.innerHTML = ""
-        if (campoPrice.value === "") {
-            msgPrice.innerHTML = "¡Debe asignar un precio al producto!!!"
+        if (errores.length > 0) {
+            e.preventDefault(); // Evita que el formulario se envíe si hay errores.
+        
+            let ulErrores = document.querySelector("div.errores ul");
+            ulErrores.innerHTML = ""; // Limpia cualquier contenido previo.
+        
+            for (let i = 0; i < errores.length; i++) {
+                let li = document.createElement("li");
+                let br = document.createElement("br");
+                li.textContent = errores[i];
+                ulErrores.appendChild(li);
+                ulErrores.appendChild(br);
+            }
         }
-
-        //Validaciones de Cantidad
-        let campoCantidad = document.querySelector("#quantity");
-        let msgQuantity = document.querySelector('#msgQuantity');
-        msgQuantity.innerHTML = ""
-        if (campoCantidad.value === "") {
-            msgQuantity.innerHTML = "¡Debe asignar alguna cantidad al producto!!!"
-        }
-
-        //Validaciones de Descuento
-        let campoDescuento = document.querySelector("#discount");
-        let msgDiscount = document.querySelector('#msgDiscount');
-        msgDiscount.innerHTML = ""
-        if (campoDescuento.value === "") {
-            msgDiscount.innerHTML = "¡Debe asignar alguna cantidad al descuento!!!"
-        }
-
 
     })
 })

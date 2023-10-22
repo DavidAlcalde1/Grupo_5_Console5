@@ -3,40 +3,41 @@
 <head>
     <title>Crear Producto</title>
     <link rel="stylesheet" href="/css/stylesCreate.css">
+    <link rel="stylesheet" type="text/css" href="/css/stylesValidators.css">
 </head>
 <body>
+    <!-- ERRORES FRONT -->
+  <div class="errores">
+    <ul></ul>
+  </div> 
+  <br>
     <h1>Crear Producto</h1>
 
-    <form class="create" id="createForm" action="/admin/create" method="POST" enctype="multipart/form-data" >
+    <form class="create" action="/admin/create" method="POST" enctype="multipart/form-data" >
         <main class="main">
             <div class="column1">
                 <label for="name">Nombre:</label>
-                <input type="text" id="name" name="name" required><br>
-                <span id="msgName" class="msg"></span><br>
+                <input class="errores" type="text" id="name" name="name"><br><br>
 
                 <label for="description">Descripción:</label>
-                <input type="text" id="description" name="description" required><br>
-                <span id="msgDescription" class="msg"></span><br>
+                <input class="errores" type="text" id="description" name="description"><br><br>
 
                 <label for="price">Precio:</label>
-                <input type="number" id="price" name="price" required><br>
-                <span id="msgPrice" class="msg"></span><br>
+                <input type="number" id="price" name="price"><br><br>
 
                 <label for="quantity">Cantidad:</label>
-                <input type="number" id="quantity" name="quantity" required><br>
-                <span id="msgQuantity" class="msg"></span><br>
+                <input type="number" id="quantity" name="quantity">
 
                 <label for="descuento">Descuento:</label>
-                <input type="number" id="descuento" name="descuento" required> <br>
-                <span id="msgDiscount" class="msg"></span><br>                
+                <input type="number" id="descuento" name="descuento">                
             </div>
 
             <div class="column2">                
                 <label for="size">Talla:</label>
-                <input type="text" id="size" name="size" required><br><br>
+                <input type="text" id="size" name="size"><br><br>
 
                 <label for="color">Color:</label>
-                <input type="text" id="color" name="color" required><br><br>
+                <input type="text" id="color" name="color"><br><br>
             </div>
 
             <div>
@@ -49,7 +50,7 @@
                 <br><br>
 
                 <label for="image">Imagen:</label>
-                <input type="file" id="image" name="image" accept="image/*">
+                <input class="errores" type="file" id="image" name="image" accept="image/*">
                 <!--<input type="text" id="image" name="image" value="" required hidden>-->
             </div>
         </main>
@@ -57,8 +58,8 @@
             <button type="submit" id="crear">Crear Producto</button>
             <button type="delete" id="eliminar">Eliminar Producto</button>
         </div>
-    </form>  
-    <script src="/js/createValidators.js"></script>
+    </form> 
+    <script src="/js/createValidators.js"></script> 
 </body>
 </html>
 

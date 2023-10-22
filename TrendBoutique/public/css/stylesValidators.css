@@ -1,0 +1,12 @@
+/* .errores {
+    display: flex;
+    flex-direction: column-reverse;
+    flex-wrap: wrap;
+} */
+
+div.errores {
+    display: block;
+    margin-bottom: 10px;
+    color:red;
+    background-color: greenyellow; /* Esto añadirá espacio entre cada elemento <li> */
+}
