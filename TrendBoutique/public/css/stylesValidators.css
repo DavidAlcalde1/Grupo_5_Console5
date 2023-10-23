@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 /* .errores {
     display: flex;
     flex-direction: column-reverse;
@@ -10,17 +9,4 @@ div.errores {
     margin-bottom: 10px;
     color:red;
     background-color: greenyellow; /* Esto añadirá espacio entre cada elemento <li> */
-=======
-/* .errores {
-    display: flex;
-    flex-direction: column-reverse;
-    flex-wrap: wrap;
-} */
-
-div.errores {
-    display: block;
-    margin-bottom: 10px;
-    color:red;
-    background-color: greenyellow; /* Esto añadirá espacio entre cada elemento <li> */
->>>>>>> 868be0ba27c78907b4ac009e3125d17ce1a60526
 }
