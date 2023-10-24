@@ -18,7 +18,7 @@ const controllerLogin = {
     },
     
     getIn: async (req, res) => {
-        // let errors = validationResult(req);
+        //let errors = validationResult(req);
         // if (!errors.isEmpty()){
         //     console.log("ERRORS",errors)
         //     res.render(path.resolve(__dirname, '..', 'views', 'users', 'login'), {errors:errors.mapped(), old:req.body});

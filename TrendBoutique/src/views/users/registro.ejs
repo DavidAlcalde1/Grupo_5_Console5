@@ -3,7 +3,7 @@
   <head>
     <title>Registro</title>
 
-    <!-- <link rel="stylesheet" type="text/css" href="/css/stylesRegistro.css"> -->
+    <link rel="stylesheet" type="text/css" href="/css/stylesRegistro.css">
     <!-- <link rel="stylesheet" type="text/css" href="/css/stylesHeader.css"> -->
     <!-- <link rel="stylesheet" type="text/css" href="/css/stylesFooter.css"> -->
     <link rel="stylesheet" type="text/css" href="/css/stylesValidators.css" />
@@ -13,6 +13,11 @@
   </head>
 
   <body>
+    <br>
+    <br>
+          <div class="errores">
+            <ul class="errores"></ul>
+          </div>
     <!-- ERRORES FRONT -->
     <main>
       <% if(typeof(errors) !='undefined' ){%>
@@ -22,10 +27,6 @@
         <%});%>
       </ul>
       <%}%>
-
-      <div class="errores">
-        <ul class="errores"></ul>
-      </div>
 
       <!-- FORMULARIO -->
       <form
