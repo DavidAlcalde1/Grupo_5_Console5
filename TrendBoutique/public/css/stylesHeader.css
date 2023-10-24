@@ -80,7 +80,7 @@
 ul {
   list-style-type: none;
   display: flex;
-  flex-wrap: wrap;
+  flex-wrap: block;
   justify-content: space-between;
 }
 
