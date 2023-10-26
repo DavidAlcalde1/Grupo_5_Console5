@@ -79,5 +79,6 @@ router.post('/login', validation, controllerLogin.getIn);
 router.get('/register', controllerLogin.register);
 router.post('/register', upload.single('image'), validationRegister, controllerLogin.create);
 router.get('/logout', controllerLogin.logout);
+router.get('/detalle', controllerLogin.detalle);
 
 module.exports = router

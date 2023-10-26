@@ -5,6 +5,7 @@ const { validationResult } = require('express-validator');
 const multer = require('multer');
 const { log } = require('console');
 let db = require('../../database/models');
+const session = require('express-session');
 // const bcrypt = require('bcrypt'); // Necesitarás instalar el paquete 'bcrypt' si aún no lo has hecho
 
 
@@ -161,6 +162,28 @@ const controllerLogin = {
         req.session.destroy ()
         res.cookie('email', null, {maxAge:-1})
         res.redirect('/')
+    },
+
+    detalle: async (req, res) => {
+        // console.log(req.session, 'USUARIOS');
+        console.log('sesion', req.session.email);
+        if (req.session.user) {
+            email = req.session.email
+            const user = await db.Users.findOne({
+                where:{
+                    email
+                }
+            })
+            console.log('User', user);
+            res.render(path.resolve(__dirname, '..', 'views', 'users', 'detalle'),{
+                user
+            });
+        }
+        // const user = await
+        // const loggedUser = user
+        //     req.session.user = loggedUser
+        //     console.log(loggedUser);
+
     }
 
 };
