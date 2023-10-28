@@ -1,7 +1,7 @@
 const db = require("../../../database/models");
 module.exports = {
     allUsers: (req, res) => {
-        db.Users.findAll()
+        const todosUsuarios =  db.Users.findAll() //Se actualizó
             .then(users => {
                 res
                     .json({
@@ -11,5 +11,8 @@ module.exports = {
                         data: users
                     })
             })
+            const totales = todosUsuarios.length
+            return JSON.stringify(totales) // Se actualizó
+
     }
 }
