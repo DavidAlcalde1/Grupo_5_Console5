@@ -12,14 +12,14 @@ background-position: center center;
 background-repeat: no-repeat;
 }
 
-:root {
+/* :root {
 --color-amarillo: #EAC926;
 --color-azul: #03264C;
 --color-celeste: #1259c3;
 --color-gris-oscuro: #666;
 --color-gris-claro: #ebebeb;
 --color-verde: #222723;
-}
+} */
 
 .btnWa {
 font-size: 72px; /* Tamaño del ícono */
