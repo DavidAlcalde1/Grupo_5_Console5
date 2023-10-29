@@ -1,6 +1,7 @@
 .listProducts {
     width: 100%;
     display: flex;
+    flex-wrap: wrap;
     margin-left: auto;
     margin-right: auto;
     width: 90%;
@@ -10,10 +11,42 @@ ul {
     flex-wrap: wrap;
 }
 
+h1 {
+    margin-left: 45px;
+}
+
 h2 {
     display: block;
+    margin-top: 20px;
+    margin-left: 10px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: medium;
 }
 
 .imageList{
+    width: 280px; 
+    height: 300px; 
     margin: 10px;
+    margin-bottom: -10px;
+    object-fit: cover; 
 }
+
+.ver-detalle {
+    display: block;
+    text-align: center;
+    background-color: #ec4767;
+    color: #fff;
+    padding: 10px 18px;
+    margin-right: 10px;
+    margin-left: 10px;
+    margin-top: 10px;
+    margin-bottom: 50px;
+    text-decoration: none;
+    border: none;
+    border-radius: 5px;
+    align-items: center;
+  }
+  
+  .ver-detalle:hover {
+    background-color: #f56e89;
+  }
