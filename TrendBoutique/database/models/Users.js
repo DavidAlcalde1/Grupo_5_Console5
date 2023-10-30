@@ -1,5 +1,6 @@
 module.exports = (sequelize, dataTypes) => {
     let alias = "Users";
+    
     let cols = {
         idusers: {
             type: dataTypes.INTEGER,
@@ -26,23 +27,25 @@ module.exports = (sequelize, dataTypes) => {
             type: dataTypes.STRING
         },
         role: {
-            type: dataTypes.STRING
+            type: dataTypes.INTEGER
         },
         country:{
             type: dataTypes.STRING
         },
         image: {
             type: dataTypes.STRING
+        },
+        fechaNacimiento: {
+            type: dataTypes.DATE
         }
     };
 
     let config = {
         tableName: "Users",
-        timestamps: false
+        timestamps: true
     }
 
     const User = sequelize.define(alias, cols, config);
 
     return User;
-
 }

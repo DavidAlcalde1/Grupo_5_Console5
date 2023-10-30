@@ -25,16 +25,16 @@
             <!-- <% if (true){ %> -->
 
 
-              <a href="/products/<%=product.id%>/edit">
-                <img class="imageList"
-                src="/images/<%= product.image %>"
-                alt="Mi Imagen"
-                width="400px"
-                height="400px"/>
-              </a>
-              <h2><%= product.id %> <%= product.name %></h2>
+            <h2><%= product.id %> <%= product.name %></h2>
+            <a href="/products/<%=product.id%>/edit">
+            <img class="imageList"
+              src="/images/<%= product.image %>"
+              alt="Mi Imagen"
+              width="400px"
+              height="400px"/>
+            </a>
               <!-- <% }; %> -->
-            <a class="ver-detalle" href="./detail/<%=product.id%>">Ver detalle</a>
+            <a href="./detail/<%=product.id%>">Ver detalle</a>
 
           </li>
           <% }); %>

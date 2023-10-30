@@ -8,8 +8,6 @@ let db = require('../../database/models');
 
 module.exports = (req, res, next) => {
     res.locals.user = false;
-    console.log("req.locals", res.locals)
-    console.log(req.cookies.email)
     if (req.session.user) {
         res.locals.user = req.session.user;
         return next();

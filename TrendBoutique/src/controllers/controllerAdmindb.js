@@ -28,7 +28,6 @@ const controllerAdmin = {
     },
 
     update: (req, res) => {         
-        console.log(req.body);     
         const productId = req.params.id;
         const updatedData = req.body; // Los nuevos datos del producto a editar
         req.body.image = req.file.filename;    

@@ -80,5 +80,7 @@ router.get('/register', controllerLogin.register);
 router.post('/register', upload.single('image'), validationRegister, controllerLogin.create);
 router.get('/logout', controllerLogin.logout);
 router.get('/detalle', controllerLogin.detalle);
+router.get('/editProfile', controllerLogin.editProfile);
+router.post('/editProfile', upload.single('image'), validationRegister, controllerLogin.updateProfile);
 
 module.exports = router

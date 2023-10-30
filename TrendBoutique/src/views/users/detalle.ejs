@@ -1,120 +1,96 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>Información de Usario</title>
 
-    <link rel="stylesheet" type="text/css" href="/css/stylesRegistro.css">
-    <!-- <link rel="stylesheet" type="text/css" href="/css/stylesHeader.css"> -->
-    <!-- <link rel="stylesheet" type="text/css" href="/css/stylesFooter.css"> -->
-    <link rel="stylesheet" type="text/css" href="/css/stylesValidators.css" />
+<head>
+  <title>Información de Usario</title>
 
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" /> -->
-  </head>
+  <link rel="stylesheet" type="text/css" href="/css/stylesRegistro.css">
+  <!-- <link rel="stylesheet" type="text/css" href="/css/stylesHeader.css"> -->
+  <!-- <link rel="stylesheet" type="text/css" href="/css/stylesFooter.css"> -->
+  <link rel="stylesheet" type="text/css" href="/css/stylesValidators.css" />
 
-  <body>
-    <br>
-    <br>
-          <div class="errores">
-            <ul class="errores"></ul>
-          </div>
-    <!-- ERRORES FRONT -->
-    <main>
-      <% if(typeof(errors) !='undefined' ){%>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" /> -->
+</head>
+
+<body>
+  <br>
+  <br>
+  <div class="errores">
+    <ul class="errores"></ul>
+  </div>
+  <!-- ERRORES FRONT -->
+  <main>
+    <% if(typeof(errors) !='undefined' ){%>
       <ul class="alert alert-danger">
         <% errors.forEach(error=> { %>
-        <li><%= error.msg%></li>
-        <%});%>
+          <li>
+            <%= error.msg%>
+          </li>
+          <%});%>
       </ul>
       <%}%>
 
-      <!-- FORMULARIO -->
-      <form
-        class="registro"
-        id="registroForm"
-        action="/register"
-        method="post"
-        enctype="multipart/form-data"
-      >
-        <h1 class="title">Registrate</h1>
-        <input
-          type="text"
-          placeholder="Nombre"
-          name="first_name"
-          id="nombre"
-        /><br />
-        <!-- <span id="msgNombre" class="msg"></span><br> -->
-        <input
-          type="text"
-          placeholder="Apellido"
-          name="last_name"
-          id="apellido"
-        /><br />
-        <!-- <span id="msgApellido" class="msg"></span><br> -->
-        <input
-          type="text"
-          placeholder="correo electrónico"
-          name="email"
-          id="correo"
-        /><br />
-        <!-- <span id="msgEmail" class="msg"></span><br> -->
-        <input
-          type="number"
-          placeholder="Teléfono"
-          name="telefono"
-          id="telefono"
-        /><br />
-        <!-- <span id="msgTelefono" class="msg"></span><br> -->
-        <!-- <input
-          type="password"
+        <!-- FORMULARIO -->
+        <form class="registro" id="registroForm" action="/detalle" method="get" enctype="multipart/form-data">
+          <!-- <label for="image">Avatar</label> -->
+          <!-- <input type="file" id="image" name="image" accept="image/*" /> -->
+          <!-- <button type="submit">Registrarse</button> -->
+          <img src="/images/users/<%= user.image%>" style="width: 250px; height: 250px;">
+          <h1 class="title">Información de tu perfil</h1>
+          <label for="first_name">Nombre</label>
+          <input type="text" placeholder="Nombre" name="first_name" id="nombre" disabled value="<%= user.first_name%>" /><br />
+          <!-- <span id="msgNombre" class="msg"></span><br> -->
+          <label for="last_name">Apellido</label>
+          <input type="text" placeholder="Apellido" name="last_name" id="apellido" disabled value="<%= user.last_name%>" /><br />
+          <!-- <span id="msgApellido" class="msg"></span><br> -->
+          <label for="email">Correo Electrónico</label>
+          <input type="text" placeholder="correo electrónico" name="email" id="correo" disabled value="<%= user.email%>" /><br />
+          <!-- <span id="msgEmail" class="msg"></span><br> -->
+          <label for="telefono">Número Telefónico</label>
+          <input type="number" placeholder="Teléfono" name="telefono" id="telefono" disabled value="<%= user.telefono%>" /><br />
+          <!-- <span id="msgTelefono" class="msg"></span><br> -->
+          <!-- <input
+            type="password"
           placeholder="Contraseña"
           name="password"
           id="contrasena"
         /><br /> -->
-        <!-- <span id="msgPassword" class="msg"></span><br> -->
-        <input
-          type="text"
-          placeholder="Ocupación"
-          name="role"
-          id="role"
-        /><br />
-        <!-- <span id="msgOcupacion" class="msg"></span><br> -->
-        <input
-          type="text"
-          placeholder="Ciudad"
-          name="country"
-          id="ciudad"
-        /><br />
-        <label for="fechaNacimiento">Fecha de nacimiento:</label>
-        <input type="date" name="fechaNacimiento" id="fechaNacimiento" /><br />
-        <h3>sexo</h3>
-        <div class="caja">
+          <!-- <span id="msgPassword" class="msg"></span><br> -->
+          <!-- <input
+        type="text"
+        placeholder="Ocupación"
+        name="role"
+        id="role"
+        /><br /> -->
+          <!-- <span id="msgOcupacion" class="msg"></span><br> -->
+          <label for="country">Ciudad</label>
+          <input type="text" placeholder="Ciudad" name="country" id="ciudad" disabled value="<%= user.country%>" /><br />
+          <label for="fechaNacimiento">Fecha de nacimiento:</label>
+          <input type="date" name="fechaNacimiento" id="fechaNacimiento" disabled value="<%= user.fechaNacimiento%>" /><br />
+          <!-- <h3>Género</h3> -->
+          <!-- <div class="caja"> -->
           <div class="contenedor">
-            <input type="radio" id="hombre" name="gender" value="hombre" />
-            <label for="hombre">hombre</label>
+            <label for="gender">Género</label>
+            <input type="text" id="gender" name="gender" disabled value="<%= user.gender%>" />
           </div>
-          <div class="contenedor">
+          <!-- <div class="contenedor">
             <input type="radio" id="mujer" name="gender" value="mujer" />
             <label for="mujer">mujer</label>
           </div>
           <div class="contenedor">
             <input
-              type="radio"
-              id="personalizado"
-              name="gender"
-              value="personalizado"
+            type="text"
             />
             <label for="personalizado">personalizado</label>
-          </div>
-        </div>
-        <br />
-        <label for="image">Imagen:</label>
-        <!-- <input type="file" id="image" name="image" accept="image/*" /> -->
-        <!-- <button type="submit">Registrarse</button> -->
-      </form>
-      <script src="script.js"></script>
-      <!-- <div><% //- include('../partials/footer.ejs') %></div> -->
-    </main>
-    <script src="/js/registerValidators.js"></script>
-  </body>
+          </div> -->
+          <!-- </div> -->
+          <br />
+        </form>
+        <script src="script.js"></script>
+        <!-- <div><% //- include('../partials/footer.ejs') %></div> -->
+  </main>
+  <script src="/js/registerValidators.js"></script>
+</body>
+
 </html>
