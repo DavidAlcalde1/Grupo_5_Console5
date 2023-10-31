@@ -4,11 +4,13 @@ const methodOverride = require("method-override");
 const access = require('./routes/access');
 const session = require('express-session');
 const cookieParser = require('cookie-parser');
+const cors = require('cors');
 
 const app = express();
 
 //Para indicarle express la carpeta donde se encuentran los archivos estáticos
 app.use(express.static(path.resolve(__dirname, '..', 'public')));
+app.use(cors());
 
 //Debemos indicar cual es el productr de plantillas que estamos usando EJS
 app.set('view engine', 'ejs');

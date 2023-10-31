@@ -4,13 +4,17 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Detalle</title>
+    <link rel="stylesheet" type="text/css" href="/css/stylesWhats.css" />
+    <link rel="stylesheet" type="text/css" href="/css/stylesDetalle.css" />
   </head>
-  <link rel="stylesheet" type="text/css" href="/css/stylesshome.css" />
-  <link rel="stylesheet" type="text/css" href="/css/stylesHeader.css" />
-  <link rel="stylesheet" type="text/css" href="/css/stylesFooter.css" />
+
+  
+
+  
   <script
     src="https://kit.fontawesome.com/2c7738e51c.js"
     crossorigin="anonymous"
+    
   ></script>
   <%- include('../partials/header.ejs') %>
   <body>
@@ -24,24 +28,29 @@
         <i class="fab fa-whatsapp my-float"></i>
       </a>
     </div>
-    <h1>Detalle de Producto</h1>
     <div class="listProducts">
-      <ul>
-        <li>
+      <!-- <h1 id="titulo">Detalle de Producto</h1> -->
+      
+      <h1 class="tituloD">Detalle de Producto</h1>
+     
+      <ul class="producto">
+        <li class="detalle">
           <img
             class="imageList"
             src="/images/<%= miProducto.image %>"
             alt="Mi Imagen"
-            width="400px"
-            height="400px"
+            width="600px"
+            height="600px"
           />
-          <h4>Nombre del Producto: <%= miProducto.name %></h4>
-          <h4>Descripción: <%= miProducto.description %></h4>
-          <h4>Precio: $<%= miProducto.price %></h4>
-          <h4>Disponibilidad: <%= miProducto.quantity %></h4>
-          <h4>Categoría: <%= miProducto.idcategory %></h4>
-          <h4>Talla: <%= miProducto.size %></h4>
-          <h4>Color: <%= miProducto.color %></h4>
+          <section class="contenedor">
+            <h4>Nombre del Producto: <%= miProducto.name %></h4>
+            <h4>Descripción: <%= miProducto.description %></h4>
+            <h4>Precio: $<%= miProducto.price %></h4>
+            <h4>Disponibilidad: <%= miProducto.quantity %></h4>
+            <h4>Categoría: <%= miProducto.idcategory %></h4>
+            <h4>Talla: <%= miProducto.size %></h4>
+            <h4>Color: <%= miProducto.color %></h4>
+          </section>
         </li>
       </ul>
     </div>
