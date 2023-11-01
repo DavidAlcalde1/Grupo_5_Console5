@@ -1,0 +1,163 @@
+/* Estilo general del cuerpo de la página */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f2f2f2;
+    margin: 0;
+    padding: 0;
+    background-image: url("../images/fondoEdit3.jpg");
+}
+
+/* Estilo de la barra de navegación */
+.header {
+    background-color: #333;
+    color: white;
+    padding: 10px;
+    text-align: center;
+}
+
+/* Estilo del título */
+h2 {
+    /* background-color: #0c6cfc; */
+    color: white;
+    padding: 15px;
+    text-align: center;
+    font-size: 50px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    
+}
+
+
+.create-form {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    
+    margin: 30px;
+    text-align: center;
+    padding: 30px;
+    width: 100%; 
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); 
+    border-radius: 15px;
+    background-color: white;
+}
+
+/* Estilo de los botones */
+.btn {
+    margin: 5px;
+}
+
+/* Estilo de los campos de entrada */
+.form-control {
+    margin: 5px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+/* Estilo de los select */
+.custom-select {
+    margin: 5px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+/* Estilo de la imagen */
+.custom-file {
+    margin: 5px;
+    text-align: center;
+}
+
+/* Estilo de la lista de errores */
+.errores ul {
+    color: red;
+}
+
+/* Estilo de la sección principal */
+/* .bg-home {
+    background-color: #f2f2f2;
+    padding: 20px;
+    width: 600px;
+    display: flex;
+    -ms-flex-align: center;
+} */
+
+
+/* Estilo del contenedor principal */
+.container-fluid {
+    padding: 0;
+}
+
+
+.infProduct {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    width: 100%; 
+    margin-top: 0px;/* Asegura que ocupe todo el ancho disponible */
+    margin-bottom: 40px;
+}
+
+
+/* Estilos para la disposición de los elementos */
+.form-group {
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.entradas {
+    display:flex;
+    flex-direction: column;
+    align-items: flex-end;
+    margin-top: 11px;
+}
+.btn-info{
+    background-color: #C4E7E1;
+    color: rgb(75, 70, 70);
+    padding: 10px 25px 10px 25px;
+    border-radius: 8px;
+    border-color: white;
+    font-weight:bolder;
+    
+    /* text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); */
+    
+}
+
+.regresar {
+    color: rgb(75, 70, 70);
+}
+
+/* Estilos generales para pantallas grandes */
+.container {
+    width: 80%;
+    margin: 0 auto;
+}
+
+.titulo {
+    font-size: 30px;
+}
+
+
+
+/* Media query para pantallas medianas */
+@media (max-width: 768px) {
+    .container {
+        width: 90%; /* Ajusta el ancho del contenedor para pantallas medianas */
+    }
+    .titulo {
+        font-size: 20px; /* Cambia el tamaño del h2 para pantallas medianas */
+    }
+    /* Otros estilos para pantallas medianas */
+}
+
+/* Media query para pantallas pequeñas (móviles) */
+@media (max-width: 480px) {
+    .container {
+        width: 100%; /* Ajusta el ancho del contenedor para pantallas pequeñas */
+    }
+    .titulo {
+        font-size: 18px; /* Cambia el tamaño del h2 para pantallas pequeñas */
+    }
+    /* Otros estilos para pantallas pequeñas */
+}

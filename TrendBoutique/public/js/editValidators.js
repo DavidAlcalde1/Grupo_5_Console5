@@ -22,24 +22,22 @@ window.addEventListener('load', function () {
             errores.push( "¡El campo Descripción deberá tener al menos 20 caracteres!!!");
         }   
         // Validaciones de la Imagen
-        let campoImagen = document.querySelector('#image');
-        if (!campoImagen.files) {
-            errores.push("¡Debes seleccionar una imagen!");
-        } else {
+        let campoImagen = document.querySelector('#image').value;
+        console.log('campoImagen:',campoImagen);
+        let imagenNueva = document.querySelector('#imagenNueva')
+        console.log('imagenNueva:', imagenNueva);
+        if (imagenNueva.files.length > 0) {
             // Verificar la extensión del archivo
             const allowedExtensions = ["jpg", "jpeg", "png", "gif"];
-            const fileName = campoImagen.files[0].name;
-            const fileExtension = fileName.split(".").pop().toLowerCase();
+            filename = imagenNueva.files[0].name;
+            const fileExtension = filename.split(".").pop().toLowerCase();
 
             if (!allowedExtensions.includes(fileExtension)) {
                 errores.push("¡La imagen debe ser de formato JPG, JPEG, PNG o GIF!");
             }
         }
-                
-
-        console.log(errores)
+        
         if (errores.length > 0) {
-            console.log("prevent default")
             e.preventDefault(); // Evita que el formulario se envíe si hay errores.
         
             let ulErrores = document.querySelector("div.errores ul");

@@ -1,3 +1,7 @@
+body {
+    background-image: url("../images/fondoEdit3.jpg");
+}
+
 .listProducts {
     width: 100%;
     display: flex;
