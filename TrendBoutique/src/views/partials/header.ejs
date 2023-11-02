@@ -1,5 +1,5 @@
 <header class="main-header">
-  <link rel="stylesheet" type="text/css" href="/css/stylesHeader.css" />
+  <!-- <link rel="stylesheet" type="text/css" href="/css/stylesHeader.css" /> -->
   <div class="main-header-top-bar">
     <div>
       <img class="logo" src="/images/logo-trend-boutique.svg" alt="Logo Trend Boutique"
@@ -16,15 +16,15 @@
     </form>
     <div class="user">
       <ul>
-        <% //if(locals.user) { %>
-        <!-- <h1><%= locals.user %></h1> -->
-          
+        <% if(locals.user) { %>
           <li> <a href="#"></a></li>
           <li><img class="avatar" src="/images/users/<%= locals.user.image %>" alt=""></li>
-          <% //} else { %>
+          <li><a href="/detalle">&nbsp&nbsp&nbsp[ Detalle ]&nbsp&nbsp&nbsp</a></li>
+          <li><a href="/editProfile">[ Editar Perfil ]</a></li>
+          <% } else { %>
             <li><a href="/login"></a></li>
             <li><a href="/registro"></a></li>
-            <% //}%>
+          <% }%>
       </ul>
     </div>
   </div>

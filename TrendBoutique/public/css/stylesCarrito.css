@@ -117,6 +117,8 @@ body {
 }
 
 .product-selected {
+    margin-top: 50px;
+    margin-right: 30px;
     display: flex;
     display: center;
 }
@@ -410,8 +412,9 @@ footer {
 .product-shop {
   margin-right: 25px;
 }
-.dess-car {
+.dress-car {
   margin-right: 10px;
+  margin-left: -40px;
 }
 }
 
