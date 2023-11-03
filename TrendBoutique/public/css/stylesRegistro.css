@@ -96,6 +96,10 @@ input {
   color: #1e1f50;
 }
 
+.search-products{
+  width: 9000%;
+}
+
 /* @media only screen and (max-width: 600px) {
   main {
     width: 100%;
