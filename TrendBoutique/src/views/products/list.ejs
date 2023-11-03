@@ -11,7 +11,7 @@
     <title>Lista de Productos</title>
   </head>
   <link rel="stylesheet" type="text/css" href="/css/stylesshome.css">
-  <link rel="stylesheet" type="text/css" href="/css/stylesHeader.css">
+  <!-- <link rel="stylesheet" type="text/css" href="/css/stylesHeader.css"> -->
   <link rel="stylesheet" type="text/css" href="/css/stylesFooter.css">
   <%- include('../partials/header.ejs') %>
   <body>
@@ -34,7 +34,7 @@
               </a>
               <h2><%= product.id %> <%= product.name %></h2>
               <!-- <% }; %> -->
-            <a class="ver-detalle" href="./detail/<%=product.id%>">Ver detalle</a>
+            <a class="ver-detalle" href="./products/detail/<%=product.id%>">Ver detalle</a>
 
           </li>
           <% }); %>

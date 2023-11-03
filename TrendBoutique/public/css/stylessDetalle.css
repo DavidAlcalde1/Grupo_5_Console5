@@ -1,0 +1,163 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  display: flex; 
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 600;
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+}
+.logo {
+  margin-right: 10px;
+  margin-top: 10px;
+  margin-left: 120px;
+}
+.main-header-top-bar {
+  display: flex;
+  align-items: center;
+  /* margin: 0; */
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background-color: white;
+  padding: 10px; 
+  z-index: 9999;
+}
+.navigation-bar {
+  display: flex;
+  justify-content: center;
+  padding-top: 80px;
+}
+main{
+  display: flex;
+  justify-content: center;
+  max-width: 90%;
+  
+}
+.descripcionProd{
+  display: flex;
+  flex-direction:column;
+  max-width: 30%;
+  margin-left: 5%;
+  margin-top: 2%;
+}
+.botones{
+  display: flex;
+}
+.boton-carrito {
+  width: 200px;
+  font-size: 15px;
+  background-color: #1e1f50;
+  color: #f7f4f4;
+  margin: 5px;
+  height: 40px;
+  border: #aca8a8;
+  border-radius: 7px;
+}
+.boton-comprar {
+  width: 150px;
+  font-size: 15px;
+  background-color: #1e1f50;
+  color: #f7f4f4;
+  margin: 5px;
+  height: 40px;
+  border: #aca8a8;
+  border-radius: 7px;
+}
+.nombreProd{
+  margin-bottom: 3%;
+ }
+.codigo{
+    font-family: 'Open Sans', sans-serif;
+    margin-bottom: 5%;
+}
+.precio{
+  font-family: 'Kanit', sans-serif;
+  margin-bottom: 5%; 
+}
+.cuotas{
+  margin-bottom: 5%; 
+}
+.colores{
+  font-family: 'Open Sans', sans-serif;
+  margin-bottom: 2%;
+}
+.talla{
+  font-family: 'Open Sans', sans-serif;  
+}
+.cajaDescripcion{
+  text-align: justify;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 80%;
+}
+.tituloDescripcion{
+  font-family: 'Roboto', sans-serif; 
+}
+.fotosProd {
+  display: flex;
+  margin-top: 5%;
+}
+.fotoGrande img {
+  display: flex;
+  justify-items: center;
+  max-width: 90vw;
+  max-height: 55vh;
+  margin-right: 10px;
+  border: 2px solid ;
+}
+.fotosPequenhas img {
+  display: flex;
+  max-width: 27vw;
+  max-height: 27vh;
+  border: 2px solid;
+  margin-bottom:10px;
+}  
+.last {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 60px;
+  margin-left: 45px;
+}
+
+.last-section {
+  flex: 1;
+  margin: 0 10px;
+  max-width: 33%;
+  margin-top: 35px;
+}
+.wide-input {
+  flex: 1;
+  margin-right: 10px;
+}
+
+.about {
+  margin-left: 10px;
+}
+
+.help {
+  margin-left: 10px;
+}
+
+.about-trend {
+  font-size: 14px;
+}
+
+.help-trend {
+  font-size: 14px;
+}
+
+.terminos {
+  margin-top: 60px;
+  margin-left: 20px;
+  margin-bottom: 15px;
+  display: flex;
+  align-items: center;
+  font-size: 12px;
+}

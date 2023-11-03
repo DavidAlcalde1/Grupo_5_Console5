@@ -28,6 +28,6 @@ router.post('/admin/edit/:id', upload.single('image'), controllerAdmindb.update)
 router.get('/admin/delete/:id', controllerAdmindb.delete);
 router.get('/admin/create', controllerAdmin.create);
 router.post('/admin/create', upload.single('image'), controllerAdmindb.save);
-
+router.get('/products', controllerAdmindb.index);
 
 module.exports = router;

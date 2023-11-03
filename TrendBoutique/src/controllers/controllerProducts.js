@@ -3,13 +3,15 @@ const fs = require('fs');
 const { Op } = require("sequelize");
 let db = require('../../database/models');
 
-let products = JSON.parse(fs.readFileSync(path.resolve(__dirname, '..', 'data', 'products.json')));
-let productsOriginal = products
+// let products = JSON.parse(fs.readFileSync(path.resolve(__dirname, '..', 'data', 'products.json')));
+//let productsOriginal = products
 
 module.exports = {
-    index: function (req,res){
-        
-       res.render(path.resolve(__dirname, '..', 'views', 'products', 'list'), { products });
+    index: async function ( req,res){
+       db.Products.findAll()
+       .then(function (products) {
+           res.render(path.resolve(__dirname, '..', 'views', 'products', 'list'), { products });
+    })
 
     },
 
@@ -51,8 +53,7 @@ module.exports = {
 
     search: function (req,res) {
         const filter = req.query.search
-        //console.log(filter);
-        let result = []
+        //console.log();
         db.Products.findAll( {where: {
             name: {
               [Op.like]: `%${filter}%`

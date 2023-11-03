@@ -12,7 +12,7 @@ const controllerAdmin = {
             res.render(path.resolve(__dirname, '..', 'views', 'admin', 'admin'), { products });
         })
     },
-
+    
     view: (req, res) => {     
         const productId = req.params.id;
         db.Products.findOne({ where: { id: productId } }).then(function (miProducto) {
@@ -26,27 +26,33 @@ const controllerAdmin = {
             res.render(path.resolve(__dirname, '..', 'views', 'admin', 'edit'), { product });
         })
     },
-
+    
     update: (req, res) => {         
         const productId = req.params.id;
         req.body.image = req.file.filename; 
         const updatedData = req.body; // Los nuevos datos del producto a editar
         db.Products.update(updatedData, { where: { id: productId} }).then(()=>{res.redirect('/admin')}).catch(error=>{console.log(error)})
     },
-
+    
     delete: (req, res) => {
         const productId = req.params.id;
         db.Products.destroy({ where: { id: productId} }).then(()=>{res.redirect('/admin')}).catch(error=>{console.log(error)})
     },
-
+    
     create: (req, res) => {
         res.render(path.resolve(__dirname, '..', 'views', 'admin', 'create'));
     },
-
+    
     save: (req, res) => {
         req.body.image = req.file.filename;
         const createData = req.body;
         db.Products.create(createData).then(()=>{res.redirect('/admin')}).catch(error=>{console.log(error)})
+    },
+    index: function (req,res){
+        db.Products.findAll()
+        .then(function (products) {
+            res.render(path.resolve(__dirname, '..', 'views', 'products', 'list'), { products });
+        })        
     }
 }
 

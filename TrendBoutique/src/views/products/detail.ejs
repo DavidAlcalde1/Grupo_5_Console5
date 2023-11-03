@@ -47,7 +47,7 @@
             <h4>Descripción: <%= miProducto.description %></h4>
             <h4>Precio: $<%= miProducto.price %></h4>
             <h4>Disponibilidad: <%= miProducto.quantity %></h4>
-            <h4>Categoría: <%= miProducto.idcategory %></h4>
+            <h4>Categoría: <%= miProducto.idcategory=== 1 ? 'SPORT' : miProducto.idcategory=== 2 ? 'CASUAL' : 'FORMAL' %></h4>
             <h4>Talla: <%= miProducto.size %></h4>
             <h4>Color: <%= miProducto.color %></h4>
           </section>
