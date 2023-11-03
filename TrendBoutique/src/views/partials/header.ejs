@@ -3,10 +3,6 @@
   <link rel="stylesheet" href="/css/stylesHeader.css">
 </head>
 <header class="main-header">
-<<<<<<< HEAD
-=======
-  <!-- <link rel="stylesheet" type="text/css" href="/css/stylesHeader.css" /> -->
->>>>>>> 84b092fc95c572cc479a74486ee418bee7e3814c
   <div class="main-header-top-bar">
     <div>
       <img class="logo" src="/images/logo-trend-boutique.svg" alt="Logo Trend Boutique"
@@ -23,64 +19,28 @@
     </form>
     <div class="user">
       <ul>
-<<<<<<< HEAD
-        <!-- <% //if(locals.user) { %>
-=======
-        <% if(locals.user) { %>
->>>>>>> 84b092fc95c572cc479a74486ee418bee7e3814c
+        <!-- <% if(locals.user) { %>
           <li> <a href="#"></a></li>
           <li><img class="avatar" src="/images/users/<%= locals.user.image %>" alt=""></li>
           <li><a href="/detalle">&nbsp&nbsp&nbsp[ Detalle ]&nbsp&nbsp&nbsp</a></li>
           <li><a href="/editProfile">[ Editar Perfil ]</a></li>
-<<<<<<< HEAD
-          <% //} else { %>
-            <li><a href="/login"></a></li>
-            <li><a href="/registro"></a></li>
-          <% //}%> -->
-        <% if (locals.user) { %>
-          <img class="avatar" src="/images/users/<%= locals.user.image %>">
-
-          <ul class="navGB">
-            <li><a href="">Hola <%= locals.user.first_name %></a>
-              <ul>
-                <li><a href="/detalle">Detalle</a></li>
-                <li><a href="editProfile">Editar Perfil</a></li>
-                <li><a href="/logout">Cerrar Sesión</a></li>
-              </ul>
-            </li>
-          </ul>
-
-          <!-- <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" id="dropUser" role="button" data-bs-toggle="dropdown"
-              aria-expanded="false"></a> -->
-          <!-- <select name="menu">
-            <option value="">Hola <%= locals.user.first_name %>
-            </option> -->
-            <!-- <ul class="dropdown-menu" aria-labelledby="navbarDropdown"> -->
-            <!-- <option value="opcion1"><a href='/detalle'></a>Detalle</option> -->
-            <!-- <li> -->
-            <!-- <hr class="dropdown-divider"> -->
-            <!-- </li> -->
-            <!-- <option value="opcion2"><a href="/editProfile"></a>Editar Perfil</option> -->
-            <!-- <li> -->
-            <!-- <hr class="dropdown-divider"> -->
-            <!-- </li> -->
-            <!-- <option value="opcion3"><a href="/logout"></a>Cerrar Sesión</option> -->
-            <!-- </ul> -->
-            <!-- </li> -->
-          <!-- </select> -->
-          <% } %>
-            <!-- else { %>
-             <li class="nav-item"><a class="nav-link" href="/login">Login</a></li>
-             <li class="nav-item"><a class="nav-link" href="/registro">Registro</a></li>
-          <%// } %> -->
-
-=======
           <% } else { %>
             <li><a href="/login"></a></li>
             <li><a href="/registro"></a></li>
-          <% }%>
->>>>>>> 84b092fc95c572cc479a74486ee418bee7e3814c
+          <% }%> -->
+          <% if (locals.user) { %>
+            <img class="avatar" src="/images/users/<%= locals.user.image %>">
+  
+            <ul class="navGB">
+              <li><a href="">Hola <%= locals.user.first_name %></a>
+                <ul>
+                  <li><a href="/detalle">Detalle</a></li>
+                  <li><a href="editProfile">Editar Perfil</a></li>
+                  <li><a href="/logout">Cerrar Sesión</a></li>
+                </ul>
+              </li>
+            </ul>
+          <% } %>
       </ul>
     </div>
   </div>
