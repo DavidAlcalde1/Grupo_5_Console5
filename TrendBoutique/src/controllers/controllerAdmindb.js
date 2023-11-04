@@ -30,7 +30,7 @@ const controllerAdmin = {
     update: (req, res) => {         
         const productId = req.params.id;
         if (req.file) {
-            req.body.image = req.file.filename; 
+            req.body.image = req.file.filename; //Deja pasar el edit sin necesitar el FileName 
         }
         const updatedData = req.body; // Los nuevos datos del producto a editar
         db.Products.update(updatedData, { where: { id: productId} }).then(()=>{res.redirect('/admin')}).catch(error=>{console.log(error)})
