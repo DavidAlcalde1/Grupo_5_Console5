@@ -1,13 +1,14 @@
-.main-header-top-bar {
+.main-header-top {
   display: flex;
   align-items: center;
-
   position: fixed;
   top: 0;
   width: 100%;
   background-color: white;
   padding: 10px;
   z-index: 9999;
+  flex-wrap: wrap;
+  box-sizing:content-box;
 }
 
 .logo {
@@ -16,20 +17,48 @@
   margin-left: 120px;
 }
 
-/* .search-bar {
+.search-products{
+  width: 600px;
+  height: 30px;
+  padding-left: 30px;
+}
+
+.search-button {
+  position: absolute;
+  width: 30px;
+  margin-left: 5px; 
+}
+
+.search-bar {
   display: flex;
   align-items: center;
   margin-top: 15px;
-  margin-left: 100px;
+  margin-left: 10px;
   position: relative;
-  width: 36%;
 }
 
-.search-bar input[type="search"] {
+.search-button {
+  height: 30px;
+  position: absolute;
+  right: 0;
+  left: 0;
+  width: 30px;
+  height: 30px;
+  background-image: url("ruta-de-la-imagen.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  border: none;
+  cursor: pointer;
+  padding-top: 3px;
+  background-color: transparent;
+  }
+
+/* .search-bar input[type="search"] {
   width: 20vw;
   height: 30px;
   background-color: transparent;
-} */
+}  */
 
 .left-navbar {
   list-style: none;
@@ -87,8 +116,7 @@ ul {
 .user {
   display: flex;
   flex-direction: row;
-  width: 64%;
-
+  margin-left: 1rem;
 }
 
 .avatar {
@@ -102,8 +130,6 @@ ul {
   background-color: #fff;
   border-color: #dee2e6 #dee2e6 #fff
 } */
-
-/*  Guillermo Betancur */
 * {
   margin:0px;
   padding:0px;
@@ -117,6 +143,16 @@ ul {
 
 ul, ol {
   list-style:none;
+}
+
+.fa-solid {
+  margin: 0px;
+  padding: 0px;
+}
+
+.fa-magnifying-glass {
+  margin: 0px;
+  padding: 0px;
 }
 
 .navGB > li {
@@ -159,3 +195,8 @@ ul, ol {
   right:-140px;
   top:0px;
 }
+
+/* .main-header-top {
+  display: flex;
+  
+} */

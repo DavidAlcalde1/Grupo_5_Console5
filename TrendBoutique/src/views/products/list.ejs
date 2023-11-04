@@ -24,7 +24,6 @@
 
             <!-- <% if (true){ %> -->
 
-
               <a href="/products/<%=product.id%>/edit">
                 <img class="imageList"
                 src="/images/<%= product.image %>"
@@ -32,9 +31,9 @@
                 width="400px"
                 height="400px"/>
               </a>
-              <h2><%= product.id %> <%= product.name %></h2>
+              <h2><%= product.name %></h2>
               <!-- <% }; %> -->
-            <a class="ver-detalle" href="./products/detail/<%=product.id%>">Ver detalle</a>
+            <a class="ver-detalle" href="<%= gbUrl%>/detail/<%=product.id%>">Ver detalle</a>
 
           </li>
           <% }); %>

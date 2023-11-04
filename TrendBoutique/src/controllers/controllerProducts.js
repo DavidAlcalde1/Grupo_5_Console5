@@ -2,52 +2,32 @@ const path = require('path');//Para homologar rutas en diferentes S.O.
 const fs = require('fs');
 const { Op } = require("sequelize");
 let db = require('../../database/models');
-
-// let products = JSON.parse(fs.readFileSync(path.resolve(__dirname, '..', 'data', 'products.json')));
-//let productsOriginal = products
+const gbUrl = '/products'
 
 module.exports = {
     index: async function ( req,res){
        db.Products.findAll()
        .then(function (products) {
-           res.render(path.resolve(__dirname, '..', 'views', 'products', 'list'), { products });
+           res.render(path.resolve(__dirname, '..', 'views', 'products', 'list'), { products , gbUrl});
     })
 
     },
 
     productsCategory: function (req,res){
-        /*
-        let products = []
-        productsOriginal.forEach(product => {
-            console.log(product.category, req.params.category)
-            if (product.category == req.params.category){
-                products.push(product)
-            }
-            
-        });
-        */
         db.Products.findAll( {where: {
             idcategory: {
               [Op.eq]: req.params.category
             }
         }})
         .then(function (products) {
-            res.render(path.resolve(__dirname, '..', 'views', 'products', 'list'), { products });
+            res.render(path.resolve(__dirname, '..', 'views', 'products', 'list'), { products, gbUrl });
         })
     },
 
     show: function (req,res){
-        /*
-        let miProducto;
-        products.forEach(product => {
-            if(product.id == req.params.id){
-                miProducto = product;
-            }
-            
-        });
-        */
-        db.Products.findOne({ where: { id: req.params.id } }).then(function(miProducto){
-            res.render(path.resolve(__dirname, '..', 'views', 'products', 'detail'), { miProducto });
+        db.Products.findOne({ where: { id: req.params.id } })
+        .then(function(miProducto){
+            res.render(path.resolve(__dirname, '..', 'views', 'products', 'detail'), { miProducto});
         });
     },
 
@@ -60,10 +40,7 @@ module.exports = {
             }
           }})
         .then(function (products) {
-            res.render(path.resolve(__dirname, '..', 'views', 'products', 'list'), { products });
+            res.render(path.resolve(__dirname, '..', 'views', 'products', 'list'), { products , gbUrl});
         })
-
-
     }
-
 }

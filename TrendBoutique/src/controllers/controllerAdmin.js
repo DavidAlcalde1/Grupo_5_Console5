@@ -11,12 +11,6 @@ const controllerAdmin = {
     },
 
     edit: (req, res) => {
-
-        // let userId = req.params.id;
-        // console.log(userId);
-        // let productEdit = products.find(product => product.id == userId);
-        // console.log(productEdit);
-        // res.render(path.resolve(__dirname, '..', 'views', 'admin', 'edit'), { productEdit });
         const productId = req.params.id;
         db.Products.findOne({ where: { id: productId } }).then(function (productEdit) {
             res.render(path.resolve(__dirname, '..', 'views', 'admin', 'edit'), { productEdit });
@@ -47,13 +41,8 @@ const controllerAdmin = {
         const finalList = products.filter(product => product.id != deleteProducts);
         let deleted = JSON.stringify(finalList, null, 2);
         fs.writeFileSync(path.resolve(__dirname, '..', 'data', 'products.json'), deleted);
-
         // res.render(path.resolve(__dirname, '..', 'views', 'admin', 'admin'),{products});
-
         res.status(200).redirect('/admin')
-
-
-
     },
 
     create: (req, res) => {
@@ -78,13 +67,10 @@ const controllerAdmin = {
         products.push(newProduct);
 
         let registroActualizado = JSON.stringify(products, null, 2);
-        // fs.writeFileSync(path.resolve(__dirname, '..', 'data', 'products.json'), updateProducts);
         fs.writeFileSync(path.resolve(__dirname, '..', 'data', 'products.json'), registroActualizado);
 
         res.redirect('/admin');
-
     }
-
 }
 
 module.exports = controllerAdmin;

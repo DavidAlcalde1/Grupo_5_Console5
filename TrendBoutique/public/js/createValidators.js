@@ -22,7 +22,7 @@ window.addEventListener('load', function () {
         // Validaciones de la Imagen
         let campoImagen = document.querySelector('#image');
         if (campoImagen.files.length === 0) {
-            errores.push("¡Debes seleccionar una imagen!");
+            errores.push("¡Debes seleccionar una imagen! create validator");
         } else {
             // Verificar la extensión del archivo
             const allowedExtensions = ["jpg", "jpeg", "png", "gif"];

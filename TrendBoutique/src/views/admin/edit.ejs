@@ -1,9 +1,10 @@
 <!doctype html>
 <html lang="es">
-  <head>
-    <link rel="stylesheet" href="/css/stylesValidators.css">
-    <link rel="stylesheet" href="/css/stylesEdit.css">
-  </head>
+
+<head>
+  <link rel="stylesheet" href="/css/stylesValidators.css">
+  <link rel="stylesheet" href="/css/stylesEdit.css">
+</head>
 
 <body>
   <!-- ERRORES FRONT -->
@@ -30,45 +31,46 @@
 
 
               <form class="edit" action="/admin/edit/<%= productEdit.id%>" method="POST" enctype="multipart/form-data">
-                
-                <div class="infProduct"> 
-                  <div class="entradas"> 
-                  <div class="form-group">
-                    <label for="name">Producto</label>
-                    <input id="name" type="text" class="form-control" name="name" placeholder="Nombre" value="<%= productEdit.name%>">
-                  </div>
-                  <div class="form-group">
-                    <label for="name">Descripción</label>
-                    <input id="description" type="text" class="form-control" name="description" placeholder="Descripción" value="<%= productEdit.description%>">
-                  </div>
-                  <div class="form-group">
-                    <label for="name">Precio</label>
-                    <input type="number" class="form-control" name="price" placeholder="Indique el precio"
-                    value="<%= productEdit.price%>">
-                  </div>
-                  <div class="form-group">
-                    <label for="name">Talla</label>
-                    <input type="text" class="form-control" name="size" placeholder="Tallas" 
-                    value="<%= productEdit.size%>">
-                  </div>
-                  <div class="form-group">
-                    <label for="name">Color</label>
-                    <input type="text" class="form-control" name="color" placeholder="Colores" 
-                    value="<%= productEdit.color%>">
-                  </div>
-                  <div class="form-group">
-                    <label for="name">Cantidad</label>
-                    <input type="number" class="form-control" name="quantity" placeholder="Indique la existencia"
-                    value="<%= productEdit.quantity%>">
-                  </div>
-                  <div class="form-group">
-                    <label for="name">Categoría</label>
-                    <select name="idcategory" class="custom-select" id="idcategory">
-                      <option disabled value="#">Seleccione la categoría"</option>
-                      <option value="1" <%=productEdit.idcategory==1 ? "selected" : null %>
-                        >FORMAL</option>
-                        <option value="Sport" <%=productEdit.idcategory==2 ? "selected" : null %>>SPORT</option>
-                        <option value="Casual" <%=productEdit.idcategory==3 ? "selected" : null %>>CASSUAL
+
+                <div class="infProduct">
+                  <div class="entradas">
+                    <div class="form-group">
+                      <label for="name">Producto</label>
+                      <input id="name" type="text" class="form-control" name="name" placeholder="Nombre"
+                        value="<%= productEdit.name%>">
+                    </div>
+                    <div class="form-group">
+                      <label for="name">Descripción</label>
+                      <input id="description" type="text" class="form-control" name="description"
+                        placeholder="Descripción" value="<%= productEdit.description%>">
+                    </div>
+                    <div class="form-group">
+                      <label for="name">Precio</label>
+                      <input type="number" class="form-control" name="price" placeholder="Indique el precio"
+                        value="<%= productEdit.price%>">
+                    </div>
+                    <div class="form-group">
+                      <label for="name">Talla</label>
+                      <input type="text" class="form-control" name="size" placeholder="Tallas"
+                        value="<%= productEdit.size%>">
+                    </div>
+                    <div class="form-group">
+                      <label for="name">Color</label>
+                      <input type="text" class="form-control" name="color" placeholder="Colores"
+                        value="<%= productEdit.color%>">
+                    </div>
+                    <div class="form-group">
+                      <label for="name">Cantidad</label>
+                      <input type="number" class="form-control" name="quantity" placeholder="Indique la existencia"
+                        value="<%= productEdit.quantity%>">
+                    </div>
+                    <div class="form-group">
+                      <label for="name">Categoría</label>
+                      <select name="idcategory" class="custom-select" id="idcategory">
+                        <option disabled value="#">Seleccione la categoría"</option>
+                        <option value=1 <%=productEdit.idcategory==1 ? "selected" : null %>>SPORT</option>
+                        <option value=2 <%=productEdit.idcategory==2 ? "selected" : null %>>CASUAL</option>
+                        <option value=3 <%=productEdit.idcategory==3 ? "selected" : null %>>FORMAL
                         </option>
                       </select>
                     </div>
@@ -76,40 +78,42 @@
                       <label for="name">Descuento</label>
                       <select name="descuento" class="custom-select" id="validationCustom04">
                         <option disabled value="#">Seleccione un descuento"</option>
-                      <option value="0" <%=productEdit.descuento==0 ? "selected" : null %>
-                      >Sin descuento</option>
-                      <option value="15" <%=productEdit.descuento==15 ? "selected" : null %>>15%</option>
-                      <option value="30" <%=productEdit.descuento==30 ? "selected" : null %>>30%</option>
-                    </select>
+                        <option value="0" <%=productEdit.descuento==0 ? "selected" : null %>
+                          >Sin descuento</option>
+                        <option value="15" <%=productEdit.descuento==15 ? "selected" : null %>>15%</option>
+                        <option value="30" <%=productEdit.descuento==30 ? "selected" : null %>>30%</option>
+                      </select>
+                    </div>
                   </div>
-                </div> 
-                
-                <div class="imageContent">
-                <!--Aquí solicito la imagen-->
-                  <div class="custom-file">
-                    <figure class="form-group">
-                      <img class="w-100" src="/images/<%= productEdit.image%>" width="450px"
-                      alt="productEdit <%= productEdit.name%>">
-                    </figure>
-                    <input id="image" type="hidden" name="image" value="<%= productEdit.image%>">
-                  <!--De esta forma logro conservar y que viaje la image anterior de esta forma evito que el usuario seleccione una image nuevamente, ( si no lo desea) -->
-                  <!--<input type="file" name="image">-->
-                  <br>
-                    <input type="file" class="fileInput" id="inputGroupFileimage"
-                    aria-describedby="inputGroupFileAddon01" name="image" value="<%= productEdit.image%>">
-                    <!-- <label class="custom-file-label" for="inputGroupFile01"></label> -->
+
+                  <div class="imageContent">
+                    <!--Aquí solicito la imagen-->
+                    <div class="custom-file">
+                      <figure class="form-group">
+                        <img class="w-100" src="/images/<%= productEdit.image%>" width="450px"
+                          alt="productEdit <%= productEdit.name%>">
+                      </figure>
+                      <input id="image" type="hidden" name="oldImage" value="<%= productEdit.image%>">
+                      <!--De esta forma logro conservar y que viaje la image anterior de esta forma evito que el usuario seleccione una image nuevamente, ( si no lo desea) -->
+                      <!--<input type="file" name="image">-->
+                      <br>
+                      <!-- <input type="file" class="fileInput" id="inputGroupFileimage"
+                        aria-describedby="inputGroupFileAddon01" name="image" value="<%=// productEdit.image%>"> -->
+                      <input type="file" class="fileInput" id="inputGroupFileimage"
+                        aria-describedby="inputGroupFileAddon01" name="image" value="">
+                      <!-- <label class="custom-file-label" for="inputGroupFile01"></label> -->
+                    </div>
                   </div>
                 </div>
-              </div>
-            
-              
-                  <div class="form-group">
-                    <button type="submit" class="btn-info">Actualizar</button>
-                    <br><br>
-                    <a class="regresar" href="/admin" class="btn-danger">Regresar</a>
-                    <label for="regresar"></label>
-                  </div>
-                
+
+
+                <div class="form-group">
+                  <button type="submit" class="btn-info">Actualizar</button>
+                  <br><br>
+                  <a class="regresar" href="/admin" class="btn-danger">Regresar</a>
+                  <label for="regresar"></label>
+                </div>
+
               </form>
 
             </div>

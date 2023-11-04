@@ -53,13 +53,13 @@ margin-top: 10px;
 margin-left: 120px;
 }
 
-.search-bar {
+/* .search-bar {
 display: flex;
 align-items: center;
 margin-top: 15px;
 margin-left: 100px;
 position: relative;
-}
+} */
 
 .search-bar input[type="search"] {
 width: 40vw;
@@ -67,7 +67,7 @@ height: 30px;
 background-color: transparent;
 }
 
-.search-button {
+/* .search-button {
 height: 30px;
 position: absolute;
 right: 0;
@@ -82,7 +82,7 @@ border: none;
 cursor: pointer;
 padding-top: 7px;
 background-color: transparent;
-}
+} */
 
 .search-products {
 width: 700px;
@@ -460,11 +460,11 @@ text-decoration: none;
   width: 100%;
   padding-left: 35px;
 }
-.search-button {
+/* .search-button {
   position: absolute;
   width: 30px;
   margin-left: 5px; 
-}
+} */
 
 .fa-solid fa-magnifying-glass {
   margin-bottom: 100px;
