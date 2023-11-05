@@ -8,7 +8,7 @@
   <!-- <link rel="stylesheet" type="text/css" href="/css/stylesHeader.css"> -->
   <!-- <link rel="stylesheet" type="text/css" href="/css/stylesFooter.css"> -->
   <title>Login</title>
-  
+
 </head>
 
 
@@ -18,59 +18,50 @@
   <div class="errores">
     <ul class="errors"></ul>
   </div>
-  
-  
+
+
   <div class="contenedorWa">
     <a class="btnWa" tarjet="_blank" onclick="gtag_report_conversion_wa();"
-        href="https://api.whatsapp.com/send?phone=51946559236&text=Estoy%20interesado%20en%20sus%20productos.">
-        <i class="fab fa-whatsapp my-float"></i>
-      </a>
+      href="https://api.whatsapp.com/send?phone=51946559236&text=Estoy%20interesado%20en%20sus%20productos.">
+      <i class="fab fa-whatsapp my-float"></i>
+    </a>
+  </div>
+
+  <main class="principal">
+    <div class="login">
+      <h1>TREND BOUTIQUE</h1>
+      <h2>La moda no incomoda</h2>
     </div>
-    
-    <main class="principal">
-      <div class="login">
-        <h1>TREND BOUTIQUE</h1>
-        <h2>La moda no incomoda</h2>
-      </div>
-      
-      <div class="ingreso">
-        <form class="login" action='/login' method="post">
-          <input class="ancho-mail" type="text" id="correo" name="email" placeholder="Correo Electrónico"
+
+    <div class="ingreso">
+      <form class="login" action='/login' method="post">
+        <input class="ancho-mail" type="text" id="correo" name="email" placeholder="Correo Electrónico"
           value="<% typeof old != 'undefined' ? old.email : '' %>" />
-          <% if(typeof(errors) !='undefined' && errors.email) { %>
-            <span class="text-danger">
-              <%= errors.email.msg %>
-            </span>
-            <%}%>
+        <% if(typeof(errors) !='undefined' && errors.email) { %>
+          <span class="text-danger">
+            <%= errors.email.msg %>
+          </span>
+          <%}%>
             <input class="ancho-pass" type="password" id="contrasena" name="password" placeholder="Contraseña" />
             <% if(typeof(errors) !='undefined' && errors.password){%>
               <span class="text-danger">
                 <%= errors.password.msg %>
               </span>
               <%}%>
-              <button class="iniciar-sesion" type="submit">Iniciar Sesión</button>
-                  <br />
-                  <br />
-                  <br />
-                  <!-- <h4 class="eres-nuevo">¿Eres nuevo?</h4>
+                <button class="iniciar-sesion" type="submit">Iniciar Sesión</button>
+                <br />
+                <br />
+                <br />
+                <!-- <h4 class="eres-nuevo">¿Eres nuevo?</h4>
                   <button>Crear cuenta nueva</button> -->
-                </form>
-              </div>
-    </main>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <script src="/js/loginValidators.js"></script>
+      </form>
+    </div>
+  </main>
+  <br><br><br><br><br><br><br><br><br><br><br>
+  <script src="/js/loginValidators.js"></script>
 
-    <%- include('../partials/footer.ejs') %>
-    
-  </body>
+  <%- include('../partials/footer.ejs') %>
+
+</body>
 
 </html>

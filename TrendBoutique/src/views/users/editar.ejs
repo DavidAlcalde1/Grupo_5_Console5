@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html>
+
   <head>
     <title>Editar</title>
 
@@ -15,35 +16,34 @@
   <body>
     <br>
     <br>
-          <div class="errores">
-            <ul class="errores"></ul>
-          </div>
+    <div class="errores">
+        <ul class="errores"></ul>
+    </div>
     <!-- ERRORES FRONT -->
     <main>
       <% if(typeof(errors) !='undefined' ){%>
       <ul class="alert alert-danger">
         <% errors.forEach(error=> { %>
-        <li><%= error.msg%></li>
+        <li>
+          <%= error.msg%>
+        </li>
         <%});%>
       </ul>
       <%}%>
 
       <!-- FORMULARIO -->
-      <form
-        class="registro"
-        id="registroForm"
-        action="/editProfile"
-        method="post"
-        enctype="multipart/form-data"
-      >
+      <form class="registro" id="registroForm" action="/editProfile" method="post" enctype="multipart/form-data">
         <h1 class="title">Edita tu perfil</h1>
         <img src="/images/users/<%= user.image%>" style="width: 250px; height: 250px;">
         <input type="text" placeholder="Nombre" name="first_name" id="nombre" value="<%= user.first_name%>"/><br />
         <!-- <span id="msgNombre" class="msg"></span><br> -->
         <input type="text" placeholder="Apellido" name="last_name" id="apellido" value="<%= user.last_name%>"/><br />
         <h2>correo electrónico</h2>
-        <input type="text" placeholder="correo electrónico" name="email" id="correo" hidden value="<%= user.email%>"/><br />
-        <h3><%= user.email %></h3>
+        <input type="text" placeholder="correo electrónico" name="email" id="correo" hidden 
+        value="<%= user.email%>"/><br />
+        <h3>
+          <%= user.email %>
+        </h3>
         <!-- <span id="msgEmail" class="msg"></span><br> -->
         <input type="number" placeholder="Teléfono" name="telefono" id="telefono" value="<%= user.telefono%>" /><br />
         <!-- <span id="msgTelefono" class="msg"></span><br> -->
@@ -55,8 +55,7 @@
           id="role"
         /><br /> -->
         <!-- <span id="msgOcupacion" class="msg"></span><br> -->
-        <input 
-          type="text" placeholder="Ciudad" name="country" id="ciudad" value="<%= user.country%>" /><br />
+        <input type="text" placeholder="Ciudad" name="country" id="ciudad" value="<%= user.country%>" /><br />
         <label for="fechaNacimiento">Fecha de nacimiento:</label>
         <input type="date" name="fechaNacimiento" id="fechaNacimiento" value="<%= user.fechaNacimiento%>" /><br />
         <h3>sexo</h3>
@@ -84,9 +83,11 @@
         <input type="file" id="image" name="image" accept="image/*" />
         <button type="submit">Actualizar</button>
       </form>
+      <a class="regresar" href="/" class="btn-danger">Regresar</a>
+      <label for="regresar"></label>
       <script src="script.js"></script>
       <!-- <div><% //- include('../partials/footer.ejs') %></div> -->
     </main>
-    <script src="/js/registerValidators.js"></script>
+    <script src="/js/editValidators.js"></script>
   </body>
 </html>

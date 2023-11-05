@@ -87,21 +87,16 @@ const controllerLogin = {
         }
     },
     updateProfile: (req, res) => {
-        req.body.image = req.file.filename
+        req.body.id = req.params.id
+
+        if (req.file) {
+            req.body.image = req.file ? req.file.filename : req.body.oldImage;
+        }
         req.body.password = bcrypt.hashSync(req.body.password, 10)
         const createData = req.body
         let reqEmail = req.body.email
- 
-        db.Users.update(createData, {
-            where: { email: reqEmail }
-        })
-            .then(() => {
-                res.redirect('/login'); // Redirige a la página de perfil u otra página según tu necesidad
-            })
-            .catch(error => {
-                console.log('Error atrapado en update', error);
-                res.status(500).send('Error al actualizar el usuario');
-            });
+
+        db.Users.update(createData, { where: { email: reqEmail} }).then(()=>{res.redirect('/login')}).catch(error=>{console.log(error)})
     }
 };
 
