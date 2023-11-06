@@ -17,7 +17,7 @@ window.addEventListener('load', function () {
         let campoDescripcion = document.querySelector('#description');
         
         if (campoDescripcion.value.trim() === "") {
-            errores.push( "¡El campo de Apellido debe estar llenado¡¡¡")
+            errores.push( "¡El campo de descripción debe estar llenado¡¡¡")
         } else if (campoDescripcion.value.length < 20 ) {
             errores.push( "¡El campo Descripción deberá tener al menos 20 caracteres!!!");
         }   

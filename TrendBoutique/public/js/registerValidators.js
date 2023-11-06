@@ -40,14 +40,14 @@ window.addEventListener('load', function () {
         
         if (campoPassword.value === "") {
             errores.push("¡El campo de Password es Obligatorio¡¡¡")
-        }else if (campoPassword.value.length <= 8){
-            errores.push("¡El campo de Password debe tener al menos 8 caracteres¡¡¡");
+        }else if (campoPassword.value.length <= 9){
+            errores.push("¡El campo de Password debe tener al menos 9 caracteres¡¡¡");
         }
 
         // Validaciones de la Imagen
         let campoImagen = document.querySelector('#image');
         if (campoImagen.files.length === 0) {
-            errores.push("¡Debes seleccionar una imagen! registervalidator");
+            errores.push("¡Debes seleccionar una imagen!");
         } else {
             // Verificar la extensión del archivo
             const allowedExtensions = ["jpg", "jpeg", "png", "gif"];
