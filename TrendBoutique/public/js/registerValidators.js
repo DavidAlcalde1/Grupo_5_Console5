@@ -40,7 +40,7 @@ window.addEventListener('load', function () {
         
         if (campoPassword.value === "") {
             errores.push("¡El campo de Password es Obligatorio¡¡¡")
-        }else if (campoPassword.value.length <= 9){
+        }else if (campoPassword.value.length <= 8){
             errores.push("¡El campo de Password debe tener al menos 9 caracteres¡¡¡");
         }
 
