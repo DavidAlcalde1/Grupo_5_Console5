@@ -5,20 +5,13 @@
 
 ##INTEGRANTES DEL EQUIPO:
 ### DAVID ERNESTO SEGURA JIMENEZ
-### JAIME MADERIC BELTRÁN CARRASCO
-### MAILEN JOHANNA IGLESIAS
 ### JOSÉ DAVID ALCALDE CABRERA
 
 ## DESCRIPCION DE INTEGRANTES:
 ### DAVID ERNESTO SEGURA JIMENES
 #### Publicista con énfasis en Marketing Digital y Comercio Electrónico
 #### ---------------------------------------------------------------------------------------------------------------------------------------
-### JAIME MADERIC BELTRÁN CARRASCO
-#### Técnico en Telecomunicaciones, Inspector de terreno en CGE
-#### ---------------------------------------------------------------------------------------------------------------------------------------
-### MAILEN JOHANNA IGLESIAS
-#### Abogada con especialización en derecho informático. 
-#### ---------------------------------------------------------------------------------------------------------------------------------------
+
 ### JOSÉ DAVID ALCALDE CABRERA
 #### Bachiller en Ingeniería de Sistemas y Computación, Técnico Titulado en Electrónica, con experiencia en Helpdesk y Cableado Estructurado
 
